@@ -71,9 +71,9 @@
   <path d="M258 655 H277 V707 H258 Z" class="barrier"/>
   <path d="M368 654 L384 651 L384 710 L368 707 Z" class="barrier"/>
 
-  <!-- Double quantum dots -->
-  <circle cx="202" cy="681" r="66" class="dot"/>
-  <circle cx="326" cy="681" r="66" class="dot"/>
+  <!-- Double quantum dots: reduced radius leaves an 8 px gap between islands. -->
+  <circle cx="202" cy="681" r="58" class="dot"/>
+  <circle cx="326" cy="681" r="58" class="dot"/>
 
   <!-- Bottom gate electrodes -->
   <rect x="174" y="776" width="14" height="72" rx="5" class="gate" transform="rotate(1 181 812)"/>
