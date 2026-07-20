@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="600" viewBox="0 0 1100 600" role="img" aria-labelledby="title desc">
   <title id="title">Simplified Zeeman splitting diagram</title>
-  <desc id="desc">At B equals zero the electron spin states are degenerate at E zero. At nonzero B the states split symmetrically, with energy separation Delta E sub Z equal to mu sub B times B.</desc>
+  <desc id="desc">At B equals zero the spin-up ket and spin-down ket are degenerate at E zero. At nonzero B the spin-up ket occupies the higher energy level and the spin-down ket occupies the lower level, separated by Delta E sub Z equal to mu sub B times B.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0 0 L10 5 L0 10 Z" fill="#171717"/>
@@ -23,6 +23,14 @@
 
   <path d="M155 300 H415" class="level" stroke="#4c5968"/>
   <text x="285" y="274" class="math" text-anchor="middle">E<tspan baseline-shift="sub" font-size="14">0</tspan></text>
+  <!-- Degenerate spin basis: both kets occupy E0. -->
+  <g id="left-spin-up-ket" aria-label="spin up ket" fill="none" stroke="#e52d35" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M245 329 V351 M255 348 V332 M251 336 L255 332 L259 336 M264 329 L272 340 L264 351"/>
+  </g>
+  <text x="285" y="348" class="state" fill="#111" text-anchor="middle">,</text>
+  <g id="left-spin-down-ket" aria-label="spin down ket" fill="none" stroke="#0c438b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M300 329 V351 M310 332 V348 M306 344 L310 348 L314 344 M319 329 L327 340 L319 351"/>
+  </g>
   <text x="285" y="400" class="math" text-anchor="middle">
     E<tspan baseline-shift="sub" font-size="13">up</tspan>
     <tspan baseline-shift="baseline" font-size="22"> = E</tspan><tspan baseline-shift="sub" font-size="13">down</tspan>
@@ -39,6 +47,9 @@
   <text x="625" y="286" class="math" fill="#66717e">E<tspan baseline-shift="sub" font-size="14">0</tspan></text>
 
   <path d="M650 190 H870" class="level" stroke="#e52d35"/>
+  <g id="right-spin-up-ket" aria-label="spin up ket" fill="none" stroke="#e52d35" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M604 179 V201 M614 198 V182 M610 186 L614 182 L618 186 M623 179 L631 190 L623 201"/>
+  </g>
   <text x="760" y="160" class="math" text-anchor="middle">
     E<tspan baseline-shift="sub" font-size="13">up</tspan>
     <tspan baseline-shift="baseline" font-size="22"> = E</tspan><tspan baseline-shift="sub" font-size="14">0</tspan>
@@ -46,6 +57,9 @@
   </text>
 
   <path d="M650 410 H870" class="level" stroke="#0c438b"/>
+  <g id="right-spin-down-ket" aria-label="spin down ket" fill="none" stroke="#0c438b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M604 399 V421 M614 402 V418 M610 414 L614 418 L618 414 M623 399 L631 410 L623 421"/>
+  </g>
   <text x="760" y="452" class="math" text-anchor="middle">
     E<tspan baseline-shift="sub" font-size="13">down</tspan>
     <tspan baseline-shift="baseline" font-size="22"> = E</tspan><tspan baseline-shift="sub" font-size="14">0</tspan>
