@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1016" height="861" viewBox="0 0 1016 861" role="img" aria-labelledby="title desc">
   <title id="title">Double quantum dot and charge sensor schematic</title>
-  <desc id="desc">A charge sensor above a double quantum dot, styled with gray source and drain reservoirs, three unlabelled blue islands with black center markers, capacitive coupling, and uniform Coulomb blockade peaks.</desc>
+  <desc id="desc">A charge sensor above a double quantum dot, styled with gray source and drain reservoirs, three unlabelled blue islands with black center markers, separate sensor-to-dot capacitances C CS 1 and C CS 2, and uniform Coulomb blockade peaks with a marked gate-voltage shift Delta V g.</desc>
   <defs>
     <radialGradient id="dotGradient" cx="42%" cy="36%" r="72%">
       <stop offset="0%" stop-color="#f7fbff"/>
@@ -55,9 +55,19 @@
   <circle cx="248" cy="409" r="50" class="dot"/>
   <circle cx="248" cy="409" r="7" fill="#050505"/>
 
-  <!-- Capacitive link from sensor to double dot -->
-  <path d="M248 459 V516 M223 527 H273 M223 540 H273 M248 540 V590" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round"/>
-  <text x="282" y="537" font-family="Georgia, serif" font-size="20" font-style="italic">C<tspan baseline-shift="sub" font-size="13">m</tspan></text>
+  <!-- Separate capacitive coupling from the charge sensor to each quantum dot -->
+  <path d="M248 459 V488 M248 488 L196 512 V520 M248 488 L309 512 V520"
+        fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M180 528 H212 M180 539 H212 M196 539 V635"
+        fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M293 528 H325 M293 539 H325 M309 539 V635"
+        fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="132" y="551" font-family="Georgia, serif" font-size="18" font-style="italic">
+    C<tspan baseline-shift="sub" font-size="11">CS,1</tspan>
+  </text>
+  <text x="330" y="551" font-family="Georgia, serif" font-size="18" font-style="italic">
+    C<tspan baseline-shift="sub" font-size="11">CS,2</tspan>
+  </text>
 
   <!-- Bottom reservoirs and tunnel barriers -->
   <path d="M18 599 H76 C106 599 124 618 124 648 V715 C124 745 106 763 76 763 H18 Z" fill="url(#metalGradient)" class="outline"/>
@@ -103,6 +113,13 @@
            C848 523 855 512 859 480 C863 450 861 351 865 351 C869 351 867 450 871 480 C875 512 882 523 900 523
            C918 523 925 512 929 480 C933 450 931 351 935 351 C939 351 937 450 941 480 C945 512 952 523 970 523"
         fill="none" stroke="#f3272d" stroke-width="3" stroke-dasharray="8 7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Explicit gate-voltage separation between corresponding blue and red peaks -->
+  <path d="M760 337 H795" fill="none" stroke="#111" stroke-width="2.4"
+        marker-start="url(#arrowBlack)" marker-end="url(#arrowBlack)"/>
+  <text x="777.5" y="323" font-family="Georgia, serif" font-size="18" font-style="italic" text-anchor="middle">
+    ΔV<tspan baseline-shift="sub" font-size="11">g</tspan>
+  </text>
 
   <!-- Shift arrows -->
   <path d="M733 293 H838" fill="none" stroke="#123a83" stroke-width="3" marker-end="url(#arrowBlue)"/>
