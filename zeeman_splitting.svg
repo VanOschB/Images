@@ -1,106 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
-  <title id="title">Zeeman splitting of an electron spin</title>
-  <desc id="desc">An electron in a quantum dot between magnetic pole pieces is subjected to an external magnetic field B. At zero field, the spin-up and spin-down states are degenerate. At nonzero field, they split by an energy Delta E Z equal to mu B times B.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="600" viewBox="0 0 1100 600" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified Zeeman splitting diagram</title>
+  <desc id="desc">At B equals zero the electron spin states are degenerate at E zero. At nonzero B the states split symmetrically, with energy separation Delta E sub Z equal to mu sub B times B.</desc>
   <defs>
-    <radialGradient id="dotGradient" cx="38%" cy="34%" r="72%">
-      <stop offset="0%" stop-color="#f8fbff"/>
-      <stop offset="55%" stop-color="#c9dcfa"/>
-      <stop offset="100%" stop-color="#91b8ef"/>
-    </radialGradient>
-    <linearGradient id="goldLeft" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#fff6dc"/>
-      <stop offset="58%" stop-color="#ffe2a0"/>
-      <stop offset="100%" stop-color="#f3c45f"/>
-    </linearGradient>
-    <linearGradient id="goldRight" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#f3c45f"/>
-      <stop offset="42%" stop-color="#ffe2a0"/>
-      <stop offset="100%" stop-color="#fff6dc"/>
-    </linearGradient>
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#17365d" flood-opacity="0.18"/>
-    </filter>
-    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 Z" fill="#15498f"/>
-    </marker>
-    <marker id="arrowRed" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 Z" fill="#e52d35"/>
-    </marker>
-    <marker id="arrowBlack" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 Z" fill="#151515"/>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#171717"/>
     </marker>
     <style>
-      .title { font: 700 32px Arial, Helvetica, sans-serif; fill: #111; text-anchor: middle; }
-      .subtitle { font: 18px Arial, Helvetica, sans-serif; fill: #404040; text-anchor: middle; }
-      .panel-title { font: 700 21px Arial, Helvetica, sans-serif; fill: #111; text-anchor: middle; }
-      .label { font: 18px Arial, Helvetica, sans-serif; fill: #111; }
-      .small { font: 16px Arial, Helvetica, sans-serif; fill: #333; }
-      .math { font: italic 19px Georgia, 'Times New Roman', serif; fill: #111; }
       .panel { fill: #fbfdff; stroke: #191919; stroke-width: 2.5; }
+      .math { font: italic 22px Georgia, 'Times New Roman', serif; fill: #111; }
+      .state { font: 21px Arial, Helvetica, sans-serif; }
       .level { stroke-width: 5; stroke-linecap: round; }
     </style>
   </defs>
 
-  <rect width="1200" height="760" fill="#fff"/>
-  <text id="figure-title" x="600" y="48" class="title">Zeeman Splitting of an Electron Spin</text>
-  <text x="600" y="78" class="subtitle">An external magnetic field lifts the degeneracy of the two spin states</text>
+  <rect width="1100" height="600" fill="#fff"/>
 
-  <!-- Magnetic-field motif in the same visual language as the quantum-dot schematics. -->
-  <path d="M72 124 H245 C282 124 306 146 306 182 V202 C306 238 282 260 245 260 H72 Z"
-        fill="url(#goldLeft)" stroke="#111" stroke-width="3"/>
-  <path d="M1128 124 H955 C918 124 894 146 894 182 V202 C894 238 918 260 955 260 H1128 Z"
-        fill="url(#goldRight)" stroke="#111" stroke-width="3"/>
-  <text x="165" y="185" class="panel-title">Magnetic pole</text>
-  <text x="1035" y="185" class="panel-title">Magnetic pole</text>
-  <text x="165" y="214" class="math" text-anchor="middle">N</text>
-  <text x="1035" y="214" class="math" text-anchor="middle">S</text>
+  <!-- B = 0 -->
+  <rect x="40" y="35" width="430" height="530" rx="36" class="panel"/>
+  <text x="255" y="88" class="math" text-anchor="middle">B = 0</text>
+  <path d="M105 500 V135" fill="none" stroke="#171717" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="86" y="135" class="math" text-anchor="middle">E</text>
 
-  <path d="M328 192 H872" fill="none" stroke="#15498f" stroke-width="4" marker-end="url(#arrowBlue)"/>
-  <text x="600" y="111" class="panel-title">External magnetic field</text>
-  <text x="840" y="177" class="math" text-anchor="middle">B</text>
+  <path d="M155 300 H415" class="level" stroke="#4c5968"/>
+  <text x="285" y="274" class="math" text-anchor="middle">E<tspan baseline-shift="sub" font-size="14">0</tspan></text>
+  <text x="285" y="400" class="math" text-anchor="middle">
+    E<tspan baseline-shift="sub" font-size="13">up</tspan>
+    <tspan baseline-shift="baseline" font-size="22"> = E</tspan><tspan baseline-shift="sub" font-size="13">down</tspan>
+    <tspan baseline-shift="baseline" font-size="22"> = E</tspan><tspan baseline-shift="sub" font-size="14">0</tspan>
+  </text>
 
-  <circle cx="600" cy="192" r="67" fill="url(#dotGradient)" stroke="#0c438b" stroke-width="2.7" filter="url(#shadow)"/>
-  <circle cx="600" cy="192" r="8" fill="#111"/>
-  <path d="M600 190 V141" fill="none" stroke="#e52d35" stroke-width="4" marker-end="url(#arrowRed)"/>
-  <text x="600" y="232" class="small" text-anchor="middle">electron</text>
+  <!-- B > 0 -->
+  <rect x="500" y="35" width="560" height="530" rx="36" class="panel"/>
+  <text x="780" y="88" class="math" text-anchor="middle">B &gt; 0</text>
+  <path d="M565 500 V135" fill="none" stroke="#171717" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="546" y="135" class="math" text-anchor="middle">E</text>
 
-  <!-- Zero-field panel. -->
-  <rect x="60" y="308" width="440" height="390" rx="42" class="panel"/>
-  <text x="280" y="350" class="panel-title">No magnetic field</text>
-  <text x="280" y="378" class="math" text-anchor="middle">B = 0</text>
+  <path d="M610 300 H1015" fill="none" stroke="#9aa4af" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="625" y="286" class="math" fill="#66717e">E<tspan baseline-shift="sub" font-size="14">0</tspan></text>
 
-  <path d="M127 631 V415" fill="none" stroke="#151515" stroke-width="3" marker-end="url(#arrowBlack)"/>
-  <text x="101" y="526" class="label" text-anchor="middle" transform="rotate(-90 101 526)">Energy</text>
-  <path d="M174 522 H432" class="level" stroke="#4c5968"/>
-  <text x="303" y="492" class="math" text-anchor="middle">E<tspan baseline-shift="sub" font-size="13">0</tspan></text>
-  <text x="222" y="565" class="label" fill="#e52d35">spin up</text>
-  <text x="342" y="565" class="label" fill="#0c438b">spin down</text>
-  <text x="303" y="606" class="small" text-anchor="middle">degenerate spin states</text>
-  <text x="303" y="642" class="math" text-anchor="middle">E<tspan baseline-shift="sub" font-size="13">up</tspan> = E<tspan baseline-shift="sub" font-size="13">down</tspan> = E<tspan baseline-shift="sub" font-size="13">0</tspan></text>
+  <path d="M650 190 H870" class="level" stroke="#e52d35"/>
+  <text x="760" y="160" class="math" text-anchor="middle">
+    E<tspan baseline-shift="sub" font-size="13">up</tspan>
+    <tspan baseline-shift="baseline" font-size="22"> = E</tspan><tspan baseline-shift="sub" font-size="14">0</tspan>
+    <tspan baseline-shift="baseline" font-size="22"> + ½ μ</tspan><tspan baseline-shift="sub" font-size="14">B</tspan><tspan baseline-shift="baseline" font-size="22">B</tspan>
+  </text>
 
-  <!-- Applied-field panel. -->
-  <rect x="530" y="308" width="610" height="390" rx="42" class="panel"/>
-  <text x="835" y="350" class="panel-title">Applied magnetic field</text>
-  <text x="835" y="378" class="math" text-anchor="middle">B &gt; 0</text>
+  <path d="M650 410 H870" class="level" stroke="#0c438b"/>
+  <text x="760" y="452" class="math" text-anchor="middle">
+    E<tspan baseline-shift="sub" font-size="13">down</tspan>
+    <tspan baseline-shift="baseline" font-size="22"> = E</tspan><tspan baseline-shift="sub" font-size="14">0</tspan>
+    <tspan baseline-shift="baseline" font-size="22"> − ½ μ</tspan><tspan baseline-shift="sub" font-size="14">B</tspan><tspan baseline-shift="baseline" font-size="22">B</tspan>
+  </text>
 
-  <path d="M602 631 V415" fill="none" stroke="#151515" stroke-width="3" marker-end="url(#arrowBlack)"/>
-  <text x="576" y="526" class="label" text-anchor="middle" transform="rotate(-90 576 526)">Energy</text>
-  <path d="M650 525 H1070" fill="none" stroke="#9aa4af" stroke-width="2" stroke-dasharray="8 8"/>
-  <text x="665" y="514" class="small">E<tspan baseline-shift="sub" font-size="11">0</tspan></text>
+  <path d="M920 195 V405" fill="none" stroke="#171717" stroke-width="2.8" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="936" y="290" class="math">
+    ΔE<tspan baseline-shift="sub" font-size="14">Z</tspan>
+  </text>
+  <text x="936" y="322" class="math">
+    = μ<tspan baseline-shift="sub" font-size="14">B</tspan><tspan baseline-shift="baseline" font-size="22">B</tspan>
+  </text>
 
-  <path d="M702 447 H942" class="level" stroke="#e52d35"/>
-  <path d="M702 603 H942" class="level" stroke="#0c438b"/>
-  <text x="718" y="430" class="label" fill="#e52d35">spin up</text>
-  <text x="718" y="635" class="label" fill="#0c438b">spin down</text>
-  <text x="823" y="430" class="math">E<tspan baseline-shift="sub" font-size="13">0</tspan> + ½ μ<tspan baseline-shift="sub" font-size="13">B</tspan>B</text>
-  <text x="823" y="635" class="math">E<tspan baseline-shift="sub" font-size="13">0</tspan> − ½ μ<tspan baseline-shift="sub" font-size="13">B</tspan>B</text>
-
-  <path d="M1005 451 V599" fill="none" stroke="#151515" stroke-width="2.8" marker-start="url(#arrowBlack)" marker-end="url(#arrowBlack)"/>
-  <text x="1024" y="518" class="math">ΔE<tspan baseline-shift="sub" font-size="13">Z</tspan></text>
-  <text x="1024" y="546" class="math">= μ<tspan baseline-shift="sub" font-size="13">B</tspan>B</text>
-
-  <path d="M462 522 C520 522 558 487 631 454" fill="none" stroke="#b6bcc4" stroke-width="2.5" stroke-dasharray="7 7"/>
-  <path d="M462 522 C520 522 558 563 631 596" fill="none" stroke="#b6bcc4" stroke-width="2.5" stroke-dasharray="7 7"/>
-
-  <text x="835" y="674" class="small" text-anchor="middle">The energy separation increases linearly with the field strength B</text>
+  <!-- Degenerate level splitting into the two Zeeman levels. -->
+  <path d="M438 300 C495 300 540 245 622 195" fill="none" stroke="#b6bcc4" stroke-width="2.5" stroke-dasharray="7 7"/>
+  <path d="M438 300 C495 300 540 355 622 405" fill="none" stroke="#b6bcc4" stroke-width="2.5" stroke-dasharray="7 7"/>
 </svg>
