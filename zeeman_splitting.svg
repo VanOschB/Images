@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="600" viewBox="0 0 1100 600" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified Zeeman splitting diagram</title>
+  <desc id="desc">At B equals zero the electron spin states are degenerate at E zero. At nonzero B the states split symmetrically, with energy separation Delta E sub Z equal to mu sub B times B.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#171717"/>
+    </marker>
+    <style>
+      .panel { fill: #fbfdff; stroke: #191919; stroke-width: 2.5; }
+      .math { font: italic 22px Georgia, 'Times New Roman', serif; fill: #111; }
+      .state { font: 21px Arial, Helvetica, sans-serif; }
+      .level { stroke-width: 5; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <rect width="1100" height="600" fill="#fff"/>
+
+  <!-- B = 0 -->
+  <rect x="40" y="35" width="430" height="530" rx="36" class="panel"/>
+  <text x="255" y="88" class="math" text-anchor="middle">B = 0</text>
+  <path d="M105 500 V135" fill="none" stroke="#171717" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="86" y="135" class="math" text-anchor="middle">E</text>
+
+  <path d="M155 300 H415" class="level" stroke="#4c5968"/>
+  <text x="285" y="274" class="math" text-anchor="middle">E<tspan baseline-shift="sub" font-size="14">0</tspan></text>
+  <text x="285" y="400" class="math" text-anchor="middle">
+    E<tspan baseline-shift="sub" font-size="13">up</tspan>
+    <tspan baseline-shift="baseline" font-size="22"> = E</tspan><tspan baseline-shift="sub" font-size="13">down</tspan>
+    <tspan baseline-shift="baseline" font-size="22"> = E</tspan><tspan baseline-shift="sub" font-size="14">0</tspan>
+  </text>
+
+  <!-- B > 0 -->
+  <rect x="500" y="35" width="560" height="530" rx="36" class="panel"/>
+  <text x="780" y="88" class="math" text-anchor="middle">B &gt; 0</text>
+  <path d="M565 500 V135" fill="none" stroke="#171717" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="546" y="135" class="math" text-anchor="middle">E</text>
+
+  <path d="M610 300 H1015" fill="none" stroke="#9aa4af" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="625" y="286" class="math" fill="#66717e">E<tspan baseline-shift="sub" font-size="14">0</tspan></text>
+
+  <path d="M650 190 H870" class="level" stroke="#e52d35"/>
+  <text x="760" y="160" class="math" text-anchor="middle">
+    E<tspan baseline-shift="sub" font-size="13">up</tspan>
+    <tspan baseline-shift="baseline" font-size="22"> = E</tspan><tspan baseline-shift="sub" font-size="14">0</tspan>
+    <tspan baseline-shift="baseline" font-size="22"> + ½ μ</tspan><tspan baseline-shift="sub" font-size="14">B</tspan><tspan baseline-shift="baseline" font-size="22">B</tspan>
+  </text>
+
+  <path d="M650 410 H870" class="level" stroke="#0c438b"/>
+  <text x="760" y="452" class="math" text-anchor="middle">
+    E<tspan baseline-shift="sub" font-size="13">down</tspan>
+    <tspan baseline-shift="baseline" font-size="22"> = E</tspan><tspan baseline-shift="sub" font-size="14">0</tspan>
+    <tspan baseline-shift="baseline" font-size="22"> − ½ μ</tspan><tspan baseline-shift="sub" font-size="14">B</tspan><tspan baseline-shift="baseline" font-size="22">B</tspan>
+  </text>
+
+  <path d="M920 195 V405" fill="none" stroke="#171717" stroke-width="2.8" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="936" y="290" class="math">
+    ΔE<tspan baseline-shift="sub" font-size="14">Z</tspan>
+  </text>
+  <text x="936" y="322" class="math">
+    = μ<tspan baseline-shift="sub" font-size="14">B</tspan><tspan baseline-shift="baseline" font-size="22">B</tspan>
+  </text>
+
+  <!-- Degenerate level splitting into the two Zeeman levels. -->
+  <path d="M438 300 C495 300 540 245 622 195" fill="none" stroke="#b6bcc4" stroke-width="2.5" stroke-dasharray="7 7"/>
+  <path d="M438 300 C495 300 540 355 622 405" fill="none" stroke="#b6bcc4" stroke-width="2.5" stroke-dasharray="7 7"/>
+</svg>
