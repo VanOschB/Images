@@ -1,16 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1016" height="861" viewBox="0 0 1016 861" role="img" aria-labelledby="title desc">
   <title id="title">Double quantum dot and charge sensor schematic</title>
-  <desc id="desc">A charge sensor above a double quantum dot, with all three dots styled as labeled blue quantum-dot islands, plus a gate-voltage response plot.</desc>
+  <desc id="desc">A charge sensor above a double quantum dot, with three unlabelled blue quantum-dot islands, warm gold source and drain reservoirs, and uniform Coulomb blockade peaks.</desc>
   <defs>
     <radialGradient id="dotGradient" cx="42%" cy="36%" r="72%">
       <stop offset="0%" stop-color="#f7fbff"/>
       <stop offset="55%" stop-color="#c9dcfa"/>
       <stop offset="100%" stop-color="#92b8ef"/>
     </radialGradient>
-    <linearGradient id="metalGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f0f0f0"/>
-      <stop offset="55%" stop-color="#cfcfcf"/>
-      <stop offset="100%" stop-color="#b7b7b7"/>
+    <!-- Match the original schematic: pale gold at the outer edge and richer gold toward each dot. -->
+    <linearGradient id="sourceGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff6dc"/>
+      <stop offset="58%" stop-color="#ffe2a0"/>
+      <stop offset="100%" stop-color="#f3c45f"/>
+    </linearGradient>
+    <linearGradient id="drainGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f3c45f"/>
+      <stop offset="42%" stop-color="#ffe2a0"/>
+      <stop offset="100%" stop-color="#fff6dc"/>
     </linearGradient>
     <linearGradient id="barrierGradient" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#56baff"/>
@@ -34,8 +40,6 @@
       .dot { fill: url(#dotGradient); stroke: #0c438b; stroke-width: 2.4; filter: url(#softShadow); }
       .barrier { fill: url(#barrierGradient); stroke: #0b253b; stroke-width: 2.5; }
       .gate { fill: #55b8f2; stroke: #0b253b; stroke-width: 3; }
-      .dot-title { font: 700 14px Arial, Helvetica, sans-serif; fill: #050505; text-anchor: middle; }
-      .dot-copy { font: 12px Arial, Helvetica, sans-serif; fill: #111; text-anchor: middle; }
       .plot-label { font: 700 22px Arial, Helvetica, sans-serif; fill: #111; }
     </style>
   </defs>
@@ -43,8 +47,8 @@
   <rect width="1016" height="861" fill="#fff"/>
 
   <!-- Top charge-sensor reservoirs and tunnel barriers -->
-  <path d="M18 338 H91 C122 338 141 357 141 389 V426 C141 456 122 474 91 474 H18 Z" fill="url(#metalGradient)" class="outline"/>
-  <path d="M355 339 H463 V474 H391 C361 474 344 456 344 426 V389 C344 357 363 339 391 339 Z" fill="url(#metalGradient)" class="outline"/>
+  <path d="M18 338 H91 C122 338 141 357 141 389 V426 C141 456 122 474 91 474 H18 Z" fill="url(#sourceGradient)" class="outline"/>
+  <path d="M355 339 H463 V474 H391 C361 474 344 456 344 426 V389 C344 357 363 339 391 339 Z" fill="url(#drainGradient)" class="outline"/>
   <path d="M140 394 L184 398 L184 423 L140 427 Z" class="barrier"/>
   <path d="M312 398 L345 394 L345 427 L312 423 Z" class="barrier"/>
 
@@ -53,39 +57,23 @@
   <rect x="245" y="242" width="14" height="78" rx="7" class="gate"/>
   <rect x="299" y="242" width="14" height="78" rx="7" class="gate" transform="rotate(1 306 281)"/>
 
-  <!-- Charge-sensor dot, restyled to match the reference quantum dot -->
+  <!-- Charge-sensor dot -->
   <circle cx="248" cy="409" r="64" class="dot"/>
-  <text x="248" y="386" class="dot-title">
-    <tspan x="248">Charge Sensor</tspan>
-    <tspan x="248" dy="18" class="dot-copy">Quantum Dot</tspan>
-    <tspan x="248" dy="17" class="dot-copy" font-style="italic">(N<tspan baseline-shift="sub" font-size="9">s</tspan> electrons)</tspan>
-    <tspan x="248" dy="18" class="dot-copy" font-family="Georgia, serif" font-style="italic">E<tspan baseline-shift="sub" font-size="9">s</tspan>(N<tspan baseline-shift="sub" font-size="9">s</tspan>)</tspan>
-  </text>
 
   <!-- Capacitive link from sensor to double dot -->
   <path d="M248 473 V516 M223 527 H273 M223 540 H273 M248 540 V590" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round"/>
   <text x="282" y="537" font-family="Georgia, serif" font-size="20" font-style="italic">C<tspan baseline-shift="sub" font-size="13">m</tspan></text>
 
   <!-- Bottom reservoirs and tunnel barriers -->
-  <path d="M18 599 H76 C106 599 124 618 124 648 V715 C124 745 106 763 76 763 H18 Z" fill="url(#metalGradient)" class="outline"/>
-  <path d="M394 599 H493 V763 H431 C401 763 383 745 383 715 V648 C383 618 401 599 431 599 Z" fill="url(#metalGradient)" class="outline"/>
+  <path d="M18 599 H76 C106 599 124 618 124 648 V715 C124 745 106 763 76 763 H18 Z" fill="url(#sourceGradient)" class="outline"/>
+  <path d="M394 599 H493 V763 H431 C401 763 383 745 383 715 V648 C383 618 401 599 431 599 Z" fill="url(#drainGradient)" class="outline"/>
   <path d="M123 651 L143 654 L143 707 L123 710 Z" class="barrier"/>
   <path d="M258 655 H277 V707 H258 Z" class="barrier"/>
   <path d="M368 654 L384 651 L384 710 L368 707 Z" class="barrier"/>
 
-  <!-- Double quantum dots, restyled to match the reference quantum dot -->
+  <!-- Double quantum dots -->
   <circle cx="202" cy="681" r="66" class="dot"/>
   <circle cx="326" cy="681" r="66" class="dot"/>
-  <text x="202" y="656" class="dot-title">
-    <tspan x="202">Quantum Dot 1</tspan>
-    <tspan x="202" dy="20" class="dot-copy" font-style="italic">(N<tspan baseline-shift="sub" font-size="9">1</tspan> electrons)</tspan>
-    <tspan x="202" dy="20" class="dot-copy" font-family="Georgia, serif" font-style="italic">E<tspan baseline-shift="sub" font-size="9">1</tspan>(N<tspan baseline-shift="sub" font-size="9">1</tspan>)</tspan>
-  </text>
-  <text x="326" y="656" class="dot-title">
-    <tspan x="326">Quantum Dot 2</tspan>
-    <tspan x="326" dy="20" class="dot-copy" font-style="italic">(N<tspan baseline-shift="sub" font-size="9">2</tspan> electrons)</tspan>
-    <tspan x="326" dy="20" class="dot-copy" font-family="Georgia, serif" font-style="italic">E<tspan baseline-shift="sub" font-size="9">2</tspan>(N<tspan baseline-shift="sub" font-size="9">2</tspan>)</tspan>
-  </text>
 
   <!-- Bottom gate electrodes -->
   <rect x="174" y="776" width="14" height="72" rx="5" class="gate" transform="rotate(1 181 812)"/>
@@ -101,22 +89,22 @@
   <text x="558" y="476" class="plot-label" text-anchor="middle" transform="rotate(-90 558 476)">Signal</text>
   <text x="778" y="622" class="plot-label" text-anchor="middle">V<tspan baseline-shift="sub" font-size="15">g</tspan> (Gate Voltage)</text>
 
-  <!-- Solid blue charge-sensor peaks -->
-  <path d="M592 523
-           C611 521 620 503 624 472 C628 438 627 351 634 351 C641 351 641 439 646 475 C650 507 659 523 678 523
-           C695 523 700 509 702 480 C705 447 700 363 707 363 C714 363 713 446 718 480 C722 509 731 523 748 523
-           C765 523 770 508 772 478 C775 444 771 365 778 365 C785 365 784 444 789 479 C793 510 802 523 819 523
-           C836 523 842 509 844 479 C847 445 843 363 850 363 C857 363 856 445 861 479 C865 510 874 523 891 523
-           C908 523 914 507 916 476 C919 442 916 362 923 362 C930 362 929 443 934 478 C938 509 948 523 970 523"
+  <!-- Uniform Coulomb blockade peaks: identical profile, height, and 70 px period. -->
+  <path d="M585 523
+           C603 523 610 512 614 480 C618 450 616 351 620 351 C624 351 622 450 626 480 C630 512 637 523 655 523
+           C673 523 680 512 684 480 C688 450 686 351 690 351 C694 351 692 450 696 480 C700 512 707 523 725 523
+           C743 523 750 512 754 480 C758 450 756 351 760 351 C764 351 762 450 766 480 C770 512 777 523 795 523
+           C813 523 820 512 824 480 C828 450 826 351 830 351 C834 351 832 450 836 480 C840 512 847 523 865 523
+           C883 523 890 512 894 480 C898 450 896 351 900 351 C904 351 902 450 906 480 C910 512 917 523 935 523"
         fill="none" stroke="#0b52ff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- Dashed red shifted peaks -->
-  <path d="M633 523
-           C653 521 663 503 667 471 C670 438 675 350 682 350 C689 350 693 438 697 472 C701 505 711 523 730 523
-           C748 523 757 506 761 474 C765 440 743 351 750 351 C757 351 765 440 769 474 C773 506 783 523 801 523
-           C819 523 828 506 832 474 C836 440 808 351 815 351 C822 351 836 440 840 474 C844 506 854 523 872 523
-           C890 523 899 506 903 474 C907 440 876 351 883 351 C890 351 907 440 911 474 C915 506 925 523 943 523
-           C953 523 966 518 978 514"
+  <!-- Identical red peak train shifted by exactly half a period. -->
+  <path d="M620 523
+           C638 523 645 512 649 480 C653 450 651 351 655 351 C659 351 657 450 661 480 C665 512 672 523 690 523
+           C708 523 715 512 719 480 C723 450 721 351 725 351 C729 351 727 450 731 480 C735 512 742 523 760 523
+           C778 523 785 512 789 480 C793 450 791 351 795 351 C799 351 797 450 801 480 C805 512 812 523 830 523
+           C848 523 855 512 859 480 C863 450 861 351 865 351 C869 351 867 450 871 480 C875 512 882 523 900 523
+           C918 523 925 512 929 480 C933 450 931 351 935 351 C939 351 937 450 941 480 C945 512 952 523 970 523"
         fill="none" stroke="#f3272d" stroke-width="3" stroke-dasharray="8 7" stroke-linecap="round" stroke-linejoin="round"/>
 
   <!-- Shift arrows -->
