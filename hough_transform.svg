@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Hough transform from pixel space to line-parameter space</title>
+  <desc id="desc">Three straight lines in pixel space are represented by sampled pixels. Each pixel maps to a sinusoidal curve in Hough parameter space. Curves from pixels on the same line intersect at one accumulator peak, identifying that line's theta and rho parameters.</desc>
+  <defs>
+    <marker id="arrowBlack" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#171717"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#15498f"/>
+    </marker>
+    <filter id="peakGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <clipPath id="pixelClip"><rect x="90" y="150" width="410" height="410"/></clipPath>
+    <clipPath id="houghClip"><rect x="700" y="150" width="410" height="410"/></clipPath>
+    <style>
+      .panel { fill: #fbfdff; stroke: #191919; stroke-width: 2.5; }
+      .panel-title { font: 700 22px Arial, Helvetica, sans-serif; fill: #111; text-anchor: middle; }
+      .axis-label { font: italic 20px Georgia, 'Times New Roman', serif; fill: #111; }
+      .tick { font: 14px Arial, Helvetica, sans-serif; fill: #505963; }
+      .grid { stroke: #dfe5eb; stroke-width: 1; }
+      .axis { stroke: #171717; stroke-width: 2.5; fill: none; }
+      .curve-blue { fill: none; stroke: #0b52ff; stroke-width: 2.1; opacity: .38; }
+      .curve-red { fill: none; stroke: #e52d35; stroke-width: 2.1; opacity: .38; }
+      .curve-gold { fill: none; stroke: #d89a21; stroke-width: 2.1; opacity: .42; }
+      .line-label { font: 700 17px Arial, Helvetica, sans-serif; paint-order: stroke; stroke: #fff; stroke-width: 4px; }
+      .math { font: italic 20px Georgia, 'Times New Roman', serif; fill: #111; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="650" fill="#fff"/>
+  <text x="600" y="38" class="math" text-anchor="middle">ρ = x cos θ + y sin θ</text>
+
+  <!-- Pixel/image space. -->
+  <rect x="20" y="70" width="520" height="540" rx="34" class="panel"/>
+  <text x="280" y="112" class="panel-title">Pixel space (x, y)</text>
+
+  <!-- Pixel-space grid. -->
+  <g clip-path="url(#pixelClip)">
+    <path d="M172 150 V560 M254 150 V560 M336 150 V560 M418 150 V560" class="grid"/>
+    <path d="M90 232 H500 M90 314 H500 M90 396 H500 M90 478 H500" class="grid"/>
+
+    <!-- Three straight lines. -->
+    <path d="M90 252.3 L500 489.0" fill="none" stroke="#0b52ff" stroke-width="4" stroke-linecap="round"/>
+    <path d="M90 465.3 L500 228.6" fill="none" stroke="#e52d35" stroke-width="4" stroke-linecap="round"/>
+    <path d="M377 150 V560" fill="none" stroke="#d89a21" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Sampled edge pixels that cast votes in Hough space. -->
+    <g fill="#0b52ff" stroke="#fff" stroke-width="2">
+      <circle cx="131" cy="276.0" r="7"/><circle cx="295" cy="370.6" r="7"/><circle cx="459" cy="465.3" r="7"/>
+    </g>
+    <g fill="#e52d35" stroke="#fff" stroke-width="2">
+      <circle cx="131" cy="441.6" r="7"/><circle cx="295" cy="347.0" r="7"/><circle cx="459" cy="252.3" r="7"/>
+    </g>
+    <g fill="#d89a21" stroke="#fff" stroke-width="2">
+      <circle cx="377" cy="478" r="7"/><circle cx="377" cy="355" r="7"/><circle cx="377" cy="232" r="7"/>
+    </g>
+  </g>
+
+  <path d="M90 560 H510" class="axis" marker-end="url(#arrowBlack)"/>
+  <path d="M90 560 V140" class="axis" marker-end="url(#arrowBlack)"/>
+  <text x="515" y="586" class="axis-label">x</text>
+  <text x="68" y="142" class="axis-label">y</text>
+  <text x="86" y="583" class="tick">0</text><text x="288" y="583" class="tick">5</text><text x="490" y="583" class="tick">10</text>
+  <text x="69" y="564" class="tick">0</text><text x="69" y="360" class="tick">5</text><text x="61" y="155" class="tick">10</text>
+  <text x="474" y="474" class="line-label" fill="#0b52ff">A</text>
+  <text x="474" y="241" class="line-label" fill="#e52d35">B</text>
+  <text x="388" y="174" class="line-label" fill="#b77a08">C</text>
+
+  <!-- Mapping arrow. -->
+  <path d="M558 330 H632" fill="none" stroke="#15498f" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <text x="595" y="306" class="math" text-anchor="middle" font-size="17">H</text>
+
+  <!-- Hough parameter space. -->
+  <rect x="650" y="70" width="520" height="540" rx="34" class="panel"/>
+  <text x="910" y="112" class="panel-title">Hough space (θ, ρ)</text>
+
+  <!-- Parameter-space grid. -->
+  <g clip-path="url(#houghClip)">
+    <path d="M768.3 150 V560 M905 150 V560 M1041.7 150 V560" class="grid"/>
+    <path d="M700 184.2 H1110 M700 269.6 H1110 M700 355 H1110 M700 440.4 H1110 M700 525.8 H1110" class="grid"/>
+
+    <!-- Each sampled pixel maps to a sinusoidal curve ρ(θ). -->
+    <polyline class="curve-blue" points="700.0,473.4 722.8,468.6 745.6,460.4 768.3,449.0 791.1,434.7 813.9,418.0 836.7,399.4 859.4,379.4 882.2,358.7 905.0,337.9 927.8,317.6 950.6,298.5 973.3,281.0 996.1,265.8 1018.9,253.4 1041.7,244.0 1064.4,237.9 1087.2,235.5 1110.0,236.6"/>
+    <polyline class="curve-blue" points="700.0,433.9 722.8,417.9 745.6,399.9 768.3,380.6 791.1,360.5 813.9,340.3 836.7,320.5 859.4,301.7 882.2,284.6 905.0,269.6 927.8,257.2 950.6,247.7 973.3,241.6 996.1,238.8 1018.9,239.7 1041.7,244.0 1064.4,251.6 1087.2,262.5 1110.0,276.1"/>
+    <polyline class="curve-blue" points="700.0,394.5 722.8,367.2 745.6,339.5 768.3,312.3 791.1,286.4 813.9,262.6 836.7,241.6 859.4,224.0 882.2,210.4 905.0,201.2 927.8,196.7 950.6,197.0 973.3,202.1 996.1,211.9 1018.9,225.9 1041.7,244.0 1064.4,265.3 1087.2,289.4 1110.0,315.5"/>
+
+    <polyline class="curve-red" points="700.0,404.3 722.8,400.6 745.6,395.5 768.3,389.2 791.1,381.8 813.9,373.6 836.7,364.9 859.4,355.8 882.2,346.7 905.0,337.9 927.8,329.6 950.6,322.1 973.3,315.5 996.1,310.2 1018.9,306.2 1041.7,303.8 1064.4,302.8 1087.2,303.5 1110.0,305.7"/>
+    <polyline class="curve-red" points="700.0,443.8 722.8,427.6 745.6,409.2 768.3,389.2 791.1,368.1 813.9,346.6 836.7,325.4 859.4,305.1 882.2,286.3 905.0,269.6 927.8,255.5 950.6,244.4 973.3,236.6 996.1,232.5 1018.9,232.1 1041.7,235.4 1064.4,242.4 1087.2,252.7 1110.0,266.2"/>
+    <polyline class="curve-red" points="700.0,483.2 722.8,454.6 745.6,422.9 768.3,389.2 791.1,354.4 813.9,319.6 836.7,286.0 859.4,254.4 882.2,225.9 905.0,201.2 927.8,181.3 950.6,166.7 973.3,157.7 996.1,154.8 1018.9,157.9 1041.7,167.1 1064.4,181.9 1087.2,202.0 1110.0,226.8"/>
+
+    <polyline class="curve-gold" points="700.0,389.2 722.8,367.9 745.6,346.2 768.3,324.8 791.1,304.3 813.9,285.4 836.7,268.5 859.4,254.3 882.2,243.2 905.0,235.4 927.8,231.3 950.6,230.9 973.3,234.4 996.1,241.4 1018.9,252.0 1041.7,265.6 1064.4,282.0 1087.2,300.6 1110.0,320.8"/>
+    <polyline class="curve-gold" points="700.0,440.4 722.8,418.4 745.6,394.4 768.3,369.2 791.1,343.6 813.9,318.3 836.7,294.1 859.4,271.8 882.2,252.1 905.0,235.4 927.8,222.4 950.6,213.4 973.3,208.7 996.1,208.5 1018.9,212.7 1041.7,221.2 1064.4,233.8 1087.2,250.1 1110.0,269.6"/>
+    <polyline class="curve-gold" points="700.0,491.7 722.8,468.8 745.6,442.5 768.3,413.6 791.1,382.8 813.9,351.2 836.7,319.8 859.4,289.4 882.2,261.0 905.0,235.4 927.8,213.5 950.6,195.9 973.3,183.1 996.1,175.5 1018.9,173.4 1041.7,176.9 1064.4,185.7 1087.2,199.6 1110.0,218.3"/>
+
+    <!-- Accumulator peaks: one intersection for each image-space line. -->
+    <g opacity=".24" filter="url(#peakGlow)">
+      <circle cx="1041.7" cy="244.0" r="13" fill="#0b52ff"/>
+      <circle cx="768.3" cy="389.2" r="13" fill="#e52d35"/>
+      <circle cx="905" cy="235.4" r="13" fill="#d89a21"/>
+    </g>
+    <circle cx="1041.7" cy="244.0" r="7" fill="#0b52ff" stroke="#fff" stroke-width="2"/>
+    <circle cx="768.3" cy="389.2" r="7" fill="#e52d35" stroke="#fff" stroke-width="2"/>
+    <circle cx="905" cy="235.4" r="7" fill="#d89a21" stroke="#fff" stroke-width="2"/>
+  </g>
+
+  <path d="M700 560 H1120" class="axis" marker-end="url(#arrowBlack)"/>
+  <path d="M700 560 V140" class="axis" marker-end="url(#arrowBlack)"/>
+  <text x="1124" y="586" class="axis-label">θ</text>
+  <text x="677" y="142" class="axis-label">ρ</text>
+  <text x="685" y="583" class="tick">−90°</text><text x="897" y="583" class="tick">0°</text><text x="1092" y="583" class="tick">90°</text>
+  <text x="668" y="530" class="tick">−10</text><text x="682" y="360" class="tick">0</text><text x="672" y="189" class="tick">10</text>
+
+  <text x="1051" y="235" class="line-label" fill="#0b52ff">A</text>
+  <text x="777" y="380" class="line-label" fill="#e52d35">B</text>
+  <text x="914" y="226" class="line-label" fill="#b77a08">C</text>
+
+  <g class="tick">
+    <circle cx="714" cy="595" r="4" fill="#6e7883"/>
+    <text x="726" y="600">pixel votes</text>
+    <circle cx="815" cy="595" r="6" fill="#15498f" stroke="#fff" stroke-width="1.5"/>
+    <text x="827" y="600">line peaks</text>
+  </g>
+</svg>
