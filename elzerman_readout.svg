@@ -43,6 +43,9 @@
       .up-level { stroke: #e52d35; stroke-width: 3.5; stroke-linecap: round; }
       .down-level { stroke: #0c438b; stroke-width: 3.5; stroke-linecap: round; }
       .axis { fill: none; stroke: #171717; stroke-width: 2.5; }
+      .step-divider { fill: none; stroke: #b8c3cf; stroke-width: 2; stroke-dasharray: 6 7; }
+      .step-badge { fill: #fff; stroke: #15498f; stroke-width: 2.2; }
+      .step-number { font: 700 16px Arial, Helvetica, sans-serif; fill: #15498f; text-anchor: middle; dominant-baseline: middle; }
     </style>
   </defs>
 
@@ -57,6 +60,15 @@
 
   <!-- Spin-up branch: tunnel out, then reload spin down. -->
   <rect x="38" y="66" width="1124" height="278" rx="34" class="panel"/>
+  <g id="up-step-guides">
+    <path d="M365 92 V320 M636 92 V320" class="step-divider"/>
+    <circle cx="274" cy="104" r="17" class="step-badge"/>
+    <circle cx="545" cy="104" r="17" class="step-badge"/>
+    <circle cx="816" cy="104" r="17" class="step-badge"/>
+    <text x="274" y="104" class="step-number">1</text>
+    <text x="545" y="104" class="step-number">2</text>
+    <text x="816" y="104" class="step-number">3</text>
+  </g>
   <text x="78" y="218" class="math" fill="#e52d35" text-anchor="middle">E<tspan baseline-shift="sub" font-size="13">up</tspan></text>
 
   <!-- Snapshot 1: spin up in the dot. -->
@@ -114,6 +126,15 @@
 
   <!-- Spin-down branch: the electron remains in the dot. -->
   <rect x="38" y="366" width="1124" height="278" rx="34" class="panel"/>
+  <g id="down-step-guides">
+    <path d="M365 392 V620 M636 392 V620" class="step-divider"/>
+    <circle cx="274" cy="404" r="17" class="step-badge"/>
+    <circle cx="545" cy="404" r="17" class="step-badge"/>
+    <circle cx="816" cy="404" r="17" class="step-badge"/>
+    <text x="274" y="404" class="step-number">1</text>
+    <text x="545" y="404" class="step-number">2</text>
+    <text x="816" y="404" class="step-number">3</text>
+  </g>
   <text x="78" y="518" class="math" fill="#0c438b" text-anchor="middle">E<tspan baseline-shift="sub" font-size="13">down</tspan></text>
 
   <g id="down-initial">
