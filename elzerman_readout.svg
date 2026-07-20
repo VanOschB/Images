@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Energy-selective Elzerman spin readout</title>
+  <desc id="desc">For energy alignment E down below reservoir chemical potential mu R below E up, a spin-up electron tunnels out and a spin-down electron reloads, creating a charge-sensor pulse. A spin-down electron remains in the dot and produces no pulse.</desc>
+  <defs>
+    <radialGradient id="dotGradient" cx="38%" cy="34%" r="72%">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="55%" stop-color="#c9dcfa"/>
+      <stop offset="100%" stop-color="#91b8ef"/>
+    </radialGradient>
+    <linearGradient id="goldGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff6dc"/>
+      <stop offset="58%" stop-color="#ffe2a0"/>
+      <stop offset="100%" stop-color="#f3c45f"/>
+    </linearGradient>
+    <linearGradient id="barrierGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#56baff"/>
+      <stop offset="50%" stop-color="#bfe5ff"/>
+      <stop offset="100%" stop-color="#43a9f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#17365d" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrowBlack" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#171717"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#e52d35"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#0c438b"/>
+    </marker>
+    <marker id="arrowWhite" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#fff"/>
+    </marker>
+    <style>
+      .panel { fill: #fbfdff; stroke: #191919; stroke-width: 2.5; }
+      .math { font: italic 21px Georgia, 'Times New Roman', serif; fill: #111; }
+      .state { font: 700 30px Arial, Helvetica, sans-serif; }
+      .smallmath { font: italic 16px Georgia, 'Times New Roman', serif; fill: #111; }
+      .dot { fill: url(#dotGradient); stroke: #0c438b; stroke-width: 2.4; filter: url(#shadow); }
+      .reservoir { fill: url(#goldGradient); stroke: #111; stroke-width: 2.5; }
+      .barrier { fill: url(#barrierGradient); stroke: #0b253b; stroke-width: 2; }
+      .up-level { stroke: #e52d35; stroke-width: 3.5; stroke-linecap: round; }
+      .down-level { stroke: #0c438b; stroke-width: 3.5; stroke-linecap: round; }
+      .axis { fill: none; stroke: #171717; stroke-width: 2.5; }
+      .step-divider { fill: none; stroke: #b8c3cf; stroke-width: 2; stroke-dasharray: 6 7; }
+      .step-badge { fill: #fff; stroke: #15498f; stroke-width: 2.2; }
+      .step-number { font: 700 16px Arial, Helvetica, sans-serif; fill: #15498f; text-anchor: middle; dominant-baseline: middle; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="700" fill="#fff"/>
+
+  <!-- Energy-selective readout condition. -->
+  <text x="600" y="42" class="math" text-anchor="middle">
+    E<tspan baseline-shift="sub" font-size="13">down</tspan>
+    <tspan baseline-shift="baseline" font-size="21"> &lt; μ</tspan><tspan baseline-shift="sub" font-size="14">R</tspan>
+    <tspan baseline-shift="baseline" font-size="21"> &lt; E</tspan><tspan baseline-shift="sub" font-size="13">up</tspan>
+  </text>
+
+  <!-- Spin-up branch: tunnel out, then reload spin down. -->
+  <rect x="38" y="66" width="1124" height="278" rx="34" class="panel"/>
+  <g id="up-step-guides">
+    <path d="M365 92 V320 M636 92 V320" class="step-divider"/>
+    <circle cx="274" cy="104" r="17" class="step-badge"/>
+    <circle cx="545" cy="104" r="17" class="step-badge"/>
+    <circle cx="816" cy="104" r="17" class="step-badge"/>
+    <text x="274" y="104" class="step-number">1</text>
+    <text x="545" y="104" class="step-number">2</text>
+    <text x="816" y="104" class="step-number">3</text>
+  </g>
+  <text x="78" y="218" class="math" fill="#e52d35" text-anchor="middle">E<tspan baseline-shift="sub" font-size="13">up</tspan></text>
+
+  <!-- Snapshot 1: spin up in the dot. -->
+  <g id="up-initial">
+    <path d="M126 146 H177 C196 146 208 158 208 177 V233 C208 252 196 264 177 264 H126 Z" class="reservoir"/>
+    <path d="M208 191 L219 194 L219 216 L208 219 Z" class="barrier"/>
+    <circle cx="274" cy="205" r="55" class="dot"/>
+    <path d="M242 182 H306" class="up-level"/>
+    <path d="M242 228 H306" class="down-level"/>
+    <path d="M137 205 H197" fill="none" stroke="#5c6670" stroke-width="2.2" stroke-dasharray="6 5"/>
+    <text x="141" y="194" class="smallmath">μ<tspan baseline-shift="sub" font-size="11">R</tspan></text>
+    <circle cx="274" cy="182" r="9" fill="#e52d35" stroke="#8f1118" stroke-width="1.5"/>
+    <path d="M274 187 V177" fill="none" stroke="#fff" stroke-width="2" marker-end="url(#arrowWhite)"/>
+  </g>
+
+  <path d="M342 205 H382" fill="none" stroke="#171717" stroke-width="2.5" marker-end="url(#arrowBlack)"/>
+
+  <!-- Snapshot 2: spin-up electron tunnels to the reservoir. -->
+  <g id="up-out">
+    <path d="M397 146 H448 C467 146 479 158 479 177 V233 C479 252 467 264 448 264 H397 Z" class="reservoir"/>
+    <path d="M479 191 L490 194 L490 216 L479 219 Z" class="barrier"/>
+    <circle cx="545" cy="205" r="55" class="dot"/>
+    <path d="M513 182 H577" class="up-level"/>
+    <path d="M513 228 H577" class="down-level"/>
+    <path d="M408 205 H468" fill="none" stroke="#5c6670" stroke-width="2.2" stroke-dasharray="6 5"/>
+    <circle cx="430" cy="182" r="9" fill="#e52d35" stroke="#8f1118" stroke-width="1.5"/>
+    <path d="M430 187 V177" fill="none" stroke="#fff" stroke-width="2" marker-end="url(#arrowWhite)"/>
+    <path d="M522 169 C503 150 474 151 447 172" fill="none" stroke="#e52d35" stroke-width="3" marker-end="url(#arrowRed)"/>
+    <text x="486" y="143" class="smallmath" text-anchor="middle">Γ<tspan baseline-shift="sub" font-size="11">out</tspan></text>
+  </g>
+
+  <path d="M613 205 H653" fill="none" stroke="#171717" stroke-width="2.5" marker-end="url(#arrowBlack)"/>
+
+  <!-- Snapshot 3: spin-down electron reloads. -->
+  <g id="down-reload">
+    <path d="M668 146 H719 C738 146 750 158 750 177 V233 C750 252 738 264 719 264 H668 Z" class="reservoir"/>
+    <path d="M750 191 L761 194 L761 216 L750 219 Z" class="barrier"/>
+    <circle cx="816" cy="205" r="55" class="dot"/>
+    <path d="M784 182 H848" class="up-level"/>
+    <path d="M784 228 H848" class="down-level"/>
+    <path d="M679 205 H739" fill="none" stroke="#5c6670" stroke-width="2.2" stroke-dasharray="6 5"/>
+    <circle cx="816" cy="228" r="9" fill="#0c438b" stroke="#052959" stroke-width="1.5"/>
+    <path d="M816 223 V233" fill="none" stroke="#fff" stroke-width="2" marker-end="url(#arrowWhite)"/>
+    <path d="M694 239 C717 257 754 255 785 237" fill="none" stroke="#0c438b" stroke-width="3" marker-end="url(#arrowBlue)"/>
+    <text x="740" y="278" class="smallmath" text-anchor="middle">Γ<tspan baseline-shift="sub" font-size="11">in</tspan></text>
+  </g>
+
+  <!-- Charge-sensor pulse. -->
+  <g id="up-trace">
+    <path d="M918 285 V132 M918 285 H1130" class="axis" marker-end="url(#arrowBlack)"/>
+    <text x="900" y="139" class="smallmath" text-anchor="middle">I<tspan baseline-shift="sub" font-size="11">CS</tspan></text>
+    <text x="1135" y="305" class="smallmath">t</text>
+    <path d="M934 258 H974 V172 H1060 V258 H1115" fill="none" stroke="#e52d35" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Spin-down branch: the electron remains in the dot. -->
+  <rect x="38" y="366" width="1124" height="278" rx="34" class="panel"/>
+  <g id="down-step-guides">
+    <path d="M365 392 V620 M636 392 V620" class="step-divider"/>
+    <circle cx="274" cy="404" r="17" class="step-badge"/>
+    <circle cx="545" cy="404" r="17" class="step-badge"/>
+    <circle cx="816" cy="404" r="17" class="step-badge"/>
+    <text x="274" y="404" class="step-number">1</text>
+    <text x="545" y="404" class="step-number">2</text>
+    <text x="816" y="404" class="step-number">3</text>
+  </g>
+  <text x="78" y="518" class="math" fill="#0c438b" text-anchor="middle">E<tspan baseline-shift="sub" font-size="13">down</tspan></text>
+
+  <g id="down-initial">
+    <path d="M126 446 H177 C196 446 208 458 208 477 V533 C208 552 196 564 177 564 H126 Z" class="reservoir"/>
+    <path d="M208 491 L219 494 L219 516 L208 519 Z" class="barrier"/>
+    <circle cx="274" cy="505" r="55" class="dot"/>
+    <path d="M242 482 H306" class="up-level"/>
+    <path d="M242 528 H306" class="down-level"/>
+    <path d="M137 505 H197" fill="none" stroke="#5c6670" stroke-width="2.2" stroke-dasharray="6 5"/>
+    <text x="141" y="494" class="smallmath">μ<tspan baseline-shift="sub" font-size="11">R</tspan></text>
+    <circle cx="274" cy="528" r="9" fill="#0c438b" stroke="#052959" stroke-width="1.5"/>
+    <path d="M274 523 V533" fill="none" stroke="#fff" stroke-width="2" marker-end="url(#arrowWhite)"/>
+  </g>
+
+  <path d="M342 505 H382" fill="none" stroke="#171717" stroke-width="2.5" marker-end="url(#arrowBlack)"/>
+
+  <g id="down-middle">
+    <path d="M397 446 H448 C467 446 479 458 479 477 V533 C479 552 467 564 448 564 H397 Z" class="reservoir"/>
+    <path d="M479 491 L490 494 L490 516 L479 519 Z" class="barrier"/>
+    <circle cx="545" cy="505" r="55" class="dot"/>
+    <path d="M513 482 H577" class="up-level"/>
+    <path d="M513 528 H577" class="down-level"/>
+    <path d="M408 505 H468" fill="none" stroke="#5c6670" stroke-width="2.2" stroke-dasharray="6 5"/>
+    <circle cx="545" cy="528" r="9" fill="#0c438b" stroke="#052959" stroke-width="1.5"/>
+    <path d="M545 523 V533" fill="none" stroke="#fff" stroke-width="2" marker-end="url(#arrowWhite)"/>
+  </g>
+
+  <path d="M613 505 H653" fill="none" stroke="#171717" stroke-width="2.5" marker-end="url(#arrowBlack)"/>
+
+  <g id="down-final">
+    <path d="M668 446 H719 C738 446 750 458 750 477 V533 C750 552 738 564 719 564 H668 Z" class="reservoir"/>
+    <path d="M750 491 L761 494 L761 516 L750 519 Z" class="barrier"/>
+    <circle cx="816" cy="505" r="55" class="dot"/>
+    <path d="M784 482 H848" class="up-level"/>
+    <path d="M784 528 H848" class="down-level"/>
+    <path d="M679 505 H739" fill="none" stroke="#5c6670" stroke-width="2.2" stroke-dasharray="6 5"/>
+    <circle cx="816" cy="528" r="9" fill="#0c438b" stroke="#052959" stroke-width="1.5"/>
+    <path d="M816 523 V533" fill="none" stroke="#fff" stroke-width="2" marker-end="url(#arrowWhite)"/>
+  </g>
+
+  <!-- Flat charge-sensor trace. -->
+  <g id="down-trace">
+    <path d="M918 585 V432 M918 585 H1130" class="axis" marker-end="url(#arrowBlack)"/>
+    <text x="900" y="439" class="smallmath" text-anchor="middle">I<tspan baseline-shift="sub" font-size="11">CS</tspan></text>
+    <text x="1135" y="605" class="smallmath">t</text>
+    <path d="M934 558 H1115" fill="none" stroke="#0c438b" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
