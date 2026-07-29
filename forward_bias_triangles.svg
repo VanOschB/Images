@@ -39,11 +39,13 @@
   <text class="state" x="207" y="686" text-anchor="middle">(1,0)</text>
   <text class="state" x="723" y="686" text-anchor="middle">(2,0)</text>
 
-  <!-- Charge-transition boundaries; central diagonal is x+y=992 -->
-  <path class="boundary" d="M399 104 L507 485"/>
-  <path class="boundary" d="M507 485 L895 484"/>
-  <path class="boundary" d="M115 425 L440 552"/>
-  <path class="boundary" d="M440 552 L398 833"/>
+  <!-- Charge-transition boundaries aligned to the reflected finite-bias vertices.
+       The upper boundaries meet (599,382) and (679,533); the lower
+       boundaries meet (347,637) and (481,700). The central diagonal is x+y=992. -->
+  <path class="boundary" d="M510 103 L599 382"/>
+  <path class="boundary" d="M507 485 L679 533 L895 593"/>
+  <path class="boundary" d="M115 584 L347 637"/>
+  <path class="boundary" d="M440 552 L481 700 L518 833"/>
 
   <!-- Reflected forward-bias triangles.
        Reverse-bias vertices were (459,313),(610,393),(507,485) and
@@ -70,9 +72,9 @@
   <path d="M502 566 L684 566" fill="none" stroke="#000" stroke-width="2" marker-start="url(#measureArrow)" marker-end="url(#measureArrow)"/>
   <text class="measure" x="593" y="607" text-anchor="middle">δV<tspan baseline-shift="sub" font-size="20">g1</tspan></text>
 
-  <!-- Chemical-potential labels -->
-  <text class="equation" x="432" y="148" transform="rotate(74 432 148)">μ₁(1,1) = μ₁(2,1)</text>
-  <text class="equation" x="667" y="338" transform="rotate(14 667 338)">μ₂(2,1) = μ₂(2,0)</text>
-  <text class="equation" x="136" y="404" transform="rotate(21 136 404)">μ₂(1,1) = μ₂(1,0)</text>
-  <text class="equation" x="200" y="780">μ₁(1,0) = μ₁(2,0)</text>
+  <!-- Chemical-potential labels, oriented along the corrected boundaries -->
+  <text class="equation" x="535" y="125" transform="rotate(72.3 535 125)">μ₁(1,1) = μ₁(2,1)</text>
+  <text class="equation" x="690" y="550" transform="rotate(15.5 690 550)">μ₂(2,1) = μ₂(2,0)</text>
+  <text class="equation" x="135" y="560" transform="rotate(12.9 135 560)">μ₂(1,1) = μ₂(1,0)</text>
+  <text class="equation" x="493" y="710" transform="rotate(74.5 493 710)">μ₁(1,0) = μ₁(2,0)</text>
 </svg>
