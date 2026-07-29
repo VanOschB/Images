@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="930" height="893" viewBox="0 0 930 893" role="img" aria-labelledby="title desc">
+  <title id="title">Forward-bias double-quantum-dot bias triangles</title>
+  <desc id="desc">Charge-stability diagram in the forward-bias regime. The two bias triangles are the geometric reflections of their reverse-bias positions across the diagonal transition line separating the (1,1) and (2,0) charge states.</desc>
+  <defs>
+    <marker id="axisArrow" viewBox="0 0 10 10" refX="8.2" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/>
+    </marker>
+    <marker id="measureArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/>
+    </marker>
+    <style>
+      .boundary { fill: none; stroke: #050505; stroke-width: 3.7; stroke-linecap: round; stroke-linejoin: round; }
+      .triangle { fill: #c9c9c9; stroke: #050505; stroke-width: 3.7; stroke-linejoin: round; }
+      .guide { fill: none; stroke: #111; stroke-width: 2; stroke-dasharray: 2 5; stroke-linecap: round; }
+      .state { font-family: "Times New Roman", Times, serif; font-size: 42px; fill: #000; }
+      .equation {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 23px;
+        font-style: italic;
+        fill: #000;
+        stroke: #fff;
+        stroke-width: 9px;
+        stroke-linejoin: round;
+        paint-order: stroke fill;
+      }
+      .measure { font-family: "Times New Roman", Times, serif; font-size: 31px; font-style: italic; fill: #000; }
+      .axis-label { font-family: "Times New Roman", Times, serif; font-size: 43px; font-style: italic; fill: #000; }
+    </style>
+  </defs>
+
+  <rect width="930" height="893" fill="#fff"/>
+
+  <!-- Title -->
+  <text x="505" y="50" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" fill="#000">
+    Forward-bias regime <tspan font-family="Times New Roman, Times, serif" font-style="italic">(V</tspan><tspan font-family="Times New Roman, Times, serif" font-style="italic" baseline-shift="sub" font-size="24">sd</tspan><tspan font-family="Times New Roman, Times, serif" font-style="italic"> ≠ 0)</tspan>
+  </text>
+
+  <!-- Plot frame and coordinate axes -->
+  <rect x="115" y="103" width="780" height="730" fill="none" stroke="#050505" stroke-width="3"/>
+  <path d="M79 854 L79 63" fill="none" stroke="#000" stroke-width="4" marker-end="url(#axisArrow)"/>
+  <path d="M79 854 L924 854" fill="none" stroke="#000" stroke-width="4" marker-end="url(#axisArrow)"/>
+  <text class="axis-label" x="52" y="458" text-anchor="end">V<tspan baseline-shift="sub" font-size="27">g2</tspan></text>
+  <text class="axis-label" x="472" y="887" text-anchor="middle">V<tspan baseline-shift="sub" font-size="27">g1</tspan></text>
+
+  <!-- Charge-state regions -->
+  <text class="state" x="252" y="272" text-anchor="middle">(1,1)</text>
+  <text class="state" x="728" y="272" text-anchor="middle">(2,1)</text>
+  <text class="state" x="207" y="686" text-anchor="middle">(1,0)</text>
+  <text class="state" x="723" y="686" text-anchor="middle">(2,0)</text>
+
+  <!-- Charge-transition boundaries aligned to the reflected finite-bias vertices.
+       The upper boundaries meet (599,382) and (679,533); the lower
+       boundaries meet (347,637) and (481,700). The central diagonal is x+y=992. -->
+  <path class="boundary" d="M510 103 L599 382"/>
+  <path class="boundary" d="M507 485 L679 533 L895 593"/>
+  <path class="boundary" d="M115 584 L347 637"/>
+  <path class="boundary" d="M440 552 L481 700 L518 833"/>
+
+  <!-- Reflected forward-bias triangles.
+       Reverse-bias vertices were (459,313),(610,393),(507,485) and
+       (292,511),(355,645),(440,552). Reflection in x+y=992 gives: -->
+  <path class="triangle" d="M507 485 L599 382 L679 533 Z"/>
+  <path class="triangle" d="M440 552 L347 637 L481 700 Z"/>
+
+  <!-- The (1,1)-(2,0) interdot transition line / reflection axis -->
+  <path class="boundary" d="M507 485 L440 552"/>
+
+  <!-- Triple points and reflected finite-bias vertices -->
+  <circle cx="507" cy="485" r="8" fill="#000"/>
+  <circle cx="440" cy="552" r="8" fill="#000"/>
+  <circle cx="599" cy="382" r="9" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <circle cx="679" cy="533" r="9" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <circle cx="347" cy="637" r="9" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <circle cx="481" cy="700" r="9" fill="#fff" stroke="#000" stroke-width="2.5"/>
+
+  <!-- Gate-voltage extents of the upper forward-bias triangle -->
+  <path class="guide" d="M599 370 L744 370 M679 545 L744 545"/>
+  <path d="M737 376 L737 539" fill="none" stroke="#000" stroke-width="2" marker-start="url(#measureArrow)" marker-end="url(#measureArrow)"/>
+  <text class="measure" x="765" y="468">δV<tspan baseline-shift="sub" font-size="20">g2</tspan></text>
+  <path class="guide" d="M495 485 L495 573 M691 533 L691 573"/>
+  <path d="M502 566 L684 566" fill="none" stroke="#000" stroke-width="2" marker-start="url(#measureArrow)" marker-end="url(#measureArrow)"/>
+  <text class="measure" x="593" y="607" text-anchor="middle">δV<tspan baseline-shift="sub" font-size="20">g1</tspan></text>
+
+  <!-- Chemical-potential labels, offset from the corrected boundaries.
+       A white paint-order stroke provides additional clearance from all linework. -->
+  <text class="equation" x="545" y="120" transform="rotate(72.3 545 120)">μ₁(1,1) = μ₁(2,1)</text>
+  <text class="equation" x="690" y="575" transform="rotate(15.5 690 575)">μ₂(2,1) = μ₂(2,0)</text>
+  <text class="equation" x="135" y="560" transform="rotate(12.9 135 560)">μ₂(1,1) = μ₂(1,0)</text>
+  <text class="equation" x="510" y="700" transform="rotate(74.5 510 700)">μ₁(1,0) = μ₁(2,0)</text>
+</svg>
