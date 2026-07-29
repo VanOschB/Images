@@ -13,7 +13,16 @@
       .triangle { fill: #c9c9c9; stroke: #050505; stroke-width: 3.7; stroke-linejoin: round; }
       .guide { fill: none; stroke: #111; stroke-width: 2; stroke-dasharray: 2 5; stroke-linecap: round; }
       .state { font-family: "Times New Roman", Times, serif; font-size: 42px; fill: #000; }
-      .equation { font-family: "Times New Roman", Times, serif; font-size: 23px; font-style: italic; fill: #000; }
+      .equation {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 23px;
+        font-style: italic;
+        fill: #000;
+        stroke: #fff;
+        stroke-width: 9px;
+        stroke-linejoin: round;
+        paint-order: stroke fill;
+      }
       .measure { font-family: "Times New Roman", Times, serif; font-size: 31px; font-style: italic; fill: #000; }
       .axis-label { font-family: "Times New Roman", Times, serif; font-size: 43px; font-style: italic; fill: #000; }
     </style>
@@ -72,9 +81,10 @@
   <path d="M502 566 L684 566" fill="none" stroke="#000" stroke-width="2" marker-start="url(#measureArrow)" marker-end="url(#measureArrow)"/>
   <text class="measure" x="593" y="607" text-anchor="middle">δV<tspan baseline-shift="sub" font-size="20">g1</tspan></text>
 
-  <!-- Chemical-potential labels, oriented along the corrected boundaries -->
-  <text class="equation" x="535" y="125" transform="rotate(72.3 535 125)">μ₁(1,1) = μ₁(2,1)</text>
-  <text class="equation" x="690" y="550" transform="rotate(15.5 690 550)">μ₂(2,1) = μ₂(2,0)</text>
+  <!-- Chemical-potential labels, offset from the corrected boundaries.
+       A white paint-order stroke provides additional clearance from all linework. -->
+  <text class="equation" x="545" y="120" transform="rotate(72.3 545 120)">μ₁(1,1) = μ₁(2,1)</text>
+  <text class="equation" x="690" y="575" transform="rotate(15.5 690 575)">μ₂(2,1) = μ₂(2,0)</text>
   <text class="equation" x="135" y="560" transform="rotate(12.9 135 560)">μ₂(1,1) = μ₂(1,0)</text>
-  <text class="equation" x="493" y="710" transform="rotate(74.5 493 710)">μ₁(1,0) = μ₁(2,0)</text>
+  <text class="equation" x="510" y="700" transform="rotate(74.5 510 700)">μ₁(1,0) = μ₁(2,0)</text>
 </svg>
