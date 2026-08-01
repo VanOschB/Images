@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
   <title id="title">Overlapping-gate silicon MOS heterostructure with two-dimensional quadratic confinement</title>
-  <desc id="desc">Cross-section of patterned upper metal gates supported directly by a continuous aluminium oxide dielectric, a continuous lower metal gate layer supported by silicon dioxide, and a silicon substrate. A thin electron sheet forms at the silicon-silicon-dioxide interface. A top-view inset shows an approximately quadratic two-dimensional lateral potential and its confined ground-state electron density.</desc>
+  <desc id="desc">Cross-section of patterned upper metal gates supported directly by a continuous aluminium oxide dielectric, a continuous inset lower metal gate layer with aluminium oxide filling both side gaps above silicon dioxide, and a silicon substrate. A thin electron sheet forms at the silicon-silicon-dioxide interface. A top-view inset shows an approximately quadratic two-dimensional lateral potential and its confined ground-state electron density.</desc>
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#fbfdff"/>
@@ -76,8 +76,8 @@
     <rect x="45" y="510" width="1110" height="90" fill="url(#oxide)"/>
     <rect x="45" y="350" width="1110" height="160" fill="url(#alumina)"/>
 
-    <!-- Metal gate layer 1: one uninterrupted bar spanning the full device width. -->
-    <rect x="45" y="425" width="1110" height="85" fill="url(#blueMetal)" stroke="#0b2e64" stroke-width="3"/>
+    <!-- Metal gate layer 1: one uninterrupted inset bar; Al2O3 fills both side gaps. -->
+    <rect x="105" y="425" width="990" height="85" fill="url(#blueMetal)" stroke="#0b2e64" stroke-width="3"/>
 
     <!-- Upper gates have flat bottoms in direct contact with the continuous Al2O3 surface. -->
     <g stroke="#523500" stroke-width="3" stroke-linejoin="round">

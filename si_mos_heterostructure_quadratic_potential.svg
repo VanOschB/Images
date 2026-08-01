@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
   <title id="title">Silicon MOS heterostructure with a quadratic voltage potential</title>
-  <desc id="desc">A minimal layered silicon MOS device. A continuous first metal gate layer sits between silicon dioxide and aluminium oxide, with patterned second-layer gates above. A two-dimensional quadratic voltage-potential map has its minimum directly beneath the central plunger gate.</desc>
+  <desc id="desc">A minimal layered silicon MOS device. A continuous first metal gate layer is inset symmetrically so aluminium oxide fills both side gaps above silicon dioxide; patterned second-layer gates sit above. A two-dimensional quadratic voltage-potential map has its minimum directly beneath the central plunger gate.</desc>
   <defs>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#a86a00"/>
@@ -63,8 +63,8 @@
     <rect x="45" y="420" width="1110" height="120" fill="url(#oxide)"/>
     <rect x="45" y="250" width="1110" height="170" fill="url(#alumina)"/>
 
-    <!-- Metal gate layer 1: one continuous bar, fully supported by SiO2 and flush with Al2O3 -->
-    <rect x="45" y="338" width="1110" height="82" fill="url(#blue)" stroke="#0c2e63" stroke-width="3"/>
+    <!-- Metal gate layer 1: one continuous inset bar, fully supported by SiO2; Al2O3 fills both side gaps. -->
+    <rect x="105" y="338" width="990" height="82" fill="url(#blue)" stroke="#0c2e63" stroke-width="3"/>
 
     <!-- Metal gate layer 2: central narrow gate is the plunger; every gate sits flush on Al2O3 -->
     <g stroke="#583800" stroke-width="3" stroke-linejoin="round">
