@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Solid-layer silicon MOS heterostructure</title>
+  <desc id="desc">A minimal stack of five continuous full-width layers: Metal Gate Layer 2, aluminium oxide, Metal Gate Layer 1, silicon dioxide, and silicon. No electron wavefunction or voltage-potential graphic is shown.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a86a00"/>
+      <stop offset="0.32" stop-color="#f5bd20"/>
+      <stop offset="0.55" stop-color="#ffe57a"/>
+      <stop offset="0.8" stop-color="#d99500"/>
+      <stop offset="1" stop-color="#8c5700"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17468f"/>
+      <stop offset="0.45" stop-color="#4d89e4"/>
+      <stop offset="0.72" stop-color="#2867c3"/>
+      <stop offset="1" stop-color="#123b7a"/>
+    </linearGradient>
+    <linearGradient id="alumina" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dfeecb"/>
+      <stop offset="1" stop-color="#a9cf86"/>
+    </linearGradient>
+    <linearGradient id="oxide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a078cb"/>
+      <stop offset="0.5" stop-color="#d6baf0"/>
+      <stop offset="1" stop-color="#9971c5"/>
+    </linearGradient>
+    <linearGradient id="silicon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfd3d7"/>
+      <stop offset="1" stop-color="#9ca3a9"/>
+    </linearGradient>
+    <pattern id="grain" width="14" height="14" patternUnits="userSpaceOnUse">
+      <path d="M0 4H14M3 10H12" stroke="#fff" stroke-opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="900" fill="#f6f8fa"/>
+
+  <!-- Five continuous, gap-free layers. -->
+  <rect x="45" y="45" width="1110" height="180" fill="url(#gold)"/>
+  <rect x="45" y="45" width="1110" height="180" fill="url(#grain)"/>
+  <rect x="45" y="225" width="1110" height="170" fill="url(#alumina)"/>
+  <rect x="45" y="395" width="1110" height="165" fill="url(#blue)"/>
+  <rect x="45" y="560" width="1110" height="145" fill="url(#oxide)"/>
+  <rect x="45" y="705" width="1110" height="150" fill="url(#silicon)"/>
+
+  <!-- Interfaces and border. -->
+  <g stroke="#171b20" stroke-width="3" fill="none">
+    <line x1="45" y1="225" x2="1155" y2="225"/>
+    <line x1="45" y1="395" x2="1155" y2="395"/>
+    <line x1="45" y1="560" x2="1155" y2="560"/>
+    <line x1="45" y1="705" x2="1155" y2="705"/>
+    <rect x="42" y="42" width="1116" height="816"/>
+  </g>
+
+  <!-- Only layer names are visible. -->
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">
+    <text x="600" y="145" font-size="34" fill="#211600">Metal Gate Layer 2</text>
+    <text x="600" y="320" font-size="34" fill="#29451e">Al<tspan baseline-shift="sub" font-size="22">2</tspan>O<tspan baseline-shift="sub" font-size="22">3</tspan></text>
+    <text x="600" y="490" font-size="34" fill="#f5f9ff">Metal Gate Layer 1</text>
+    <text x="600" y="650" font-size="34" fill="#2f184c">SiO<tspan baseline-shift="sub" font-size="22">2</tspan></text>
+    <text x="600" y="795" font-size="36" fill="#273039">Si</text>
+  </g>
+</svg>

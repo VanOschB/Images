@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Overlapping-gate silicon MOS heterostructure with two-dimensional quadratic confinement</title>
+  <desc id="desc">Cross-section of patterned upper metal gates supported directly by a continuous aluminium oxide dielectric, a continuous inset lower metal gate layer with aluminium oxide filling both side gaps above silicon dioxide, and a silicon substrate. A thin electron sheet forms at the silicon-silicon-dioxide interface. A top-view inset shows an approximately quadratic two-dimensional lateral potential and its confined ground-state electron density.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbfdff"/>
+      <stop offset="1" stop-color="#edf2f7"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9a6200"/>
+      <stop offset="0.25" stop-color="#f0b91a"/>
+      <stop offset="0.52" stop-color="#ffe577"/>
+      <stop offset="0.78" stop-color="#d79300"/>
+      <stop offset="1" stop-color="#865300"/>
+    </linearGradient>
+    <linearGradient id="blueMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#153e85"/>
+      <stop offset="0.38" stop-color="#4f8de9"/>
+      <stop offset="0.7" stop-color="#2869ca"/>
+      <stop offset="1" stop-color="#123a78"/>
+    </linearGradient>
+    <linearGradient id="alumina" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e1f0cf"/>
+      <stop offset="1" stop-color="#a8ce85"/>
+    </linearGradient>
+    <linearGradient id="oxide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9f75cf"/>
+      <stop offset="0.5" stop-color="#d8bdf2"/>
+      <stop offset="1" stop-color="#9670c3"/>
+    </linearGradient>
+    <linearGradient id="silicon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ced2d6"/>
+      <stop offset="1" stop-color="#9da4aa"/>
+    </linearGradient>
+    <linearGradient id="sheet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#13a8e8" stop-opacity="0"/>
+      <stop offset="0.27" stop-color="#13a8e8" stop-opacity="0.25"/>
+      <stop offset="0.5" stop-color="#d9ffff" stop-opacity="1"/>
+      <stop offset="0.73" stop-color="#13a8e8" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#13a8e8" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="potentialMap" cx="50%" cy="50%" r="67%">
+      <stop offset="0" stop-color="#073b78"/>
+      <stop offset="0.18" stop-color="#116ab1"/>
+      <stop offset="0.42" stop-color="#35b8da"/>
+      <stop offset="0.68" stop-color="#a8e7d7"/>
+      <stop offset="1" stop-color="#fff0a6"/>
+    </radialGradient>
+    <radialGradient id="density2d" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="0.25" stop-color="#c6fbff" stop-opacity="0.95"/>
+      <stop offset="0.58" stop-color="#3be6ff" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#20aee5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="metalGrain" width="13" height="13" patternUnits="userSpaceOnUse">
+      <path d="M0 3H13M2 9H11" stroke="#fff" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+    <filter id="sheetGlow" x="-10%" y="-300%" width="120%" height="700%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#174b73"/>
+    </marker>
+    <clipPath id="stackClip">
+      <rect x="45" y="110" width="1110" height="740" rx="5"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#background)"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="700" fill="#15263a">Overlapping-gate Si MOS heterostructure</text>
+  <text x="600" y="78" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#586a7d">Cross-section with two-dimensional lateral confinement · not to scale</text>
+
+  <g clip-path="url(#stackClip)">
+    <!-- Every continuous supporting material is drawn first so no voids occur below patterned gates. -->
+    <rect x="45" y="600" width="1110" height="250" fill="url(#silicon)"/>
+    <rect x="45" y="510" width="1110" height="90" fill="url(#oxide)"/>
+    <rect x="45" y="350" width="1110" height="160" fill="url(#alumina)"/>
+
+    <!-- Metal gate layer 1: one uninterrupted inset bar; Al2O3 fills both side gaps. -->
+    <rect x="105" y="425" width="990" height="85" fill="url(#blueMetal)" stroke="#0b2e64" stroke-width="3"/>
+
+    <!-- Upper gates have flat bottoms in direct contact with the continuous Al2O3 surface. -->
+    <g stroke="#523500" stroke-width="3" stroke-linejoin="round">
+      <path d="M70 220Q70 208 82 208H363Q375 208 375 220V350H70Z" fill="url(#gold)"/>
+      <path d="M455 160Q455 148 467 148H733Q745 148 745 160V350H455Z" fill="url(#gold)"/>
+      <path d="M825 220Q825 208 837 208H1118Q1130 208 1130 220V350H825Z" fill="url(#gold)"/>
+    </g>
+    <g fill="url(#metalGrain)" pointer-events="none">
+      <path d="M70 220Q70 208 82 208H363Q375 208 375 220V350H70Z"/>
+      <path d="M455 160Q455 148 467 148H733Q745 148 745 160V350H455Z"/>
+      <path d="M825 220Q825 208 837 208H1118Q1130 208 1130 220V350H825Z"/>
+    </g>
+
+    <!-- Thin inversion-layer electron sheet, matched to the central layer-2 gate width. -->
+    <rect x="455" y="602" width="290" height="8" rx="4" fill="#24c8ef" opacity="0.4" filter="url(#sheetGlow)"/>
+    <rect x="455" y="602" width="290" height="5" rx="2.5" fill="url(#sheet)"/>
+  </g>
+
+  <!-- Exact material interfaces; patterned metal bottoms coincide with the supporting dielectric boundaries. -->
+  <line x1="45" y1="350" x2="1155" y2="350" stroke="#6f8f54" stroke-width="3"/>
+  <line x1="45" y1="510" x2="1155" y2="510" stroke="#38205b" stroke-width="3"/>
+  <line x1="45" y1="600" x2="1155" y2="600" stroke="#3c3150" stroke-width="3"/>
+  <rect x="42" y="107" width="1116" height="746" rx="7" fill="none" stroke="#141d27" stroke-width="5"/>
+
+  <!-- Gate labels -->
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="222" y="256" font-size="26" font-weight="700" fill="#211500">A<tspan baseline-shift="sub" font-size="17">L</tspan></text>
+    <text x="600" y="196" font-size="28" font-weight="700" fill="#211500">P</text>
+    <text x="978" y="256" font-size="26" font-weight="700" fill="#211500">A<tspan baseline-shift="sub" font-size="17">R</tspan></text>
+    <text x="222" y="286" font-size="17" fill="#3c2700">accumulation</text>
+    <text x="600" y="226" font-size="17" fill="#3c2700">plunger</text>
+    <text x="978" y="286" font-size="17" fill="#3c2700">accumulation</text>
+    <text x="222" y="321" font-size="15" font-weight="700" fill="#4a3100">METAL GATE LAYER 2 · 10s of nm</text>
+    <text x="600" y="321" font-size="15" font-weight="700" fill="#4a3100">METAL GATE LAYER 2 · 10s of nm</text>
+    <text x="978" y="321" font-size="15" font-weight="700" fill="#4a3100">METAL GATE LAYER 2 · 10s of nm</text>
+
+    <text x="215" y="467" font-size="24" font-weight="700" fill="#f6fbff">S<tspan baseline-shift="sub" font-size="15">L</tspan></text>
+    <text x="462" y="466" font-size="18" font-weight="700" fill="#f6fbff">B<tspan baseline-shift="sub" font-size="12">L</tspan></text>
+    <text x="738" y="466" font-size="18" font-weight="700" fill="#f6fbff">B<tspan baseline-shift="sub" font-size="12">R</tspan></text>
+    <text x="985" y="467" font-size="24" font-weight="700" fill="#f6fbff">S<tspan baseline-shift="sub" font-size="15">R</tspan></text>
+    <text x="215" y="496" font-size="13" font-weight="700" fill="#eaf3ff">METAL GATE LAYER 1</text>
+    <text x="985" y="496" font-size="13" font-weight="700" fill="#eaf3ff">METAL GATE LAYER 1</text>
+  </g>
+
+  <!-- Material labels and explicit no-void support annotations -->
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="65" y="380" font-size="24" font-weight="700" fill="#29451e">Al<tspan baseline-shift="sub" font-size="16">2</tspan>O<tspan baseline-shift="sub" font-size="16">3</tspan></text>
+    <text x="158" y="380" font-size="17" fill="#3c5d31">continuous interlayer dielectric · 10–20 nm</text>
+    <text x="1135" y="380" text-anchor="end" font-size="15" font-weight="700" fill="#466b37">fills all spaces around layer-1 gates</text>
+    <path d="M1088 389V413H1040" fill="none" stroke="#4f733f" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <text x="65" y="548" font-size="26" font-weight="700" fill="#2e164c">SiO<tspan baseline-shift="sub" font-size="17">2</tspan></text>
+    <text x="65" y="576" font-size="17" fill="#442b5e">continuous gate oxide · 10s of nm</text>
+    <text x="1135" y="551" text-anchor="end" font-size="15" font-weight="700" fill="#533573">all layer-1 gates fully supported</text>
+    <path d="M1090 558H1010V514" fill="none" stroke="#67478a" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <text x="65" y="650" font-size="25" font-weight="700" fill="#27313a">Si substrate</text>
+    <text x="65" y="678" font-size="16" fill="#3e4b55">natural-abundance Si / <tspan baseline-shift="super" font-size="12">28</tspan>Si</text>
+    <text x="65" y="702" font-size="16" fill="#3e4b55">300 mm wafer / 20–90 nm</text>
+
+    <path d="M440 623C420 617 400 611 378 606" fill="none" stroke="#12628e" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="448" y="624" font-size="16" font-weight="700" fill="#075b87">2D electron sheet at Si/SiO<tspan baseline-shift="sub" font-size="11">2</tspan> interface</text>
+  </g>
+
+  <!-- Top-view inset: an in-plane quadratic potential has elliptical equipotential contours. -->
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="390" y="648" width="735" height="178" rx="12" fill="#f8fbfd" fill-opacity="0.86" stroke="#305c75" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="410" y="674" font-size="14" font-weight="700" fill="#496575">TOP VIEW OF THE INTERFACIAL SHEET</text>
+    <text x="1105" y="674" text-anchor="end" font-size="17" font-weight="700" fill="#173e59">V(x,y) = 1/2 m*(ω<tspan baseline-shift="sub" font-size="11">x</tspan>²x² + ω<tspan baseline-shift="sub" font-size="11">y</tspan>²y²)</text>
+
+    <rect x="410" y="688" width="390" height="119" rx="8" fill="url(#potentialMap)" stroke="#214966" stroke-width="2"/>
+    <!-- For equal steps in V, contour radii scale approximately as sqrt(V). -->
+    <g cx="605" cy="747" fill="none" stroke="#f8ffff" stroke-width="1.8" stroke-opacity="0.88">
+      <ellipse cx="605" cy="747" rx="42" ry="18"/>
+      <ellipse cx="605" cy="747" rx="60" ry="26"/>
+      <ellipse cx="605" cy="747" rx="73" ry="32"/>
+      <ellipse cx="605" cy="747" rx="84" ry="37"/>
+      <ellipse cx="605" cy="747" rx="94" ry="42"/>
+      <ellipse cx="605" cy="747" rx="103" ry="46"/>
+    </g>
+    <ellipse cx="605" cy="747" rx="52" ry="27" fill="url(#density2d)"/>
+    <circle cx="605" cy="747" r="8" fill="#ffffff" stroke="#075b87" stroke-width="2"/>
+    <text x="605" y="752" text-anchor="middle" font-size="13" font-weight="700" fill="#075b87">e<tspan baseline-shift="super" font-size="9">−</tspan></text>
+
+    <path d="M430 790H478" stroke="#173e59" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M430 790V705" stroke="#173e59" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="484" y="795" font-size="15" font-style="italic" fill="#173e59">x</text>
+    <text x="421" y="705" font-size="15" font-style="italic" fill="#173e59">y</text>
+
+    <text x="825" y="710" font-size="16" font-weight="700" fill="#173e59">Approx. quadratic in-plane confinement</text>
+    <text x="825" y="738" font-size="15" fill="#355a70">elliptical equipotential contours in x–y</text>
+    <text x="825" y="764" font-size="15" fill="#355a70">Gaussian |ψ<tspan baseline-shift="sub" font-size="10">0</tspan>(x,y)|² at the minimum</text>
+    <text x="825" y="790" font-size="14" fill="#526d7d">dark = low V · light = high V</text>
+  </g>
+</svg>

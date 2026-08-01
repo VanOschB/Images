@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Silicon MOS heterostructure with a quadratic voltage potential</title>
+  <desc id="desc">A minimal layered silicon MOS device. A continuous first metal gate layer is inset symmetrically so aluminium oxide fills both side gaps above silicon dioxide; patterned second-layer gates sit above. A two-dimensional quadratic voltage-potential map has its minimum directly beneath the central plunger gate.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a86a00"/>
+      <stop offset="0.32" stop-color="#f5bd20"/>
+      <stop offset="0.55" stop-color="#ffe57a"/>
+      <stop offset="0.8" stop-color="#d99500"/>
+      <stop offset="1" stop-color="#8c5700"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17468f"/>
+      <stop offset="0.45" stop-color="#4d89e4"/>
+      <stop offset="0.72" stop-color="#2867c3"/>
+      <stop offset="1" stop-color="#123b7a"/>
+    </linearGradient>
+    <linearGradient id="alumina" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dfeecb"/>
+      <stop offset="1" stop-color="#a9cf86"/>
+    </linearGradient>
+    <linearGradient id="oxide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a078cb"/>
+      <stop offset="0.5" stop-color="#d6baf0"/>
+      <stop offset="1" stop-color="#9971c5"/>
+    </linearGradient>
+    <linearGradient id="silicon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfd3d7"/>
+      <stop offset="1" stop-color="#9ca3a9"/>
+    </linearGradient>
+    <radialGradient id="potential" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#061d5c"/>
+      <stop offset="0.18" stop-color="#074c91"/>
+      <stop offset="0.38" stop-color="#168fc2"/>
+      <stop offset="0.62" stop-color="#58d1d0"/>
+      <stop offset="0.82" stop-color="#c3e8bb"/>
+      <stop offset="1" stop-color="#ffe596"/>
+    </radialGradient>
+    <pattern id="grain" width="14" height="14" patternUnits="userSpaceOnUse">
+      <path d="M0 4H14M3 10H12" stroke="#fff" stroke-opacity="0.1"/>
+    </pattern>
+    <filter id="softShadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
+      <feOffset dy="7" result="offset"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.25"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="stack">
+      <rect x="42" y="42" width="1116" height="816" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="900" fill="#f6f8fa"/>
+
+  <g clip-path="url(#stack)">
+    <!-- Continuous supporting layers -->
+    <rect x="45" y="540" width="1110" height="315" fill="url(#silicon)"/>
+    <rect x="45" y="420" width="1110" height="120" fill="url(#oxide)"/>
+    <rect x="45" y="250" width="1110" height="170" fill="url(#alumina)"/>
+
+    <!-- Metal gate layer 1: one continuous inset bar, fully supported by SiO2; Al2O3 fills both side gaps. -->
+    <rect x="105" y="338" width="990" height="82" fill="url(#blue)" stroke="#0c2e63" stroke-width="3"/>
+
+    <!-- Metal gate layer 2: central narrow gate is the plunger; every gate sits flush on Al2O3 -->
+    <g stroke="#583800" stroke-width="3" stroke-linejoin="round">
+      <path d="M65 125Q65 113 77 113H397Q409 113 409 125V250H65Z" fill="url(#gold)"/>
+      <path d="M465 62Q465 50 477 50H723Q735 50 735 62V250H465Z" fill="url(#gold)"/>
+      <path d="M791 125Q791 113 803 113H1123Q1135 113 1135 125V250H791Z" fill="url(#gold)"/>
+    </g>
+    <g fill="url(#grain)" pointer-events="none">
+      <path d="M65 125Q65 113 77 113H397Q409 113 409 125V250H65Z"/>
+      <path d="M465 62Q465 50 477 50H723Q735 50 735 62V250H465Z"/>
+      <path d="M791 125Q791 113 803 113H1123Q1135 113 1135 125V250H791Z"/>
+    </g>
+
+    <!-- Quadratic 2D voltage-potential map at the Si/SiO2 interface. -->
+    <!-- The dark minimum at x=600 is vertically aligned with the central plunger gate. -->
+    <g filter="url(#softShadow)">
+      <ellipse cx="600" cy="665" rx="135" ry="57" fill="url(#potential)" stroke="#173f62" stroke-width="3"/>
+      <!-- Equal voltage increments in a quadratic potential give radii proportional to sqrt(V). -->
+      <g fill="none" stroke="#f7ffff" stroke-width="2.2" stroke-opacity="0.88">
+        <ellipse cx="600" cy="665" rx="40" ry="17"/>
+        <ellipse cx="600" cy="665" rx="57" ry="24"/>
+        <ellipse cx="600" cy="665" rx="70" ry="30"/>
+        <ellipse cx="600" cy="665" rx="81" ry="34"/>
+        <ellipse cx="600" cy="665" rx="90" ry="38"/>
+        <ellipse cx="600" cy="665" rx="99" ry="42"/>
+        <ellipse cx="600" cy="665" rx="107" ry="45"/>
+        <ellipse cx="600" cy="665" rx="114" ry="48"/>
+        <ellipse cx="600" cy="665" rx="121" ry="51"/>
+      </g>
+      <ellipse cx="600" cy="665" rx="18" ry="8" fill="#021342" stroke="#bff9ff" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Interfaces and border -->
+  <line x1="45" y1="250" x2="1155" y2="250" stroke="#67844d" stroke-width="3"/>
+  <line x1="45" y1="420" x2="1155" y2="420" stroke="#38205b" stroke-width="3"/>
+  <line x1="45" y1="540" x2="1155" y2="540" stroke="#40344e" stroke-width="3"/>
+  <rect x="42" y="42" width="1116" height="816" rx="8" fill="none" stroke="#141a20" stroke-width="5"/>
+
+  <!-- Only layer names are rendered as text. -->
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    <text x="600" y="165" text-anchor="middle" font-size="27" fill="#241700">Metal Gate Layer 2</text>
+    <text x="82" y="295" font-size="28" fill="#2b491e">Al<tspan baseline-shift="sub" font-size="18">2</tspan>O<tspan baseline-shift="sub" font-size="18">3</tspan></text>
+    <text x="600" y="385" text-anchor="middle" font-size="23" fill="#f5f9ff">Metal Gate Layer 1</text>
+    <text x="82" y="490" font-size="29" fill="#2f184c">SiO<tspan baseline-shift="sub" font-size="19">2</tspan></text>
+    <text x="82" y="810" font-size="31" fill="#273039">Si</text>
+  </g>
+</svg>
