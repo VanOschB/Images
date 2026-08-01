@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Overlapping-gate silicon MOS heterostructure with confined electron wavefunction</title>
+  <desc id="desc">Schematic cross-section of patterned gold upper gates, a conformal aluminium oxide interlayer dielectric, patterned blue lower gates, silicon dioxide, and a silicon substrate. A cyan probability-density lobe is confined in silicon immediately below the silicon dioxide interface.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#edf2f8"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9d6500"/>
+      <stop offset="0.28" stop-color="#f8c52d"/>
+      <stop offset="0.55" stop-color="#ffe36f"/>
+      <stop offset="0.78" stop-color="#d99400"/>
+      <stop offset="1" stop-color="#8a5600"/>
+    </linearGradient>
+    <linearGradient id="blueMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#174b9c"/>
+      <stop offset="0.42" stop-color="#4e89e7"/>
+      <stop offset="0.72" stop-color="#2768c7"/>
+      <stop offset="1" stop-color="#123e83"/>
+    </linearGradient>
+    <linearGradient id="alumina" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#deefca"/>
+      <stop offset="1" stop-color="#a9cf85"/>
+    </linearGradient>
+    <linearGradient id="oxide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a57bd1"/>
+      <stop offset="0.5" stop-color="#d5b8f1"/>
+      <stop offset="1" stop-color="#9c72ca"/>
+    </linearGradient>
+    <linearGradient id="silicon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9cdd2"/>
+      <stop offset="1" stop-color="#9ca3aa"/>
+    </linearGradient>
+    <radialGradient id="wave" cx="50%" cy="12%" r="72%" fx="50%" fy="8%">
+      <stop offset="0" stop-color="#ecffff" stop-opacity="0.98"/>
+      <stop offset="0.18" stop-color="#73ebff" stop-opacity="0.9"/>
+      <stop offset="0.48" stop-color="#1b9ee9" stop-opacity="0.62"/>
+      <stop offset="0.78" stop-color="#1267d5" stop-opacity="0.23"/>
+      <stop offset="1" stop-color="#164cb5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="metalGrain" width="13" height="13" patternUnits="userSpaceOnUse">
+      <path d="M0 3H13M2 9H11" stroke="#fff" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#14243c" flood-opacity="0.25"/>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-80%" width="200%" height="250%">
+      <feGaussianBlur stdDeviation="11"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#123f69"/>
+    </marker>
+    <clipPath id="stackClip">
+      <rect x="42" y="116" width="1116" height="734" rx="7"/>
+    </clipPath>
+    <clipPath id="siliconClip">
+      <rect x="45" y="610" width="1110" height="237"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#background)"/>
+  <text x="600" y="54" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#15263a">Overlapping-gate Si MOS heterostructure</text>
+  <text x="600" y="85" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#586a7d">Schematic cross-section · not to scale</text>
+
+  <g clip-path="url(#stackClip)">
+    <!-- Silicon substrate and thermal oxide -->
+    <rect x="45" y="610" width="1110" height="237" fill="url(#silicon)"/>
+    <rect x="45" y="520" width="1110" height="90" fill="url(#oxide)"/>
+    <line x1="45" y1="610" x2="1155" y2="610" stroke="#412866" stroke-width="3"/>
+
+    <!-- Interlayer Al2O3: blanket dielectric that surrounds the lower gates -->
+    <rect x="45" y="365" width="1110" height="155" fill="url(#alumina)"/>
+    <path d="M45 365H1155" stroke="#7fa45f" stroke-width="4"/>
+
+    <!-- Patterned lower gate layer, embedded in/wrapped by Al2O3 -->
+    <g filter="url(#shadow)" stroke="#0b2e64" stroke-width="3">
+      <path d="M70 520V443Q70 425 88 425H344Q362 425 362 443V520Z" fill="url(#blueMetal)"/>
+      <path d="M432 520V443Q432 425 450 425H478Q496 425 496 443V520Z" fill="url(#blueMetal)"/>
+      <path d="M704 520V443Q704 425 722 425H750Q768 425 768 443V520Z" fill="url(#blueMetal)"/>
+      <path d="M838 520V443Q838 425 856 425H1112Q1130 425 1130 443V520Z" fill="url(#blueMetal)"/>
+    </g>
+    <!-- Explicit conformal dielectric caps and sidewall isolation -->
+    <g fill="none" stroke="#e9f7d9" stroke-width="9" stroke-linejoin="round" opacity="0.9">
+      <path d="M65 520V443Q65 420 88 420H344Q367 420 367 443V520"/>
+      <path d="M427 520V443Q427 420 450 420H478Q501 420 501 443V520"/>
+      <path d="M699 520V443Q699 420 722 420H750Q773 420 773 443V520"/>
+      <path d="M833 520V443Q833 420 856 420H1112Q1135 420 1135 443V520"/>
+    </g>
+    <g fill="none" stroke="#759f56" stroke-width="2" opacity="0.85">
+      <path d="M65 520V443Q65 420 88 420H344Q367 420 367 443V520"/>
+      <path d="M427 520V443Q427 420 450 420H478Q501 420 501 443V520"/>
+      <path d="M699 520V443Q699 420 722 420H750Q773 420 773 443V520"/>
+      <path d="M833 520V443Q833 420 856 420H1112Q1135 420 1135 443V520"/>
+    </g>
+
+    <!-- Patterned upper gates with pad-to-finger geometry -->
+    <g filter="url(#shadow)" stroke="#523500" stroke-width="3" stroke-linejoin="round">
+      <path d="M80 235Q80 220 95 220H375Q390 220 390 235V287H352V365H145V287H80Z" fill="url(#gold)"/>
+      <path d="M455 195Q455 180 470 180H730Q745 180 745 195V260H700V365H500V260H455Z" fill="url(#gold)"/>
+      <path d="M810 235Q810 220 825 220H1105Q1120 220 1120 235V287H1055V365H848V287H810Z" fill="url(#gold)"/>
+    </g>
+    <g fill="url(#metalGrain)" pointer-events="none">
+      <path d="M80 235Q80 220 95 220H375Q390 220 390 235V287H352V365H145V287H80Z"/>
+      <path d="M455 195Q455 180 470 180H730Q745 180 745 195V260H700V365H500V260H455Z"/>
+      <path d="M810 235Q810 220 825 220H1105Q1120 220 1120 235V287H1055V365H848V287H810Z"/>
+    </g>
+
+    <!-- Electron probability density, confined just inside Si below the Si/SiO2 interface -->
+    <g clip-path="url(#siliconClip)">
+      <ellipse cx="600" cy="628" rx="176" ry="77" fill="#39dfff" opacity="0.42" filter="url(#softGlow)"/>
+      <ellipse cx="600" cy="625" rx="151" ry="68" fill="url(#wave)"/>
+      <ellipse cx="600" cy="625" rx="117" ry="48" fill="none" stroke="#c9fbff" stroke-width="3" stroke-opacity="0.78"/>
+      <ellipse cx="600" cy="625" rx="78" ry="31" fill="none" stroke="#efffff" stroke-width="3" stroke-opacity="0.9"/>
+      <ellipse cx="600" cy="625" rx="38" ry="15" fill="#f6ffff" fill-opacity="0.45" stroke="#ffffff" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Outer stack border and interfaces -->
+  <rect x="42" y="116" width="1116" height="734" rx="7" fill="none" stroke="#141d27" stroke-width="5"/>
+  <line x1="45" y1="520" x2="1155" y2="520" stroke="#321b56" stroke-width="3"/>
+
+  <!-- Gate labels -->
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="235" y="258" font-size="24" font-weight="700" fill="#211500">A<tspan baseline-shift="sub" font-size="16">L</tspan></text>
+    <text x="600" y="224" font-size="26" font-weight="700" fill="#211500">P</text>
+    <text x="965" y="258" font-size="24" font-weight="700" fill="#211500">A<tspan baseline-shift="sub" font-size="16">R</tspan></text>
+    <text x="235" y="331" font-size="18" fill="#3c2700">accumulation</text>
+    <text x="600" y="302" font-size="18" fill="#3c2700">plunger</text>
+    <text x="965" y="331" font-size="18" fill="#3c2700">accumulation</text>
+
+    <text x="216" y="470" font-size="25" font-weight="700" fill="#f6fbff">S<tspan baseline-shift="sub" font-size="16">L</tspan></text>
+    <text x="464" y="469" font-size="18" font-weight="700" fill="#f6fbff">B<tspan baseline-shift="sub" font-size="12">L</tspan></text>
+    <text x="736" y="469" font-size="18" font-weight="700" fill="#f6fbff">B<tspan baseline-shift="sub" font-size="12">R</tspan></text>
+    <text x="984" y="470" font-size="25" font-weight="700" fill="#f6fbff">S<tspan baseline-shift="sub" font-size="16">R</tspan></text>
+  </g>
+
+  <!-- Material labels and annotations -->
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g transform="translate(66 137)">
+      <rect width="333" height="58" rx="10" fill="#fff" fill-opacity="0.91" stroke="#bd840b" stroke-width="2"/>
+      <text x="18" y="24" font-size="20" font-weight="700" fill="#432c00">Metal gate layer 2</text>
+      <text x="18" y="47" font-size="16" fill="#655023">patterned electrodes · 10s of nm</text>
+    </g>
+
+    <text x="73" y="393" font-size="25" font-weight="700" fill="#29451e">Al<tspan baseline-shift="sub" font-size="17">2</tspan>O<tspan baseline-shift="sub" font-size="17">3</tspan></text>
+    <text x="170" y="393" font-size="18" fill="#3c5d31">interlayer dielectric · 10–20 nm</text>
+    <path d="M839 397H791Q778 397 778 411V423" fill="none" stroke="#4c743c" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="847" y="391" font-size="16" font-weight="700" fill="#36552c">conformal isolation</text>
+    <text x="847" y="411" font-size="15" fill="#4a6840">over tops and sidewalls</text>
+
+    <text x="216" y="503" text-anchor="middle" font-size="14" font-weight="700" fill="#eaf3ff">metal gate layer 1 · 10s of nm</text>
+
+    <text x="75" y="558" font-size="27" font-weight="700" fill="#2e164c">SiO<tspan baseline-shift="sub" font-size="18">2</tspan></text>
+    <text x="75" y="586" font-size="18" fill="#442b5e">gate oxide · 10s of nm</text>
+
+    <text x="76" y="787" font-size="27" font-weight="700" fill="#27313a">Si substrate</text>
+    <text x="76" y="817" font-size="18" fill="#3e4b55">natural-abundance Si / <tspan baseline-shift="super" font-size="13">28</tspan>Si · 300 mm wafer / 20–90 nm</text>
+
+    <path d="M820 760C780 744 741 704 699 648" fill="none" stroke="#123f69" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="1126" y="692" text-anchor="end" font-size="22" font-weight="700" fill="#0a568f">Confined electron</text>
+    <text x="1126" y="718" text-anchor="end" font-size="20" fill="#0a568f">probability density |ψ(x,z)|²</text>
+    <text x="1126" y="742" text-anchor="end" font-size="16" fill="#37586d">inside Si at the Si/SiO<tspan baseline-shift="sub" font-size="11">2</tspan> interface</text>
+  </g>
+
+  <!-- Gate-to-wavefunction alignment guide -->
+  <path d="M600 365V606" stroke="#164f81" stroke-width="2" stroke-dasharray="7 7" opacity="0.62" marker-end="url(#arrow)"/>
+  <text x="612" y="579" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#255f8c">electrostatic confinement</text>
+</svg>
