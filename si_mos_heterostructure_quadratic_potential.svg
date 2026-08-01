@@ -81,26 +81,20 @@
     <!-- Quadratic 2D voltage-potential map at the Si/SiO2 interface. -->
     <!-- The dark minimum at x=600 is vertically aligned with the central plunger gate. -->
     <g filter="url(#softShadow)">
-      <ellipse cx="600" cy="665" rx="275" ry="116" fill="url(#potential)" stroke="#173f62" stroke-width="3"/>
+      <ellipse cx="600" cy="665" rx="135" ry="57" fill="url(#potential)" stroke="#173f62" stroke-width="3"/>
       <!-- Equal voltage increments in a quadratic potential give radii proportional to sqrt(V). -->
-      <g fill="none" stroke="#f7ffff" stroke-width="2.4" stroke-opacity="0.88">
-        <ellipse cx="600" cy="665" rx="62" ry="26"/>
-        <ellipse cx="600" cy="665" rx="88" ry="37"/>
-        <ellipse cx="600" cy="665" rx="108" ry="46"/>
-        <ellipse cx="600" cy="665" rx="125" ry="53"/>
-        <ellipse cx="600" cy="665" rx="140" ry="59"/>
-        <ellipse cx="600" cy="665" rx="153" ry="65"/>
-        <ellipse cx="600" cy="665" rx="166" ry="70"/>
-        <ellipse cx="600" cy="665" rx="177" ry="75"/>
-        <ellipse cx="600" cy="665" rx="188" ry="79"/>
-        <ellipse cx="600" cy="665" rx="198" ry="84"/>
-        <ellipse cx="600" cy="665" rx="208" ry="88"/>
-        <ellipse cx="600" cy="665" rx="217" ry="92"/>
-        <ellipse cx="600" cy="665" rx="226" ry="96"/>
-        <ellipse cx="600" cy="665" rx="235" ry="99"/>
-        <ellipse cx="600" cy="665" rx="243" ry="103"/>
+      <g fill="none" stroke="#f7ffff" stroke-width="2.2" stroke-opacity="0.88">
+        <ellipse cx="600" cy="665" rx="40" ry="17"/>
+        <ellipse cx="600" cy="665" rx="57" ry="24"/>
+        <ellipse cx="600" cy="665" rx="70" ry="30"/>
+        <ellipse cx="600" cy="665" rx="81" ry="34"/>
+        <ellipse cx="600" cy="665" rx="90" ry="38"/>
+        <ellipse cx="600" cy="665" rx="99" ry="42"/>
+        <ellipse cx="600" cy="665" rx="107" ry="45"/>
+        <ellipse cx="600" cy="665" rx="114" ry="48"/>
+        <ellipse cx="600" cy="665" rx="121" ry="51"/>
       </g>
-      <ellipse cx="600" cy="665" rx="30" ry="13" fill="#021342" stroke="#bff9ff" stroke-width="2"/>
+      <ellipse cx="600" cy="665" rx="18" ry="8" fill="#021342" stroke="#bff9ff" stroke-width="2"/>
     </g>
   </g>
 

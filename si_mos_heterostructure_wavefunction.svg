@@ -91,9 +91,9 @@
       <path d="M825 220Q825 208 837 208H1118Q1130 208 1130 220V350H825Z"/>
     </g>
 
-    <!-- Thin inversion-layer electron sheet immediately inside Si. -->
-    <rect x="365" y="602" width="470" height="8" rx="4" fill="#24c8ef" opacity="0.4" filter="url(#sheetGlow)"/>
-    <rect x="365" y="602" width="470" height="5" rx="2.5" fill="url(#sheet)"/>
+    <!-- Thin inversion-layer electron sheet, matched to the central layer-2 gate width. -->
+    <rect x="455" y="602" width="290" height="8" rx="4" fill="#24c8ef" opacity="0.4" filter="url(#sheetGlow)"/>
+    <rect x="455" y="602" width="290" height="5" rx="2.5" fill="url(#sheet)"/>
   </g>
 
   <!-- Exact material interfaces; patterned metal bottoms coincide with the supporting dielectric boundaries. -->
