@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
   <title id="title">Silicon MOS heterostructure with a quadratic voltage potential</title>
-  <desc id="desc">A minimal layered silicon MOS device. Patterned metal gates sit on continuous dielectric layers. A two-dimensional quadratic voltage-potential map has its minimum directly beneath the central plunger gate.</desc>
+  <desc id="desc">A minimal layered silicon MOS device. A continuous first metal gate layer sits between silicon dioxide and aluminium oxide, with patterned second-layer gates above. A two-dimensional quadratic voltage-potential map has its minimum directly beneath the central plunger gate.</desc>
   <defs>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#a86a00"/>
@@ -63,13 +63,8 @@
     <rect x="45" y="420" width="1110" height="120" fill="url(#oxide)"/>
     <rect x="45" y="250" width="1110" height="170" fill="url(#alumina)"/>
 
-    <!-- Metal gate layer 1: fully supported by SiO2 and embedded in Al2O3 -->
-    <g stroke="#0c2e63" stroke-width="3" stroke-linejoin="round">
-      <path d="M65 420V350Q65 338 77 338H365Q377 338 377 350V420Z" fill="url(#blue)"/>
-      <path d="M440 420V350Q440 338 452 338H492Q504 338 504 350V420Z" fill="url(#blue)"/>
-      <path d="M696 420V350Q696 338 708 338H748Q760 338 760 350V420Z" fill="url(#blue)"/>
-      <path d="M823 420V350Q823 338 835 338H1123Q1135 338 1135 350V420Z" fill="url(#blue)"/>
-    </g>
+    <!-- Metal gate layer 1: one continuous bar, fully supported by SiO2 and flush with Al2O3 -->
+    <rect x="45" y="338" width="1110" height="82" fill="url(#blue)" stroke="#0c2e63" stroke-width="3"/>
 
     <!-- Metal gate layer 2: central narrow gate is the plunger; every gate sits flush on Al2O3 -->
     <g stroke="#583800" stroke-width="3" stroke-linejoin="round">
@@ -119,7 +114,7 @@
   <g font-family="Arial, Helvetica, sans-serif" font-weight="700">
     <text x="600" y="165" text-anchor="middle" font-size="27" fill="#241700">Metal Gate Layer 2</text>
     <text x="82" y="295" font-size="28" fill="#2b491e">Al<tspan baseline-shift="sub" font-size="18">2</tspan>O<tspan baseline-shift="sub" font-size="18">3</tspan></text>
-    <text x="221" y="385" text-anchor="middle" font-size="23" fill="#f5f9ff">Metal Gate Layer 1</text>
+    <text x="600" y="385" text-anchor="middle" font-size="23" fill="#f5f9ff">Metal Gate Layer 1</text>
     <text x="82" y="490" font-size="29" fill="#2f184c">SiO<tspan baseline-shift="sub" font-size="19">2</tspan></text>
     <text x="82" y="810" font-size="31" fill="#273039">Si</text>
   </g>
