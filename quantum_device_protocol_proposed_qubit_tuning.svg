@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1008" height="1010" viewBox="0 0 1008 1010" role="img" aria-labelledby="title desc">
+  <title id="title">Quantum device protocol with proposed Qubit Tuning stage</title>
+  <desc id="desc">A five-stage quantum device protocol flowchart. The fifth stage, Qubit Tuning, is shown with dashed lines, reduced contrast, and a Proposed label to indicate it is not yet a concrete part of the protocol.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#172033" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#182030"/></marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#239b4b"/></marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#ff3038"/></marker>
+    <marker id="arrow-draft" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#9b88bf"/></marker>
+    <style>
+      text { font-family: Inter, Arial, Helvetica, sans-serif; fill: #182030; }
+      .card { stroke-width: 1.5; filter: url(#shadow); }
+      .title { font-size: 16px; font-weight: 700; }
+      .subtitle { font-size: 10.5px; fill: #42526a; }
+      .branch-title { font-size: 14px; font-weight: 700; }
+      .decision { stroke-width: 1.5; }
+      .decision-text { font-size: 13px; text-anchor: middle; }
+      .flow { fill: none; stroke: #182030; stroke-width: 1.5; marker-end: url(#arrow-dark); }
+      .pass-flow { fill: none; stroke: #239b4b; stroke-width: 1.5; marker-end: url(#arrow-green); }
+      .fail-flow { fill: none; stroke: #ff3038; stroke-width: 1.6; stroke-dasharray: 7 6; marker-end: url(#arrow-red); }
+      .fail-label { font-size: 13px; font-weight: 700; fill: #ff3038; }
+      .pass-label { font-size: 13px; font-weight: 700; fill: #239b4b; }
+      .stage-number { font-size: 16px; font-weight: 700; fill: white; text-anchor: middle; dominant-baseline: middle; }
+      .draft-flow { fill: none; stroke: #9b88bf; stroke-width: 1.7; stroke-dasharray: 4 6; marker-end: url(#arrow-draft); }
+    </style>
+  </defs>
+
+  <rect width="1008" height="1010" fill="#ffffff"/>
+
+  <!-- Stage 1: Bootstrapping -->
+  <rect x="54" y="111" width="247" height="86" rx="6" fill="#eef6fc" stroke="#3777bc" class="card"/>
+  <circle cx="58" cy="111" r="17" fill="#3977b9"/>
+  <text x="58" y="111" class="stage-number">1</text>
+  <!-- gear icon -->
+  <g transform="translate(101 154)" fill="#3977b9">
+    <circle r="19"/>
+    <circle r="9" fill="#eef6fc"/>
+    <rect x="-4" y="-26" width="8" height="12" rx="1"/><rect x="-4" y="14" width="8" height="12" rx="1"/>
+    <rect x="14" y="-4" width="12" height="8" rx="1"/><rect x="-26" y="-4" width="12" height="8" rx="1"/>
+    <rect x="-4" y="-26" width="8" height="12" rx="1" transform="rotate(45)"/><rect x="-4" y="14" width="8" height="12" rx="1" transform="rotate(45)"/>
+    <rect x="-4" y="-26" width="8" height="12" rx="1" transform="rotate(-45)"/><rect x="-4" y="14" width="8" height="12" rx="1" transform="rotate(-45)"/>
+  </g>
+  <text x="131" y="143" class="title">Bootstrapping</text>
+  <text x="131" y="161" class="subtitle">Establish a functional device</text>
+
+  <path d="M301 154H323" class="flow"/>
+  <path d="M323 70V265M323 70H339M323 164H339M323 265H339" fill="none" stroke="#182030" stroke-width="1.5" marker-end="url(#arrow-dark)"/>
+
+  <rect x="339" y="38" width="183" height="66" rx="6" fill="#eef6fc" stroke="#3777bc" class="card"/>
+  <text x="430.5" y="65" class="branch-title" text-anchor="middle"><tspan x="430.5">Noise Floor</tspan><tspan x="430.5" dy="18">&amp; Turn-On</tspan></text>
+  <rect x="339" y="132" width="183" height="66" rx="6" fill="#eef6fc" stroke="#3777bc" class="card"/>
+  <text x="430.5" y="159" class="branch-title" text-anchor="middle"><tspan x="430.5">Finger-Gate</tspan><tspan x="430.5" dy="18">Pinch-Offs</tspan></text>
+  <rect x="339" y="232" width="183" height="66" rx="6" fill="#eef6fc" stroke="#3777bc" class="card"/>
+  <text x="430.5" y="259" class="branch-title" text-anchor="middle"><tspan x="430.5">Barrier &amp; Sensor</tspan><tspan x="430.5" dy="18">Working Points</tspan></text>
+
+  <path d="M522 71H532" class="flow"/>
+  <polygon points="532,71 662,31 792,71 662,111" fill="#eef6fc" stroke="#3777bc" class="decision"/>
+  <text x="662" y="66" class="decision-text"><tspan x="662">Both channels</tspan><tspan x="662" dy="18">turn on?</tspan></text>
+  <path d="M522 165H532" class="flow"/>
+  <polygon points="532,165 662,126 792,165 662,204" fill="#eef6fc" stroke="#3777bc" class="decision"/>
+  <text x="662" y="160" class="decision-text"><tspan x="662">All pinch-off windows</tspan><tspan x="662" dy="18">and fits valid?</tspan></text>
+  <path d="M522 265H532" class="flow"/>
+  <polygon points="532,265 662,225 792,265 662,305" fill="#eef6fc" stroke="#3777bc" class="decision"/>
+  <text x="662" y="260" class="decision-text"><tspan x="662">Working and sensing</tspan><tspan x="662" dy="18">points found?</tspan></text>
+
+  <path d="M662 111V126" class="pass-flow"/>
+  <text x="686" y="122" class="pass-label">Pass</text>
+  <path d="M662 204V225" class="pass-flow"/>
+  <text x="686" y="221" class="pass-label">Pass</text>
+  <path d="M662 305V348" class="pass-flow"/>
+  <text x="686" y="331" class="pass-label">Pass</text>
+
+  <!-- Stage 2: Global Dot Characterization -->
+  <rect x="54" y="343" width="247" height="87" rx="6" fill="#f0fbf4" stroke="#269b4c" class="card"/>
+  <circle cx="58" cy="344" r="17" fill="#269b4c"/>
+  <text x="58" y="344" class="stage-number">2</text>
+  <g transform="translate(101 386)" fill="none" stroke="#269b4c" stroke-width="2.5">
+    <circle r="17"/><circle r="7"/><path d="M0-25V-16M0 16V25M-25 0H-16M16 0H25"/>
+  </g>
+  <text x="131" y="371" class="title"><tspan x="131">Global Dot</tspan><tspan x="131" dy="18">Characterization</tspan></text>
+  <text x="131" y="412" class="subtitle">Calibrate sensor and map CSDs</text>
+  <path d="M301 386H532" class="flow"/>
+  <polygon points="532,386 662,347 792,386 662,425" fill="#f0fbf4" stroke="#269b4c" class="decision"/>
+  <text x="662" y="382" class="decision-text"><tspan x="662">Countersweeps calibrated</tspan><tspan x="662" dy="18">and CSDs acquired?</tspan></text>
+  <path d="M662 425V479" class="pass-flow"/>
+  <text x="686" y="457" class="pass-label">Pass</text>
+
+  <!-- Stage 3: Virtual Gating -->
+  <rect x="54" y="474" width="247" height="87" rx="6" fill="#fff8e8" stroke="#e49c16" class="card"/>
+  <circle cx="58" cy="475" r="17" fill="#dfa021"/>
+  <text x="58" y="475" class="stage-number">3</text>
+  <g transform="translate(80 503)" fill="none" stroke="#dfa021" stroke-width="2">
+    <path d="M0 0H43M0 14H43M0 28H43"/>
+    <circle cx="15" cy="0" r="4" fill="#fff8e8"/><circle cx="30" cy="14" r="4" fill="#fff8e8"/><circle cx="19" cy="28" r="4" fill="#fff8e8"/>
+  </g>
+  <text x="131" y="505" class="title">Virtual Gating</text>
+  <text x="131" y="525" class="subtitle">Build the physical-to-virtual map</text>
+  <path d="M301 518H532" class="flow"/>
+  <polygon points="532,518 662,478 792,518 662,557" fill="#fff8e8" stroke="#e49c16" class="decision"/>
+  <text x="662" y="513" class="decision-text"><tspan x="662">Lever-arm matrix</tspan><tspan x="662" dy="18">established?</tspan></text>
+  <path d="M662 557V609" class="pass-flow"/>
+  <text x="686" y="588" class="pass-label">Pass</text>
+
+  <!-- Stage 4: Charge State Characterization -->
+  <rect x="54" y="605" width="247" height="87" rx="6" fill="#f7f2fc" stroke="#8b6bbb" class="card"/>
+  <circle cx="58" cy="606" r="17" fill="#8064ad"/>
+  <text x="58" y="606" class="stage-number">4</text>
+  <g transform="translate(91 638)" fill="#8b6bbb">
+    <rect x="-5" y="-5" width="10" height="10" transform="rotate(45)"/><rect x="14" y="-5" width="10" height="10" transform="rotate(45 19 0)"/>
+    <rect x="-5" y="14" width="10" height="10" transform="rotate(45 0 19)"/><rect x="14" y="14" width="10" height="10" transform="rotate(45 19 19)"/>
+  </g>
+  <text x="131" y="633" class="title"><tspan x="131">Charge State</tspan><tspan x="131" dy="18">Characterization</tspan></text>
+  <text x="131" y="674" class="subtitle">Identify and label occupations</text>
+  <path d="M301 649H532" class="flow"/>
+  <polygon points="532,649 662,609 792,649 662,688" fill="#f7f2fc" stroke="#8b6bbb" class="decision"/>
+  <text x="662" y="644" class="decision-text"><tspan x="662">Charge states identified</tspan><tspan x="662" dy="18">and labeled?</tspan></text>
+
+  <!-- Failure rail for established protocol stages -->
+  <path d="M792 71H940V915" class="fail-flow"/>
+  <path d="M792 165H940" class="fail-flow"/>
+  <path d="M792 265H940" class="fail-flow"/>
+  <path d="M792 386H940" class="fail-flow"/>
+  <path d="M792 518H940" class="fail-flow"/>
+  <path d="M792 649H940" class="fail-flow"/>
+  <text x="848" y="60" class="fail-label">Fail</text>
+  <text x="848" y="154" class="fail-label">Fail</text>
+  <text x="848" y="254" class="fail-label">Fail</text>
+  <text x="848" y="375" class="fail-label">Fail</text>
+  <text x="848" y="507" class="fail-label">Fail</text>
+  <text x="848" y="638" class="fail-label">Fail</text>
+
+  <!-- Proposed fifth stage: visually separated from the established protocol -->
+  <rect x="35" y="716" width="778" height="176" rx="14" fill="#fbfaff" stroke="#b6a7d1" stroke-width="1.5" stroke-dasharray="8 7"/>
+  <path d="M662 688V752" class="draft-flow"/>
+  <text x="680" y="719" font-size="12" font-weight="700" fill="#8067aa">Proposed</text>
+
+  <rect x="54" y="753" width="247" height="87" rx="6" fill="#fbfaff" fill-opacity="0.75" stroke="#9b88bf" stroke-width="1.6" stroke-dasharray="8 6" filter="url(#shadow)"/>
+  <circle cx="58" cy="754" r="17" fill="#9b88bf" fill-opacity="0.8"/>
+  <text x="58" y="754" class="stage-number">5</text>
+  <g transform="translate(101 797)" fill="none" stroke="#9b88bf" stroke-width="2">
+    <ellipse rx="22" ry="9" transform="rotate(28)" stroke-dasharray="4 3"/>
+    <ellipse rx="22" ry="9" transform="rotate(-28)" stroke-dasharray="4 3"/>
+    <circle r="4" fill="#9b88bf" stroke="none"/>
+    <path d="M-27 0H-20M20 0H27"/>
+  </g>
+  <text x="131" y="790" class="title" fill="#6f5a96">Qubit Tuning</text>
+
+  <path d="M301 797H532" class="draft-flow"/>
+  <polygon points="532,797 662,757 792,797 662,837" fill="#fbfaff" fill-opacity="0.75" stroke="#9b88bf" stroke-width="1.6" stroke-dasharray="8 6"/>
+  <text x="662" y="792" class="decision-text" fill="#6f5a96"><tspan x="662">Qubit tuning criteria</tspan><tspan x="662" dy="18">defined and met?</tspan></text>
+
+  <path d="M662 837V920" class="draft-flow"/>
+
+  <!-- Terminal outcomes -->
+  <rect x="528" y="920" width="262" height="70" rx="6" fill="#f0fbf4" stroke="#269b4c" stroke-width="1.5" filter="url(#shadow)"/>
+  <circle cx="563" cy="955" r="19" fill="#269b4c"/>
+  <path d="M553 955L560 962 573 946" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="595" y="951" class="title"><tspan x="595">Device Accepted</tspan><tspan x="595" dy="19">Protocol Complete</tspan></text>
+
+  <rect x="822" y="920" width="183" height="70" rx="6" fill="#fff1f2" stroke="#ff3038" stroke-width="1.5" filter="url(#shadow)"/>
+  <circle cx="854" cy="955" r="19" fill="#ff3038"/>
+  <path d="M847 948L861 962M861 948L847 962" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <text x="884" y="951" class="title"><tspan x="884">Protocol Halted</tspan><tspan x="884" dy="19" font-size="12">Reject or Retune</tspan></text>
+</svg>
