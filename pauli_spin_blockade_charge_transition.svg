@@ -91,8 +91,8 @@
   <!-- Plot axes -->
   <path d="M88 660H612" class="axis" marker-end="url(#arrowNavy)"/>
   <path d="M88 660V164" class="axis" marker-end="url(#arrowNavy)"/>
-  <text x="350" y="686" text-anchor="middle" class="axis-label">Virtual plunger gate V<tspan baseline-shift="sub" font-size="10">P1</tspan></text>
-  <text x="52" y="412" text-anchor="middle" class="axis-label" transform="rotate(-90 52 412)">Virtual plunger gate V<tspan baseline-shift="sub" font-size="10">P2</tspan></text>
+  <text x="350" y="686" text-anchor="middle" class="axis-label">P<tspan baseline-shift="sub" font-size="10">0</tspan></text>
+  <text x="52" y="412" text-anchor="middle" class="axis-label" transform="rotate(-90 52 412)">P<tspan baseline-shift="sub" font-size="10">1</tspan></text>
 
   <!-- Potential-PSB-region key -->
   <g transform="translate(153 714)">
