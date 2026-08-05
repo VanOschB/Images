@@ -131,7 +131,6 @@
   <path d="M866 351H925" fill="none" stroke="#e6434f" stroke-width="3" stroke-dasharray="8 6"/>
   <path d="M926 342L944 360M944 342L926 360" stroke="#e6434f" stroke-width="4" stroke-linecap="round"/>
   <circle cx="995" cy="351" r="29" class="dot" opacity="0.25"/><circle cx="1063" cy="351" r="29" class="dot" opacity="0.25"/>
-  <text x="1142" y="410" class="small" text-anchor="end">Pauli exclusion + singlet–triplet splitting Δ<tspan baseline-shift="sub" font-size="8">ST</tspan></text>
 
   <!-- Panel 3: sensor response -->
   <rect x="680" y="445" width="492" height="341" rx="13" class="panel"/>
