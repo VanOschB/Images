@@ -58,44 +58,38 @@
   <text x="83" y="153" class="small">schematic virtual-gate coordinates</text>
 
   <g clip-path="url(#mapClip)">
-    <rect x="88" y="164" width="524" height="496" fill="url(#mapBackground)"/>
-    <!-- Subtle sensor-map texture and contours -->
-    <path d="M75 563C184 523 228 458 309 393S466 248 628 191" fill="none" stroke="#6da2cb" stroke-width="22" opacity="0.08"/>
-    <path d="M76 602C190 558 247 485 329 416S484 276 632 229" fill="none" stroke="#b9ddf0" stroke-width="2" opacity="0.16"/>
-    <path d="M65 520C174 482 214 421 289 359S443 220 622 164" fill="none" stroke="#b9ddf0" stroke-width="2" opacity="0.13"/>
-    <path d="M105 651C210 610 273 532 356 459S513 323 630 293" fill="none" stroke="#90c6de" stroke-width="2" opacity="0.12"/>
-    <g fill="#b5d8ef" opacity="0.12">
-      <circle cx="128" cy="218" r="3"/><circle cx="183" cy="282" r="2"/><circle cx="245" cy="205" r="2.5"/><circle cx="312" cy="263" r="2"/>
-      <circle cx="393" cy="198" r="2.5"/><circle cx="520" cy="258" r="3"/><circle cx="564" cy="342" r="2"/><circle cx="480" cy="430" r="2.5"/>
-      <circle cx="393" cy="540" r="3"/><circle cx="285" cy="586" r="2"/><circle cx="167" cy="541" r="2.5"/><circle cx="548" cy="590" r="2"/>
+    <!-- Clean black-line charge stability diagram, matching the supplied reference style. -->
+    <rect x="88" y="164" width="524" height="496" fill="#ffffff"/>
+
+    <!-- Reservoir transitions and the short (1,1)-(2,0) interdot transition. -->
+    <path d="M329 164L387 352" fill="none" stroke="#111111" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M88 344L335 411" fill="none" stroke="#111111" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M387 352L612 391" fill="none" stroke="#111111" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M335 411L382 660" fill="none" stroke="#111111" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M335 411L387 352" fill="none" stroke="#111111" stroke-width="3.8" stroke-linecap="round"/>
+    <circle cx="335" cy="411" r="7.5" fill="#111111"/>
+    <circle cx="387" cy="352" r="7.5" fill="#111111"/>
+
+    <!-- Charge occupations. -->
+    <g font-family="Georgia, 'Times New Roman', serif" font-size="31" fill="#111111" text-anchor="middle">
+      <text x="216" y="259">(1,1)</text>
+      <text x="495" y="259">(2,1)</text>
+      <text x="216" y="551">(1,0)</text>
+      <text x="495" y="551">(2,0)</text>
     </g>
-    <!-- Interdot transition ridge -->
-    <path d="M136 628C245 526 348 422 449 321S535 235 568 198" fill="none" stroke="#65ddff" stroke-width="30" opacity="0.11" filter="url(#ridgeGlow)"/>
-    <path d="M136 628C245 526 348 422 449 321S535 235 568 198" fill="none" stroke="url(#transitionGlow)" stroke-width="10" opacity="0.75" filter="url(#ridgeGlow)"/>
-    <path d="M136 628C245 526 348 422 449 321S535 235 568 198" fill="none" stroke="#ffffff" stroke-width="2.8" opacity="0.95"/>
 
-    <!-- Dashed exploration corridor around the transition -->
-    <path d="M213 551L476 288L501 313L238 576Z" fill="#bba6ef" fill-opacity="0.09" stroke="#d5c4ff" stroke-width="2" stroke-dasharray="8 7"/>
+    <!-- Initialize-separate-read pulse path retained from the PSB workflow. -->
+    <path d="M474 500Q390 376 275 290" fill="none" stroke="#5b6778" stroke-width="2.2" marker-end="url(#arrowNavy)"/>
+    <path d="M275 290Q326 334 365 386" fill="none" stroke="#5b6778" stroke-width="2.2" marker-end="url(#arrowNavy)"/>
+    <circle cx="474" cy="500" r="12" fill="#51aaf0" stroke="#ffffff" stroke-width="3"/><text x="474" y="504" font-size="11" font-weight="800" style="fill:#ffffff" text-anchor="middle">I</text>
+    <circle cx="275" cy="290" r="12" fill="#8f72c8" stroke="#ffffff" stroke-width="3"/><text x="275" y="294" font-size="11" font-weight="800" style="fill:#ffffff" text-anchor="middle">S</text>
+    <circle cx="365" cy="386" r="12" fill="#f0ad27" stroke="#ffffff" stroke-width="3"/><text x="365" y="390" font-size="11" font-weight="800" style="fill:#ffffff" text-anchor="middle">R</text>
 
-    <!-- Charge-state labels -->
-    <rect x="128" y="224" width="105" height="49" rx="24" fill="#17355f" fill-opacity="0.82" stroke="#79c9ef" stroke-width="1.2"/>
-    <text x="180.5" y="256" class="state-label" text-anchor="middle">(1,1)</text>
-    <rect x="468" y="534" width="105" height="49" rx="24" fill="#17355f" fill-opacity="0.82" stroke="#79c9ef" stroke-width="1.2"/>
-    <text x="520.5" y="566" class="state-label" text-anchor="middle">(2,0)</text>
-
-    <!-- Pulse points and path -->
-    <path d="M479 409Q424 326 360 310" fill="none" stroke="#ffffff" stroke-width="2.4" marker-end="url(#arrowWhite)"/>
-    <path d="M360 310Q373 357 407 393" fill="none" stroke="#ffffff" stroke-width="2.4" marker-end="url(#arrowWhite)"/>
-    <circle cx="479" cy="409" r="12" fill="#51aaf0" stroke="#ffffff" stroke-width="3"/><text x="479" y="413" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">I</text>
-    <circle cx="360" cy="310" r="12" fill="#8f72c8" stroke="#ffffff" stroke-width="3"/><text x="360" y="314" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">S</text>
-    <circle cx="407" cy="393" r="12" fill="#f0ad27" stroke="#ffffff" stroke-width="3"/><text x="407" y="397" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">R</text>
-
-    <!-- Detuning direction across the line -->
-    <path d="M325 365L437 477" fill="none" stroke="#ffffff" stroke-width="2" marker-start="url(#arrowWhite)" marker-end="url(#arrowWhite)"/>
-    <rect x="423" y="447" width="88" height="26" rx="13" fill="#102847" fill-opacity="0.9"/>
-    <text x="467" y="465" font-size="12" font-weight="700" style="fill:#ffffff" text-anchor="middle">detuning ε</text>
+    <!-- Detuning direction across the interdot transition. -->
+    <path d="M285 307L451 486" fill="none" stroke="#111111" stroke-width="2" stroke-dasharray="7 7" marker-end="url(#arrowNavy)"/>
+    <text x="459" y="473" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-style="italic" fill="#111111">ε</text>
   </g>
-  <rect x="88" y="164" width="524" height="496" rx="8" fill="none" stroke="#2b4a70" stroke-width="2"/>
+  <rect x="88" y="164" width="524" height="496" rx="2" fill="none" stroke="#111111" stroke-width="3"/>
 
   <!-- Plot axes -->
   <path d="M88 660H612" class="axis" marker-end="url(#arrowNavy)"/>
