@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="805" viewBox="0 0 1200 805" role="img" aria-labelledby="title desc">
+  <title id="title">Finding Pauli spin blockade at the (1,1) to (2,0) charge transition</title>
+  <desc id="desc">Educational schematic with a zoomed charge stability diagram highlighting a trapezoidal candidate Pauli-spin-blockade region and an R readout point in the (2,0) sector, singlet and triplet spin-to-charge conversion cartoons, and the charge-sensor plateau expected from Pauli spin blockade.</desc>
+  <defs>
+    <linearGradient id="mapBackground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#142a55"/>
+      <stop offset="48%" stop-color="#284b7d"/>
+      <stop offset="100%" stop-color="#10213f"/>
+    </linearGradient>
+    <linearGradient id="transitionGlow" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#63e6ff"/>
+      <stop offset="48%" stop-color="#fff3a6"/>
+      <stop offset="100%" stop-color="#67f0d0"/>
+    </linearGradient>
+    <radialGradient id="dotFill" cx="38%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="58%" stop-color="#cbe2fb"/>
+      <stop offset="100%" stop-color="#8eb8eb"/>
+    </radialGradient>
+    <filter id="panelShadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#152744" flood-opacity="0.12"/>
+    </filter>
+    <filter id="ridgeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="mapClip"><rect x="88" y="164" width="524" height="496" rx="8"/></clipPath>
+    <marker id="arrowNavy" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#17243a"/></marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#2879bd"/></marker>
+    <marker id="arrowWhite" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#ffffff"/></marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#199b5b"/></marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#e6434f"/></marker>
+    <style>
+      text { font-family: Inter, Arial, Helvetica, sans-serif; fill: #17243a; font-variant-ligatures: none; }
+      .panel { fill: #ffffff; stroke: #c8d5e5; stroke-width: 1.5; filter: url(#panelShadow); }
+      .panel-title { font-size: 18px; font-weight: 700; }
+      .panel-number { font-size: 14px; font-weight: 800; fill: #ffffff; text-anchor: middle; dominant-baseline: middle; }
+      .small { font-size: 11px; fill: #50627a; }
+      .axis { stroke: #dbe8f6; stroke-width: 1.6; }
+      .axis-label { font-size: 13px; font-weight: 600; fill: #435972; }
+      .state-label { font-size: 22px; font-weight: 800; fill: #ffffff; }
+      .light-text { fill: #ffffff; }
+      .green-text { fill: #168b50; }
+      .red-text { fill: #d63846; }
+      .muted-text { fill: #7c8797; }
+      .dot { fill: url(#dotFill); stroke: #245b91; stroke-width: 2; }
+      .electron { fill: #ffffff; stroke-width: 2.2; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="805" fill="#f7f9fc"/>
+  <text x="600" y="42" text-anchor="middle" font-size="27" font-weight="800">Finding Pauli Spin Blockade at the (1,1) - (2,0) Transition</text>
+  <text x="600" y="68" text-anchor="middle" font-size="13" fill="#5b6d84">Zoom into the interdot line, pulse across it, and look for a metastable (1,1) charge signal</text>
+
+  <!-- Panel 1: zoomed charge stability diagram -->
+  <rect x="28" y="94" width="630" height="692" rx="13" class="panel"/>
+  <circle cx="58" cy="126" r="16" fill="#2879bd"/><text x="58" y="126" class="panel-number">1</text>
+  <text x="83" y="132" class="panel-title">Zoom in on the interdot charge transition</text>
+
+  <g clip-path="url(#mapClip)">
+    <!-- Clean black-line charge stability diagram, matching the supplied reference style. -->
+    <rect x="88" y="164" width="524" height="496" fill="#ffffff"/>
+
+    <!-- Reservoir transitions and the short (1,1)-(2,0) interdot transition. -->
+    <path d="M329 164L387 352" fill="none" stroke="#111111" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M88 344L335 411" fill="none" stroke="#111111" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M387 352L612 391" fill="none" stroke="#111111" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M335 411L382 660" fill="none" stroke="#111111" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M335 411L387 352" fill="none" stroke="#111111" stroke-width="3.8" stroke-linecap="round"/>
+    <circle cx="335" cy="411" r="7.5" fill="#111111"/>
+    <circle cx="387" cy="352" r="7.5" fill="#111111"/>
+
+    <!-- Charge occupations. -->
+    <g font-family="Georgia, 'Times New Roman', serif" font-size="31" fill="#111111" text-anchor="middle">
+      <text x="216" y="259">(1,1)</text>
+      <text x="495" y="259">(2,1)</text>
+      <text x="216" y="551">(1,0)</text>
+      <text x="495" y="551">(2,0)</text>
+    </g>
+
+    <!-- Load the second electron before probing the interdot transition. -->
+    <path d="M150 500V295" fill="none" stroke="#2879bd" stroke-width="3.2" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+    <text x="166" y="407" font-size="13" font-weight="700" style="fill:#2879bd">Load e<tspan baseline-shift="super" font-size="9">−</tspan></text>
+
+    <!-- Candidate Pauli-spin-blockade window in the (2,0) sector. -->
+    <polygon points="335,411 387,352 567,383.2 371.6,604.9" fill="#f8c9cf" fill-opacity="0.72" stroke="#d63846" stroke-width="2.6" stroke-dasharray="8 6" stroke-linejoin="round"/>
+    <text x="470" y="430" font-size="12" font-weight="800" style="fill:#b72f3c" text-anchor="middle"><tspan x="470">Potential PSB</tspan><tspan x="470" dy="16">region</tspan></text>
+    <circle cx="420" cy="500" r="12" fill="#f0ad27" stroke="#ffffff" stroke-width="3"/>
+    <text x="420" y="504" font-size="11" font-weight="800" style="fill:#ffffff" text-anchor="middle">R</text>
+
+    <!-- Detuning direction across the interdot transition. -->
+    <path d="M285 307L451 486" fill="none" stroke="#111111" stroke-width="2" stroke-dasharray="7 7" marker-end="url(#arrowNavy)"/>
+    <text x="459" y="473" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-style="italic" fill="#111111">ε</text>
+  </g>
+  <rect x="88" y="164" width="524" height="496" rx="2" fill="none" stroke="#111111" stroke-width="3"/>
+
+  <!-- Plot axes -->
+  <path d="M88 660H612" class="axis" marker-end="url(#arrowNavy)"/>
+  <path d="M88 660V164" class="axis" marker-end="url(#arrowNavy)"/>
+  <text x="350" y="688" text-anchor="middle" class="axis-label" style="font-size:18px;font-weight:700">V<tspan baseline-shift="sub" font-size="13">P₀</tspan><tspan baseline-shift="baseline" font-size="18"> (V)</tspan></text>
+  <text x="49" y="412" text-anchor="middle" class="axis-label" style="font-size:18px;font-weight:700" transform="rotate(-90 49 412)">V<tspan baseline-shift="sub" font-size="13">P₁</tspan><tspan baseline-shift="baseline" font-size="18"> (V)</tspan></text>
+
+  <!-- Potential-PSB-region key -->
+  <g transform="translate(153 714)">
+    <rect width="394" height="47" rx="8" fill="#fff6f7" stroke="#e5a0a8"/>
+    <polygon points="20,33 31,14 70,18 48,33" fill="#f8c9cf" stroke="#d63846" stroke-width="2" stroke-dasharray="6 4" stroke-linejoin="round"/>
+    <text x="82" y="21" font-size="11" font-weight="800" style="fill:#b72f3c">Potential PSB region</text>
+    <text x="82" y="37" class="small">candidate detuning window inside (2,0)</text>
+  </g>
+
+  <!-- Panel 2: spin-to-charge conversion -->
+  <rect x="680" y="94" width="492" height="332" rx="13" class="panel"/>
+  <circle cx="710" cy="126" r="16" fill="#269b5b"/><text x="710" y="126" class="panel-number">2</text>
+  <text x="735" y="132" class="panel-title">Use spin-to-charge conversion</text>
+
+  <text x="710" y="171" font-size="13" font-weight="800" style="fill:#168b50">Allowed: singlet returns to (2,0)</text>
+  <!-- S(1,1) -->
+  <circle cx="762" cy="216" r="29" class="dot"/><circle cx="830" cy="216" r="29" class="dot"/>
+  <circle cx="762" cy="216" r="8" fill="#2c83c6"/><path d="M762 225V203M756 209L762 203L768 209" fill="none" stroke="#fff" stroke-width="2"/>
+  <circle cx="830" cy="216" r="8" fill="#2c83c6"/><path d="M830 207V229M824 223L830 229L836 223" fill="none" stroke="#fff" stroke-width="2"/>
+  <text x="796" y="259" font-size="12" font-weight="700" text-anchor="middle">S(1,1)</text>
+  <path d="M866 216H934" fill="none" stroke="#199b5b" stroke-width="3" marker-end="url(#arrowGreen)"/>
+  <!-- S(2,0) -->
+  <circle cx="985" cy="216" r="29" class="dot"/><circle cx="1053" cy="216" r="29" class="dot" opacity="0.55"/>
+  <circle cx="978" cy="216" r="8" fill="#199b5b"/><path d="M978 225V203M972 209L978 203L984 209" fill="none" stroke="#fff" stroke-width="2"/>
+  <circle cx="992" cy="216" r="8" fill="#199b5b"/><path d="M992 207V229M986 223L992 229L998 223" fill="none" stroke="#fff" stroke-width="2"/>
+  <text x="1019" y="259" font-size="12" font-weight="700" text-anchor="middle">S(2,0)</text>
+
+  <line x1="706" y1="278" x2="1145" y2="278" stroke="#e1e8f0"/>
+  <text x="710" y="307" font-size="13" font-weight="800" style="fill:#d63846">Blocked: triplet remains in (1,1)</text>
+  <!-- T(1,1) -->
+  <circle cx="762" cy="351" r="29" class="dot"/><circle cx="830" cy="351" r="29" class="dot"/>
+  <circle cx="762" cy="351" r="8" fill="#e6434f"/><path d="M762 360V338M756 344L762 338L768 344" fill="none" stroke="#fff" stroke-width="2"/>
+  <circle cx="830" cy="351" r="8" fill="#e6434f"/><path d="M830 360V338M824 344L830 338L836 344" fill="none" stroke="#fff" stroke-width="2"/>
+  <text x="796" y="394" font-size="12" font-weight="700" text-anchor="middle">T(1,1)</text>
+  <path d="M866 351H925" fill="none" stroke="#e6434f" stroke-width="3" stroke-dasharray="8 6"/>
+  <path d="M926 342L944 360M944 342L926 360" stroke="#e6434f" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="995" cy="351" r="29" class="dot" opacity="0.25"/><circle cx="1063" cy="351" r="29" class="dot" opacity="0.25"/>
+
+  <!-- Panel 3: sensor response -->
+  <rect x="680" y="445" width="492" height="341" rx="13" class="panel"/>
+  <circle cx="710" cy="477" r="16" fill="#e6434f"/><text x="710" y="477" class="panel-number">3</text>
+  <text x="735" y="483" font-size="19" font-weight="700">Search for a blocked charge-sensor plateau</text>
+
+  <!-- Blockade-window key above the plot, away from data features. -->
+  <rect x="812" y="501" width="15" height="12" rx="2" fill="#fff0f1" stroke="#e5a0a8"/>
+  <text x="836" y="512" font-size="13" font-weight="700" style="fill:#d63846">Blocked (1,1) window</text>
+
+  <!-- Plot and levels -->
+  <rect x="770" y="526" width="364" height="174" rx="6" fill="#f7fafc" stroke="#d8e2ed"/>
+  <rect x="812" y="526" width="196" height="174" fill="#fff0f1" opacity="0.8"/>
+  <path d="M770 700H1135" class="axis" marker-end="url(#arrowNavy)"/>
+  <path d="M770 700V526" class="axis" marker-end="url(#arrowNavy)"/>
+  <line x1="770" y1="570" x2="1134" y2="570" stroke="#bbc9d7" stroke-dasharray="4 5"/>
+  <line x1="770" y1="660" x2="1134" y2="660" stroke="#bbc9d7" stroke-dasharray="4 5"/>
+  <text x="758" y="574" font-size="13" font-weight="700" fill="#52677e" text-anchor="end">(1,1)</text>
+  <text x="758" y="664" font-size="13" font-weight="700" fill="#52677e" text-anchor="end">(2,0)</text>
+
+  <!-- Immediate singlet transfer -->
+  <path d="M783 570C796 570 800 577 804 610S811 660 838 660H1120" fill="none" stroke="#199b5b" stroke-width="3.2"/>
+  <circle cx="833" cy="660" r="4" fill="#199b5b"/>
+
+  <!-- Triplet blockade then relaxation -->
+  <path d="M783 570H976C1002 570 1015 583 1028 612S1050 652 1080 660H1120" fill="none" stroke="#e6434f" stroke-width="3.2" stroke-dasharray="9 7"/>
+  <circle cx="976" cy="570" r="4" fill="#e6434f"/>
+  <path d="M976 583V627" fill="none" stroke="#e6434f" stroke-width="1.6" marker-end="url(#arrowRed)"/>
+
+  <text x="952" y="724" text-anchor="middle" font-size="15" font-weight="700" fill="#435972">Time at readout point, t<tspan baseline-shift="sub" font-size="11">R</tspan></text>
+  <text x="706" y="613" text-anchor="middle" font-size="15" font-weight="700" fill="#435972" transform="rotate(-90 706 613)">Charge-sensor response</text>
+
+  <!-- Larger trace labels placed below the plot. -->
+  <g transform="translate(744 747)">
+    <line x1="0" y1="0" x2="36" y2="0" stroke="#199b5b" stroke-width="3.2"/>
+    <text x="46" y="5" font-size="13" font-weight="700" style="fill:#168b50">Singlet: prompt transfer to S(2,0)</text>
+  </g>
+  <g transform="translate(744 773)">
+    <line x1="0" y1="0" x2="36" y2="0" stroke="#e6434f" stroke-width="3.2" stroke-dasharray="8 6"/>
+    <text x="46" y="5" font-size="13" font-weight="700" style="fill:#d63846">Triplet: T(1,1) blocked, then spin relaxation</text>
+  </g>
+
+</svg>
