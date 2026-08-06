@@ -26,6 +26,7 @@
     </filter>
     <clipPath id="mapClip"><rect x="88" y="164" width="524" height="496" rx="8"/></clipPath>
     <marker id="arrowNavy" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#17243a"/></marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#2879bd"/></marker>
     <marker id="arrowWhite" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#ffffff"/></marker>
     <marker id="arrowGreen" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#199b5b"/></marker>
     <marker id="arrowRed" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#e6434f"/></marker>
@@ -76,6 +77,10 @@
       <text x="216" y="551">(1,0)</text>
       <text x="495" y="551">(2,0)</text>
     </g>
+
+    <!-- Load the second electron before probing the interdot transition. -->
+    <path d="M150 500V295" fill="none" stroke="#2879bd" stroke-width="3.2" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+    <text x="166" y="407" font-size="13" font-weight="700" style="fill:#2879bd">Load e<tspan baseline-shift="super" font-size="9">−</tspan></text>
 
     <!-- Candidate Pauli-spin-blockade window in the (2,0) sector. -->
     <polygon points="335,411 387,352 567,383.2 371.6,604.9" fill="#f8c9cf" fill-opacity="0.72" stroke="#d63846" stroke-width="2.6" stroke-dasharray="8 6" stroke-linejoin="round"/>
