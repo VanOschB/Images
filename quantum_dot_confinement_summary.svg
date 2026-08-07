@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">How confinement is achieved in a silicon gate-defined quantum dot</title>
+  <desc id="desc">Scientific infographic showing vertical confinement at a silicon oxide interface and in a silicon silicon-germanium quantum well, lateral gate confinement, tunnel barriers, and the governing Poisson, Schrodinger, charging-energy, and tunneling equations.</desc>
+
+  <defs>
+    <linearGradient id="headerGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10243f"/>
+      <stop offset="1" stop-color="#183d66"/>
+    </linearGradient>
+    <linearGradient id="siliconGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9f0ff"/>
+      <stop offset="1" stop-color="#a9d7f4"/>
+    </linearGradient>
+    <linearGradient id="sigeGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6dcfb"/>
+      <stop offset="1" stop-color="#c8b7ed"/>
+    </linearGradient>
+    <linearGradient id="gateGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffcf70"/>
+      <stop offset="1" stop-color="#e69a24"/>
+    </linearGradient>
+    <radialGradient id="electronGlow">
+      <stop offset="0" stop-color="#1aa6b7" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#45d4dc" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#45d4dc" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#18324d" flood-opacity="0.14"/>
+    </filter>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2878b5"/>
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#118c98"/>
+    </marker>
+    <style>
+      .title { font: 700 46px Arial, Helvetica, sans-serif; fill: #ffffff; }
+      .subtitle { font: 400 22px Arial, Helvetica, sans-serif; fill: #d9e9f7; }
+      .panel-title { font: 700 27px Arial, Helvetica, sans-serif; fill: #12314f; }
+      .section-title { font: 700 21px Arial, Helvetica, sans-serif; fill: #163b5e; }
+      .body { font: 400 18px Arial, Helvetica, sans-serif; fill: #29465f; }
+      .small { font: 400 15px Arial, Helvetica, sans-serif; fill: #47627a; }
+      .tiny { font: 400 13px Arial, Helvetica, sans-serif; fill: #5d7285; }
+      .label { font: 700 15px Arial, Helvetica, sans-serif; fill: #173a59; }
+      .eq { font: 400 22px Georgia, 'Times New Roman', serif; fill: #102f4b; }
+      .eq-small { font: 400 18px Georgia, 'Times New Roman', serif; fill: #102f4b; }
+      .white-label { font: 700 15px Arial, Helvetica, sans-serif; fill: #ffffff; }
+      .card { fill: #ffffff; stroke: #d8e4ee; stroke-width: 1.5; }
+      .subcard { fill: #f8fbfd; stroke: #dce8f1; stroke-width: 1.25; }
+      .axis { stroke: #688198; stroke-width: 2; fill: none; }
+      .dash { stroke-dasharray: 7 6; }
+    </style>
+  </defs>
+
+  <!-- Canvas and header -->
+  <rect width="1800" height="1200" fill="#f3f7fa"/>
+  <rect width="1800" height="145" fill="url(#headerGradient)"/>
+  <circle cx="1660" cy="40" r="135" fill="#2a638f" opacity="0.24"/>
+  <circle cx="1735" cy="135" r="90" fill="#34a8b3" opacity="0.16"/>
+  <text x="70" y="66" class="title">Confinement in a gate-defined silicon quantum dot</text>
+  <text x="72" y="106" class="subtitle">Band offsets confine vertically • patterned gates confine laterally • Coulomb repulsion quantizes charge</text>
+
+  <!-- Vertical confinement panel -->
+  <rect x="55" y="175" width="830" height="500" rx="20" class="card" filter="url(#shadow)"/>
+  <circle cx="91" cy="214" r="17" fill="#2878b5"/>
+  <text x="91" y="220" text-anchor="middle" class="white-label">1</text>
+  <text x="120" y="222" class="panel-title">Vertical confinement</text>
+  <text x="120" y="251" class="body">A conduction-band offset plus an electric field binds the electron in z.</text>
+
+  <!-- MOS subpanel -->
+  <rect x="82" y="276" width="374" height="370" rx="15" class="subcard"/>
+  <text x="101" y="309" class="section-title">Si / SiO₂ interface</text>
+  <text x="101" y="333" class="small">Gate field creates a triangular well</text>
+
+  <rect x="104" y="355" width="160" height="34" rx="5" fill="url(#gateGradient)"/>
+  <text x="184" y="377" text-anchor="middle" class="label">+ accumulation gate</text>
+  <line x1="184" y1="394" x2="184" y2="426" stroke="#2878b5" stroke-width="2.2" marker-end="url(#arrowBlue)"/>
+  <text x="195" y="412" class="tiny">F<tspan baseline-shift="sub" font-size="10">z</tspan></text>
+  <rect x="104" y="430" width="160" height="32" fill="#f1d6a8" stroke="#d2ab68"/>
+  <text x="184" y="451" text-anchor="middle" class="label">SiO₂</text>
+  <rect x="104" y="462" width="160" height="82" fill="url(#siliconGradient)" stroke="#77acd0"/>
+  <text x="184" y="528" text-anchor="middle" class="label">Si</text>
+  <ellipse cx="184" cy="469" rx="58" ry="19" fill="url(#electronGlow)"/>
+  <circle cx="184" cy="469" r="7" fill="#087d91" stroke="#ffffff" stroke-width="2"/>
+  <text x="276" y="474" class="small">electron layer</text>
+
+  <!-- triangular well mini plot -->
+  <line x1="300" y1="537" x2="300" y2="371" class="axis"/>
+  <line x1="300" y1="537" x2="431" y2="537" class="axis"/>
+  <path d="M303 376 L303 522 L426 398" fill="none" stroke="#2878b5" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M306 510 C320 478,338 456,359 451 C382 447,401 465,420 503" fill="none" stroke="#118c98" stroke-width="3"/>
+  <line x1="303" y1="481" x2="424" y2="481" stroke="#118c98" stroke-width="1.5" class="dash"/>
+  <text x="308" y="365" class="tiny">U(z)</text>
+  <text x="422" y="554" class="tiny">z</text>
+  <text x="321" y="397" class="tiny">oxide barrier</text>
+  <text x="319" y="500" class="tiny">Airy state</text>
+
+  <text x="103" y="580" class="eq-small">U(z) ≈ eF<tspan baseline-shift="sub" font-size="13">z</tspan>z</text>
+  <text x="103" y="611" class="eq-small">ℓ<tspan baseline-shift="sub" font-size="13">z</tspan> = [ℏ² / (2m<tspan baseline-shift="sub" font-size="13">l</tspan>eF<tspan baseline-shift="sub" font-size="13">z</tspan>)]<tspan baseline-shift="super" font-size="13">1/3</tspan></text>
+
+  <!-- SiGe subpanel -->
+  <rect x="475" y="276" width="383" height="370" rx="15" class="subcard"/>
+  <text x="495" y="309" class="section-title">Si / SiGe quantum well</text>
+  <text x="495" y="333" class="small">Band offsets trap electrons in a strained-Si layer</text>
+
+  <rect x="497" y="356" width="338" height="45" fill="url(#sigeGradient)" stroke="#9f8ccb"/>
+  <text x="666" y="384" text-anchor="middle" class="label">SiGe barrier</text>
+  <rect x="497" y="401" width="338" height="66" fill="url(#siliconGradient)" stroke="#77acd0"/>
+  <text x="666" y="441" text-anchor="middle" class="label">strained Si quantum well</text>
+  <rect x="497" y="467" width="338" height="46" fill="url(#sigeGradient)" stroke="#9f8ccb"/>
+  <text x="666" y="495" text-anchor="middle" class="label">SiGe barrier</text>
+  <ellipse cx="666" cy="434" rx="90" ry="28" fill="url(#electronGlow)"/>
+  <path d="M574 434 C600 406,630 406,666 434 C702 462,733 462,758 434" fill="none" stroke="#087d91" stroke-width="3"/>
+  <circle cx="666" cy="434" r="7" fill="#087d91" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- finite well mini plot -->
+  <line x1="507" y1="572" x2="507" y2="526" class="axis"/>
+  <line x1="507" y1="572" x2="827" y2="572" class="axis"/>
+  <path d="M510 532 L583 532 L583 565 L747 565 L747 532 L824 532" fill="none" stroke="#7358aa" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M538 558 C575 558,580 557,586 554 C626 527,704 527,744 554 C750 557,756 558,795 558" fill="none" stroke="#118c98" stroke-width="3"/>
+  <text x="511" y="523" class="tiny">U(z)</text>
+  <text x="816" y="589" class="tiny">z</text>
+  <text x="492" y="611" class="eq-small">κ = √[2m<tspan baseline-shift="sub" font-size="13">b</tspan>(ΔE<tspan baseline-shift="sub" font-size="13">c</tspan>−E)] / ℏ</text>
+  <text x="492" y="636" class="small">Wavefunction decays into finite barriers</text>
+
+  <!-- Lateral confinement panel -->
+  <rect x="915" y="175" width="830" height="500" rx="20" class="card" filter="url(#shadow)"/>
+  <circle cx="951" cy="214" r="17" fill="#118c98"/>
+  <text x="951" y="220" text-anchor="middle" class="white-label">2</text>
+  <text x="980" y="222" class="panel-title">Lateral confinement and tunnel barriers</text>
+  <text x="980" y="251" class="body">Gate voltages shape a potential minimum in x–y and saddle points at its edges.</text>
+
+  <!-- top view device -->
+  <rect x="948" y="282" width="456" height="330" rx="15" fill="#eaf5fb" stroke="#c8dce9"/>
+  <text x="968" y="312" class="section-title">Top view</text>
+  <rect x="970" y="343" width="412" height="76" rx="35" fill="#b8dff2" stroke="#7db7d5" stroke-width="2"/>
+  <text x="988" y="387" class="label">source</text>
+  <text x="1322" y="387" class="label">drain</text>
+  <rect x="1061" y="325" width="45" height="112" rx="8" fill="#efb54d" stroke="#c98715" stroke-width="2"/>
+  <rect x="1246" y="325" width="45" height="112" rx="8" fill="#efb54d" stroke="#c98715" stroke-width="2"/>
+  <text x="1084" y="454" text-anchor="middle" class="tiny">barrier</text>
+  <text x="1269" y="454" text-anchor="middle" class="tiny">barrier</text>
+  <rect x="1122" y="293" width="108" height="55" rx="10" fill="url(#gateGradient)" stroke="#c98715" stroke-width="2"/>
+  <text x="1176" y="326" text-anchor="middle" class="label">plunger</text>
+  <ellipse cx="1176" cy="382" rx="66" ry="48" fill="url(#electronGlow)"/>
+  <ellipse cx="1176" cy="382" rx="37" ry="27" fill="none" stroke="#07889b" stroke-width="3"/>
+  <circle cx="1176" cy="382" r="9" fill="#087d91" stroke="#ffffff" stroke-width="2"/>
+  <text x="1176" y="493" text-anchor="middle" class="small">localized orbital ψ(x,y)</text>
+  <line x1="1114" y1="526" x2="1238" y2="526" stroke="#2878b5" stroke-width="2" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+  <text x="1176" y="553" text-anchor="middle" class="small">typical diameter: 40–160 nm</text>
+  <text x="1176" y="584" text-anchor="middle" class="eq-small">U(x,y) ≈ ½m<tspan baseline-shift="sub" font-size="13">t</tspan>(ω<tspan baseline-shift="sub" font-size="13">x</tspan>²x² + ω<tspan baseline-shift="sub" font-size="13">y</tspan>²y²)</text>
+
+  <!-- barrier profile -->
+  <rect x="1424" y="282" width="290" height="330" rx="15" class="subcard"/>
+  <text x="1444" y="312" class="section-title">Potential cut</text>
+  <line x1="1452" y1="521" x2="1691" y2="521" class="axis"/>
+  <line x1="1452" y1="521" x2="1452" y2="345" class="axis"/>
+  <path d="M1458 475 C1490 468,1501 379,1534 373 C1568 367,1570 493,1600 493 C1631 493,1633 367,1666 373 C1689 378,1690 436,1697 470" fill="none" stroke="#2878b5" stroke-width="4"/>
+  <line x1="1460" y1="445" x2="1695" y2="445" stroke="#118c98" stroke-width="2" class="dash"/>
+  <text x="1460" y="338" class="tiny">U(x)</text>
+  <text x="1685" y="540" class="tiny">x</text>
+  <text x="1535" y="359" text-anchor="middle" class="tiny">barrier</text>
+  <text x="1665" y="359" text-anchor="middle" class="tiny">barrier</text>
+  <text x="1600" y="510" text-anchor="middle" class="tiny">dot</text>
+  <text x="1445" y="561" class="eq-small">T ≈ exp[−2∫κ(x)dx]</text>
+  <text x="1445" y="588" class="small">Small gate changes → orders-of-</text>
+  <text x="1445" y="609" class="small">magnitude change in tunnel rate</text>
+
+  <!-- Equations and energy scales panel -->
+  <rect x="55" y="705" width="1690" height="430" rx="20" class="card" filter="url(#shadow)"/>
+  <circle cx="91" cy="744" r="17" fill="#7358aa"/>
+  <text x="91" y="750" text-anchor="middle" class="white-label">3</text>
+  <text x="120" y="752" class="panel-title">From gate voltages to discrete charge states</text>
+  <text x="120" y="781" class="body">Electrostatics and quantum mechanics are solved self-consistently; interactions set the addition spectrum.</text>
+
+  <!-- Equation card 1 -->
+  <rect x="83" y="810" width="500" height="235" rx="15" fill="#f5f9fc" stroke="#d5e3ed"/>
+  <rect x="83" y="810" width="500" height="43" rx="15" fill="#e3eff7"/>
+  <rect x="83" y="838" width="500" height="15" fill="#e3eff7"/>
+  <text x="105" y="839" class="section-title">Electrostatic potential</text>
+  <text x="105" y="894" class="eq">∇·[ε(r)∇φ(r)] = −ρ(r)</text>
+  <text x="105" y="937" class="eq">U<tspan baseline-shift="sub" font-size="15">electron</tspan>(r) = U<tspan baseline-shift="sub" font-size="15">band</tspan>(r) − eφ(r)</text>
+  <text x="105" y="979" class="small">Positive gates lower the electron energy;</text>
+  <text x="105" y="1003" class="small">less-positive barrier gates isolate the dot.</text>
+
+  <!-- Equation card 2 -->
+  <rect x="606" y="810" width="535" height="235" rx="15" fill="#f5f9fc" stroke="#d5e3ed"/>
+  <rect x="606" y="810" width="535" height="43" rx="15" fill="#e7f5f5"/>
+  <rect x="606" y="838" width="535" height="15" fill="#e7f5f5"/>
+  <text x="628" y="839" class="section-title">Discrete orbitals</text>
+  <text x="628" y="891" class="eq">[−ℏ²∇·m<tspan baseline-shift="super" font-size="15">−1</tspan>∇/2 + U]ψ<tspan baseline-shift="sub" font-size="15">n</tspan> = E<tspan baseline-shift="sub" font-size="15">n</tspan>ψ<tspan baseline-shift="sub" font-size="15">n</tspan></text>
+  <text x="628" y="934" class="eq">E<tspan baseline-shift="sub" font-size="15">nₓ,nᵧ</tspan> = ℏω<tspan baseline-shift="sub" font-size="15">x</tspan>(n<tspan baseline-shift="sub" font-size="15">x</tspan>+½) + ℏω<tspan baseline-shift="sub" font-size="15">y</tspan>(n<tspan baseline-shift="sub" font-size="15">y</tspan>+½)</text>
+  <text x="628" y="979" class="small">Orbital spacing ℏω: typically 0.1–2 meV</text>
+  <text x="628" y="1003" class="small">Vertical confinement also splits silicon valleys.</text>
+
+  <!-- Equation card 3 -->
+  <rect x="1164" y="810" width="553" height="235" rx="15" fill="#f5f9fc" stroke="#d5e3ed"/>
+  <rect x="1164" y="810" width="553" height="43" rx="15" fill="#eee9f8"/>
+  <rect x="1164" y="838" width="553" height="15" fill="#eee9f8"/>
+  <text x="1186" y="839" class="section-title">Coulomb blockade and control</text>
+  <text x="1186" y="894" class="eq">E<tspan baseline-shift="sub" font-size="15">C</tspan> = e² / C<tspan baseline-shift="sub" font-size="15">Σ</tspan></text>
+  <text x="1418" y="894" class="eq">Δμ = −eα<tspan baseline-shift="sub" font-size="15">g</tspan>ΔV<tspan baseline-shift="sub" font-size="15">g</tspan></text>
+  <text x="1186" y="937" class="eq">μ(N) = E(N) − E(N−1)</text>
+  <text x="1186" y="979" class="small">Charging energy: typically 1–10 meV</text>
+  <text x="1186" y="1003" class="small">One electron enters whenever μ(N) crosses a reservoir.</text>
+
+  <!-- Bottom synthesis strip -->
+  <rect x="83" y="1065" width="1634" height="48" rx="12" fill="#173b5c"/>
+  <text x="900" y="1096" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">BAND OFFSETS set z  +  GATES shape x–y  +  TUNNEL BARRIERS isolate  +  COULOMB ENERGY counts electrons</text>
+
+  <!-- small footer -->
+  <text x="1715" y="1170" text-anchor="end" class="tiny">Effective-mass picture • Si m<tspan baseline-shift="sub" font-size="10">t</tspan> ≈ 0.19m<tspan baseline-shift="sub" font-size="10">e</tspan>, m<tspan baseline-shift="sub" font-size="10">l</tspan> ≈ 0.92m<tspan baseline-shift="sub" font-size="10">e</tspan></text>
+</svg>
