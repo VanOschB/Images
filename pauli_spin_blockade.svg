@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Pauli spin blockade sequence</title>
+  <desc id="desc">A numbered double-quantum-dot transport sequence. The singlet branch proceeds from charge state zero-one through singlet one-one to singlet zero-two and carries current. The blocked branch shows the full triplet manifold in the one-one charge state and a forbidden transition to the accessible singlet zero-two state, so current is zero. A key defines the singlet and all three triplet spin states.</desc>
+  <defs>
+    <radialGradient id="dotGradient" cx="38%" cy="34%" r="72%">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="55%" stop-color="#c9dcfa"/>
+      <stop offset="100%" stop-color="#91b8ef"/>
+    </radialGradient>
+    <linearGradient id="sourceGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff6dc"/>
+      <stop offset="58%" stop-color="#ffe2a0"/>
+      <stop offset="100%" stop-color="#f3c45f"/>
+    </linearGradient>
+    <linearGradient id="drainGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f3c45f"/>
+      <stop offset="42%" stop-color="#ffe2a0"/>
+      <stop offset="100%" stop-color="#fff6dc"/>
+    </linearGradient>
+    <linearGradient id="barrierGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#56baff"/>
+      <stop offset="50%" stop-color="#bfe5ff"/>
+      <stop offset="100%" stop-color="#43a9f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#17365d" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrowBlack" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#171717"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#0c438b"/>
+    </marker>
+    <marker id="arrowWhite" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#fff"/>
+    </marker>
+    <style>
+      .panel { fill: #fbfdff; stroke: #191919; stroke-width: 2.5; }
+      .math { font: italic 21px Georgia, 'Times New Roman', serif; fill: #111; }
+      .smallmath { font: italic 17px Georgia, 'Times New Roman', serif; fill: #111; }
+      .row-label { font: italic 28px Georgia, 'Times New Roman', serif; font-weight: 700; }
+      .dot { fill: url(#dotGradient); stroke: #0c438b; stroke-width: 2.2; filter: url(#shadow); }
+      .source { fill: url(#sourceGradient); stroke: #111; stroke-width: 2.2; }
+      .drain { fill: url(#drainGradient); stroke: #111; stroke-width: 2.2; }
+      .barrier { fill: url(#barrierGradient); stroke: #0b253b; stroke-width: 1.8; }
+      .step-divider { fill: none; stroke: #b8c3cf; stroke-width: 2; stroke-dasharray: 6 7; }
+      .step-badge { fill: #fff; stroke: #15498f; stroke-width: 2.2; }
+      .step-number { font: 700 16px Arial, Helvetica, sans-serif; fill: #15498f; text-anchor: middle; dominant-baseline: middle; }
+      .state-key { font: 15px 'Noto Sans', 'DejaVu Sans', Arial, sans-serif; fill: #333; }
+      .triplet-electron { fill: #7651a8; stroke: #45256f; stroke-width: 1.4; }
+      .blocked-target { opacity: 0.52; }
+      .blocked-label { font: italic 14px Georgia, 'Times New Roman', serif; fill: #b3202a; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="700" fill="#fff"/>
+  <text x="600" y="42" class="math" text-anchor="middle">
+    μ<tspan baseline-shift="sub" font-size="14">S</tspan>
+    <tspan baseline-shift="baseline" font-size="21"> &gt; μ</tspan><tspan baseline-shift="sub" font-size="14">D</tspan>
+  </text>
+
+  <!-- Singlet transport branch. -->
+  <rect x="38" y="66" width="1124" height="278" rx="34" class="panel"/>
+  <text x="78" y="218" class="row-label" fill="#0c438b" text-anchor="middle">S</text>
+  <g id="singlet-step-guides">
+    <path d="M365 92 V320 M636 92 V320" class="step-divider"/>
+    <circle cx="240" cy="104" r="17" class="step-badge"/><text x="240" y="104" class="step-number">1</text>
+    <circle cx="510" cy="104" r="17" class="step-badge"/><text x="510" y="104" class="step-number">2</text>
+    <circle cx="780" cy="104" r="17" class="step-badge"/><text x="780" y="104" class="step-number">3</text>
+  </g>
+
+  <!-- Step 1: (0,1). -->
+  <g id="singlet-step-1">
+    <path d="M126 176 H151 C166 176 176 187 176 202 V208 C176 223 166 234 151 234 H126 Z" class="source"/>
+    <path d="M176 196 L185 198 L185 212 L176 214 Z" class="barrier"/>
+    <circle cx="211" cy="205" r="34" class="dot"/>
+    <path d="M245 198 H255 V212 H245 Z" class="barrier"/>
+    <circle cx="289" cy="205" r="34" class="dot"/>
+    <path d="M323 196 L332 198 L332 212 L323 214 Z" class="barrier"/>
+    <path d="M332 176 H357 V234 H332 C317 234 307 223 307 208 V202 C307 187 317 176 332 176 Z" class="drain"/>
+    <circle cx="289" cy="205" r="8" fill="#0c438b" stroke="#052959" stroke-width="1.4"/>
+    <path d="M289 200 V210" fill="none" stroke="#fff" stroke-width="1.8" marker-end="url(#arrowWhite)"/>
+    <text x="240" y="291" class="smallmath" text-anchor="middle">(0,1)</text>
+  </g>
+
+  <path d="M342 205 H382" fill="none" stroke="#171717" stroke-width="2.5" marker-end="url(#arrowBlack)"/>
+
+  <!-- Step 2: S(1,1). -->
+  <g id="singlet-step-2">
+    <path d="M396 176 H421 C436 176 446 187 446 202 V208 C446 223 436 234 421 234 H396 Z" class="source"/>
+    <path d="M446 196 L455 198 L455 212 L446 214 Z" class="barrier"/>
+    <circle cx="481" cy="205" r="34" class="dot"/>
+    <path d="M515 198 H525 V212 H515 Z" class="barrier"/>
+    <circle cx="559" cy="205" r="34" class="dot"/>
+    <path d="M593 196 L602 198 L602 212 L593 214 Z" class="barrier"/>
+    <path d="M602 176 H627 V234 H602 C587 234 577 223 577 208 V202 C577 187 587 176 602 176 Z" class="drain"/>
+    <circle cx="481" cy="205" r="8" fill="#e52d35" stroke="#8f1118" stroke-width="1.4"/>
+    <path d="M481 210 V200" fill="none" stroke="#fff" stroke-width="1.8" marker-end="url(#arrowWhite)"/>
+    <circle cx="559" cy="205" r="8" fill="#0c438b" stroke="#052959" stroke-width="1.4"/>
+    <path d="M559 200 V210" fill="none" stroke="#fff" stroke-width="1.8" marker-end="url(#arrowWhite)"/>
+    <text x="510" y="291" class="smallmath" text-anchor="middle">S(1,1)</text>
+  </g>
+
+  <path d="M612 205 H652" fill="none" stroke="#171717" stroke-width="2.5" marker-end="url(#arrowBlack)"/>
+
+  <!-- Step 3: S(0,2), allowed. -->
+  <g id="singlet-step-3">
+    <path d="M666 176 H691 C706 176 716 187 716 202 V208 C716 223 706 234 691 234 H666 Z" class="source"/>
+    <path d="M716 196 L725 198 L725 212 L716 214 Z" class="barrier"/>
+    <circle cx="751" cy="205" r="34" class="dot"/>
+    <path d="M785 198 H795 V212 H785 Z" class="barrier"/>
+    <circle cx="829" cy="205" r="34" class="dot"/>
+    <path d="M863 196 L872 198 L872 212 L863 214 Z" class="barrier"/>
+    <path d="M872 176 H897 V234 H872 C857 234 847 223 847 208 V202 C847 187 857 176 872 176 Z" class="drain"/>
+    <circle cx="829" cy="194" r="8" fill="#e52d35" stroke="#8f1118" stroke-width="1.4"/>
+    <path d="M829 199 V189" fill="none" stroke="#fff" stroke-width="1.8" marker-end="url(#arrowWhite)"/>
+    <circle cx="829" cy="216" r="8" fill="#0c438b" stroke="#052959" stroke-width="1.4"/>
+    <path d="M829 211 V221" fill="none" stroke="#fff" stroke-width="1.8" marker-end="url(#arrowWhite)"/>
+    <path d="M756 169 C775 151 807 153 822 174" fill="none" stroke="#0c438b" stroke-width="3" marker-end="url(#arrowBlue)"/>
+    <text x="780" y="291" class="smallmath" text-anchor="middle">S(0,2)</text>
+  </g>
+
+  <g id="singlet-current">
+    <path d="M942 205 H1106" fill="none" stroke="#0c438b" stroke-width="4" marker-end="url(#arrowBlue)"/>
+    <text x="1024" y="177" class="math" text-anchor="middle">I<tspan baseline-shift="sub" font-size="14">SD</tspan> &gt; 0</text>
+  </g>
+
+  <!-- Triplet blocked branch. -->
+  <rect x="38" y="366" width="1124" height="278" rx="34" class="panel"/>
+  <text x="78" y="518" class="row-label" fill="#e52d35" text-anchor="middle">T</text>
+  <g id="triplet-step-guides">
+    <path d="M365 392 V620 M636 392 V620" class="step-divider"/>
+    <circle cx="240" cy="404" r="17" class="step-badge"/><text x="240" y="404" class="step-number">1</text>
+    <circle cx="510" cy="404" r="17" class="step-badge"/><text x="510" y="404" class="step-number">2</text>
+    <circle cx="780" cy="404" r="17" class="step-badge"/><text x="780" y="404" class="step-number">3</text>
+  </g>
+
+  <!-- Step 1: (0,1). -->
+  <g id="triplet-step-1">
+    <path d="M126 476 H151 C166 476 176 487 176 502 V508 C176 523 166 534 151 534 H126 Z" class="source"/>
+    <path d="M176 496 L185 498 L185 512 L176 514 Z" class="barrier"/>
+    <circle cx="211" cy="505" r="34" class="dot"/>
+    <path d="M245 498 H255 V512 H245 Z" class="barrier"/>
+    <circle cx="289" cy="505" r="34" class="dot"/>
+    <path d="M323 496 L332 498 L332 512 L323 514 Z" class="barrier"/>
+    <path d="M332 476 H357 V534 H332 C317 534 307 523 307 508 V502 C307 487 317 476 332 476 Z" class="drain"/>
+    <circle cx="289" cy="505" r="8" class="triplet-electron"/>
+    <text x="240" y="591" class="smallmath" text-anchor="middle">(0,1)</text>
+  </g>
+
+  <path d="M342 505 H382" fill="none" stroke="#171717" stroke-width="2.5" marker-end="url(#arrowBlack)"/>
+
+  <!-- Step 2: T(1,1). -->
+  <g id="triplet-step-2">
+    <path d="M396 476 H421 C436 476 446 487 446 502 V508 C446 523 436 534 421 534 H396 Z" class="source"/>
+    <path d="M446 496 L455 498 L455 512 L446 514 Z" class="barrier"/>
+    <circle cx="481" cy="505" r="34" class="dot"/>
+    <path d="M515 498 H525 V512 H515 Z" class="barrier"/>
+    <circle cx="559" cy="505" r="34" class="dot"/>
+    <path d="M593 496 L602 498 L602 512 L593 514 Z" class="barrier"/>
+    <path d="M602 476 H627 V534 H602 C587 534 577 523 577 508 V502 C577 487 587 476 602 476 Z" class="drain"/>
+    <circle cx="481" cy="505" r="8" class="triplet-electron"/>
+    <circle cx="559" cy="505" r="8" class="triplet-electron"/>
+    <text x="510" y="591" class="smallmath" text-anchor="middle">T(1,1): {T+, T0, T−}</text>
+  </g>
+
+  <!-- Spin-conserving tunnelling from the (1,1) triplet manifold to S(0,2) is forbidden. -->
+  <path d="M612 505 H652" fill="none" stroke="#9aa4af" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#arrowBlack)"/>
+  <path d="M626 493 L640 517 M640 493 L626 517" fill="none" stroke="#e52d35" stroke-width="4" stroke-linecap="round"/>
+  <text x="633" y="480" class="blocked-label" text-anchor="middle">forbidden</text>
+
+  <!-- Step 3: the accessible S(0,2) target is not reached from the (1,1) triplet manifold. -->
+  <g id="blocked-singlet-target">
+    <g class="blocked-target">
+      <path d="M666 476 H691 C706 476 716 487 716 502 V508 C716 523 706 534 691 534 H666 Z" class="source"/>
+      <path d="M716 496 L725 498 L725 512 L716 514 Z" class="barrier"/>
+      <circle cx="751" cy="505" r="34" class="dot"/>
+      <path d="M785 498 H795 V512 H785 Z" class="barrier"/>
+      <circle cx="829" cy="505" r="34" class="dot"/>
+      <path d="M863 496 L872 498 L872 512 L863 514 Z" class="barrier"/>
+      <path d="M872 476 H897 V534 H872 C857 534 847 523 847 508 V502 C847 487 857 476 872 476 Z" class="drain"/>
+      <circle cx="829" cy="494" r="8" fill="#e52d35" stroke="#8f1118" stroke-width="1.4"/>
+      <path d="M829 499 V489" fill="none" stroke="#fff" stroke-width="1.8" marker-end="url(#arrowWhite)"/>
+      <circle cx="829" cy="516" r="8" fill="#0c438b" stroke="#052959" stroke-width="1.4"/>
+      <path d="M829 511 V521" fill="none" stroke="#fff" stroke-width="1.8" marker-end="url(#arrowWhite)"/>
+    </g>
+    <text x="780" y="591" class="smallmath" text-anchor="middle">S(0,2)</text>
+    <text x="780" y="614" class="blocked-label" text-anchor="middle">not reached</text>
+  </g>
+
+  <g id="triplet-current">
+    <path d="M942 505 H1072" fill="none" stroke="#9aa4af" stroke-width="3"/>
+    <path d="M1080 492 L1106 518 M1106 492 L1080 518" fill="none" stroke="#e52d35" stroke-width="4" stroke-linecap="round"/>
+    <text x="1024" y="477" class="math" text-anchor="middle">I<tspan baseline-shift="sub" font-size="14">SD</tspan> = 0</text>
+  </g>
+
+  <text x="600" y="677" class="state-key" text-anchor="middle">
+    State key: S = (|UD&gt; - |DU&gt;)/sqrt(2); T+ = |UU&gt;, T0 = (|UD&gt; + |DU&gt;)/sqrt(2), T- = |DD&gt;; U/D denote spin up/down.
+  </text>
+</svg>
