@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f3f8ff"/>
+    </linearGradient>
+    <linearGradient id="entry" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eaf4ff"/>
+      <stop offset="1" stop-color="#b9d7ff"/>
+    </linearGradient>
+    <linearGradient id="worker" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff4d6"/>
+      <stop offset="1" stop-color="#ffd77a"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8f8fb"/>
+      <stop offset="1" stop-color="#a8e0e9"/>
+    </linearGradient>
+    <linearGradient id="return" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4edff"/>
+      <stop offset="1" stop-color="#d3b8ff"/>
+    </linearGradient>
+    <linearGradient id="support" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f6f9"/>
+      <stop offset="1" stop-color="#d9e0e8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-25%" width="140%" height="155%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#17365d" flood-opacity="0.10"/>
+    </filter>
+    <filter id="soft" x="-15%" y="-20%" width="130%" height="140%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 12 12" refX="10.5" refY="6" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#1557a6"/>
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 12 12" refX="10.5" refY="6" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#7047ad"/>
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 12 12" refX="10.5" refY="6" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#158496"/>
+    </marker>
+    <marker id="arrowGold" viewBox="0 0 12 12" refX="10.5" refY="6" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#b67a12"/>
+    </marker>
+    <style>
+      .filename { font: 700 25px "Courier New", Courier, monospace; fill: #102a43; }
+      .filename-small { font: 700 22px "Courier New", Courier, monospace; fill: #102a43; }
+      .node { stroke: #17365d; stroke-width: 3; filter: url(#shadow); }
+      .entry-node { fill: url(#entry); }
+      .worker-node { fill: url(#worker); stroke: #7b5716; }
+      .core-node { fill: url(#core); stroke: #116678; }
+      .return-node { fill: url(#return); stroke: #55318c; }
+      .support-node { fill: url(#support); stroke: #52616f; }
+      .fold { fill: #ffffff; fill-opacity: 0.58; stroke: #17365d; stroke-width: 2; stroke-linejoin: round; }
+      .icon { fill: none; stroke: #17365d; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-fill { fill: #1557a6; stroke: #17365d; stroke-width: 2; stroke-linejoin: round; }
+      .control { fill: none; stroke: #1557a6; stroke-width: 3.25; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowBlue); }
+      .exchange { fill: none; stroke: #1557a6; stroke-width: 3.25; stroke-linecap: round; stroke-linejoin: round; marker-start: url(#arrowBlue); marker-end: url(#arrowBlue); }
+      .plot-flow { fill: none; stroke: #7047ad; stroke-width: 3.25; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowPurple); }
+      .plot-exchange { fill: none; stroke: #7047ad; stroke-width: 3.25; stroke-linecap: round; stroke-linejoin: round; marker-start: url(#arrowPurple); marker-end: url(#arrowPurple); }
+      .instrument-flow { fill: none; stroke: #158496; stroke-width: 3.25; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowTeal); }
+      .support-flow { fill: none; stroke: #b67a12; stroke-width: 2.5; stroke-dasharray: 4 12; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowGold); }
+      .log-flow { fill: none; stroke: #647485; stroke-width: 2.25; stroke-dasharray: 8 10; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1120" fill="url(#bg)"/>
+  <ellipse cx="885" cy="600" rx="720" ry="470" fill="#dcecff" opacity="0.15" filter="url(#soft)"/>
+
+  <rect x="55" y="45" width="450" height="1030" rx="52" fill="#eaf3ff" opacity="0.68" stroke="#c5dbf6" stroke-width="2"/>
+  <rect x="535" y="45" width="650" height="1030" rx="52" fill="#fffaf0" opacity="0.72" stroke="#f3dfb3" stroke-width="2"/>
+  <rect x="1215" y="45" width="530" height="1030" rx="52" fill="#f7f1ff" opacity="0.68" stroke="#ddcdf4" stroke-width="2"/>
+
+  <!-- Communication paths behind nodes -->
+  <path class="control" d="M280 170 V227"/>
+  <path class="exchange" d="M470 270 C545 270 535 205 610 205"/>
+  <path class="exchange" d="M470 300 C535 300 540 545 610 545"/>
+  <path class="exchange" d="M470 325 C520 325 535 885 610 885"/>
+  <path class="exchange" d="M790 250 V332"/>
+  <path class="exchange" d="M790 430 V500"/>
+  <path class="exchange" d="M790 590 V680"/>
+  <path class="exchange" d="M790 770 V840"/>
+  <path class="exchange" d="M610 410 C590 410 590 910 610 910"/>
+
+  <path class="plot-exchange" d="M970 385 H1265"/>
+  <path class="plot-flow" d="M1450 340 V258"/>
+  <path class="plot-flow" d="M1265 205 C1100 205 1110 125 955 125 C790 125 735 85 585 85 C470 85 455 190 400 235"/>
+
+  <path class="instrument-flow" d="M1450 690 C1450 820 1060 820 970 885"/>
+
+  <path class="support-flow" d="M120 125 H70 V975 H90"/>
+  <path class="support-flow" d="M970 725 C1090 725 1110 1015 470 960"/>
+  <path class="support-flow" d="M610 385 C505 385 505 995 470 995"/>
+
+  <path class="log-flow" d="M280 530 V600"/>
+  <path class="log-flow" d="M470 645 H525 V205 H610"/>
+  <path class="log-flow" d="M525 390 H575 V885 H610"/>
+  <path class="log-flow" d="M440 690 V930"/>
+  <circle cx="525" cy="390" r="4" fill="#647485"/>
+  <circle cx="575" cy="545" r="3.5" fill="#647485"/>
+  <circle cx="575" cy="725" r="3.5" fill="#647485"/>
+  <circle cx="575" cy="885" r="3.5" fill="#647485"/>
+
+  <!-- main.py -->
+  <g>
+    <rect class="node entry-node" x="120" y="80" width="320" height="90" rx="20"/>
+    <path class="fold" d="M394 80 H420 Q440 80 440 100 V126 Z"/>
+    <circle cx="170" cy="125" r="24" fill="#ffffff" opacity="0.65" stroke="#17365d" stroke-width="2"/>
+    <path class="icon-fill" d="M163 111 L185 125 L163 139 Z"/>
+    <text class="filename" x="215" y="134">main.py</text>
+  </g>
+
+  <!-- gui.py -->
+  <g>
+    <rect class="node entry-node" x="90" y="235" width="380" height="95" rx="20"/>
+    <path class="fold" d="M424 235 H450 Q470 235 470 255 V281 Z"/>
+    <rect x="128" y="261" width="58" height="38" rx="5" fill="#ffffff" opacity="0.62" stroke="#17365d" stroke-width="3"/>
+    <path class="icon" d="M140 309 H174 M157 299 V309"/>
+    <text class="filename" x="215" y="292">gui.py</text>
+  </g>
+
+  <!-- logger.py -->
+  <g opacity="0.82">
+    <rect class="node support-node" x="90" y="440" width="380" height="90" rx="20"/>
+    <path class="fold" d="M424 440 H450 Q470 440 470 460 V486 Z"/>
+    <circle cx="136" cy="468" r="4" fill="#52616f"/>
+    <circle cx="136" cy="485" r="4" fill="#52616f"/>
+    <circle cx="136" cy="502" r="4" fill="#52616f"/>
+    <path class="icon" d="M147 468 H178 M147 485 H178 M147 502 H178"/>
+    <text class="filename" x="218" y="493">logger.py</text>
+  </g>
+
+  <!-- tunerlog.py -->
+  <g>
+    <rect class="node support-node" x="90" y="600" width="380" height="90" rx="20"/>
+    <path class="fold" d="M424 600 H450 Q470 600 470 620 V646 Z"/>
+    <circle cx="136" cy="628" r="4" fill="#1557a6"/>
+    <circle cx="136" cy="645" r="4" fill="#158496"/>
+    <circle cx="136" cy="662" r="4" fill="#7047ad"/>
+    <path class="icon" d="M147 628 H178 M147 645 H178 M147 662 H178"/>
+    <text class="filename" x="208" y="653">tunerlog.py</text>
+  </g>
+
+  <!-- paths.py -->
+  <g>
+    <rect class="node support-node" x="90" y="930" width="380" height="90" rx="20"/>
+    <path class="fold" d="M424 930 H450 Q470 930 470 950 V976 Z"/>
+    <path d="M127 961 H151 L159 970 H193 V998 H127 Z" fill="#ffd77a" stroke="#52616f" stroke-width="3" stroke-linejoin="round"/>
+    <text class="filename" x="225" y="986">paths.py</text>
+  </g>
+
+  <!-- autotuning_handler.py -->
+  <g>
+    <rect class="node worker-node" x="610" y="160" width="360" height="90" rx="20"/>
+    <path class="fold" d="M924 160 H950 Q970 160 970 180 V206 Z"/>
+    <circle cx="652" cy="194" r="8" fill="#ffffff" stroke="#7b5716" stroke-width="2"/>
+    <circle cx="677" cy="194" r="8" fill="#ffffff" stroke="#7b5716" stroke-width="2"/>
+    <circle cx="702" cy="194" r="8" fill="#ffffff" stroke="#7b5716" stroke-width="2"/>
+    <path d="M648 220 H710" fill="none" stroke="#7b5716" stroke-width="3" marker-end="url(#arrowGold)"/>
+    <text class="filename-small" x="832" y="214" text-anchor="middle">autotuning_handler.py</text>
+  </g>
+
+  <!-- autotuning_protocol.py -->
+  <g>
+    <rect class="node core-node" x="610" y="340" width="360" height="90" rx="20"/>
+    <path class="fold" d="M924 340 H950 Q970 340 970 360 V386 Z"/>
+    <circle cx="655" cy="385" r="10" fill="#ffffff" stroke="#116678" stroke-width="3"/>
+    <circle cx="695" cy="365" r="10" fill="#ffffff" stroke="#116678" stroke-width="3"/>
+    <circle cx="695" cy="405" r="10" fill="#ffffff" stroke="#116678" stroke-width="3"/>
+    <path d="M665 381 L685 369 M665 389 L685 401" fill="none" stroke="#116678" stroke-width="3"/>
+    <text class="filename-small" x="840" y="394" text-anchor="middle">autotuning_protocol.py</text>
+  </g>
+
+  <!-- experiment_handler.py -->
+  <g>
+    <rect class="node worker-node" x="610" y="500" width="360" height="90" rx="20"/>
+    <path class="fold" d="M924 500 H950 Q970 500 970 520 V546 Z"/>
+    <circle cx="652" cy="534" r="8" fill="#ffffff" stroke="#7b5716" stroke-width="2"/>
+    <circle cx="677" cy="534" r="8" fill="#ffffff" stroke="#7b5716" stroke-width="2"/>
+    <circle cx="702" cy="534" r="8" fill="#ffffff" stroke="#7b5716" stroke-width="2"/>
+    <path d="M648 560 H710" fill="none" stroke="#7b5716" stroke-width="3" marker-end="url(#arrowGold)"/>
+    <text class="filename-small" x="835" y="554" text-anchor="middle">experiment_handler.py</text>
+  </g>
+
+  <!-- experiment_base.py -->
+  <g>
+    <rect class="node core-node" x="610" y="680" width="360" height="90" rx="20"/>
+    <path class="fold" d="M924 680 H950 Q970 680 970 700 V726 Z"/>
+    <path d="M643 734 C656 697 669 751 682 714 C695 677 708 731 721 704" fill="none" stroke="#116678" stroke-width="4" stroke-linecap="round"/>
+    <text class="filename-small" x="838" y="734" text-anchor="middle">experiment_base.py</text>
+  </g>
+
+  <!-- instrument_handler.py -->
+  <g>
+    <rect class="node worker-node" x="610" y="840" width="360" height="90" rx="20"/>
+    <path class="fold" d="M924 840 H950 Q970 840 970 860 V886 Z"/>
+    <circle cx="652" cy="874" r="8" fill="#ffffff" stroke="#7b5716" stroke-width="2"/>
+    <circle cx="677" cy="874" r="8" fill="#ffffff" stroke="#7b5716" stroke-width="2"/>
+    <circle cx="702" cy="874" r="8" fill="#ffffff" stroke="#7b5716" stroke-width="2"/>
+    <path d="M648 900 H710" fill="none" stroke="#7b5716" stroke-width="3" marker-end="url(#arrowGold)"/>
+    <text class="filename-small" x="835" y="894" text-anchor="middle">instrument_handler.py</text>
+  </g>
+
+  <!-- gui_bridge.py -->
+  <g>
+    <rect class="node return-node" x="1265" y="160" width="370" height="90" rx="20"/>
+    <path class="fold" d="M1589 160 H1615 Q1635 160 1635 180 V206 Z"/>
+    <path d="M1311 190 C1294 190 1294 220 1311 220 H1328 M1357 190 H1374 C1391 190 1391 220 1374 220 H1357 M1323 205 H1362" fill="none" stroke="#55318c" stroke-width="4" stroke-linecap="round"/>
+    <text class="filename" x="1410" y="214">gui_bridge.py</text>
+  </g>
+
+  <!-- data_analysis.py -->
+  <g>
+    <rect class="node return-node" x="1265" y="340" width="370" height="90" rx="20"/>
+    <path class="fold" d="M1589 340 H1615 Q1635 340 1635 360 V386 Z"/>
+    <path d="M1305 402 V363 M1305 402 H1380" fill="none" stroke="#55318c" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1314 390 L1334 377 L1351 385 L1374 358" fill="none" stroke="#7047ad" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="1314" cy="390" r="4" fill="#7047ad"/>
+    <circle cx="1334" cy="377" r="4" fill="#7047ad"/>
+    <circle cx="1351" cy="385" r="4" fill="#7047ad"/>
+    <circle cx="1374" cy="358" r="4" fill="#7047ad"/>
+    <text class="filename" x="1410" y="394">data_analysis.py</text>
+  </g>
+
+  <!-- instrument_registry.py -->
+  <g>
+    <rect class="node core-node" x="1245" y="645" width="450" height="90" rx="20"/>
+    <path class="fold" d="M1649 645 H1675 Q1695 645 1695 665 V691 Z"/>
+    <rect x="1282" y="673" width="18" height="18" rx="3" fill="#ffffff" stroke="#116678" stroke-width="2"/>
+    <rect x="1308" y="673" width="18" height="18" rx="3" fill="#ffffff" stroke="#116678" stroke-width="2"/>
+    <rect x="1282" y="699" width="18" height="18" rx="3" fill="#ffffff" stroke="#116678" stroke-width="2"/>
+    <rect x="1308" y="699" width="18" height="18" rx="3" fill="#ffffff" stroke="#116678" stroke-width="2"/>
+    <text class="filename-small" x="1498" y="699" text-anchor="middle">instrument_registry.py</text>
+  </g>
+
+</svg>
