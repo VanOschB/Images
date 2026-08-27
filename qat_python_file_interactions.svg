@@ -25,21 +25,21 @@
       <stop offset="1" stop-color="#d9e0e8"/>
     </linearGradient>
     <filter id="shadow" x="-20%" y="-25%" width="140%" height="155%">
-      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#17365d" flood-opacity="0.16"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#17365d" flood-opacity="0.10"/>
     </filter>
     <filter id="soft" x="-15%" y="-20%" width="130%" height="140%">
-      <feGaussianBlur stdDeviation="18"/>
+      <feGaussianBlur stdDeviation="10"/>
     </filter>
-    <marker id="arrowBlue" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+    <marker id="arrowBlue" viewBox="0 0 12 12" refX="10.5" refY="6" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
       <path d="M1 1 L11 6 L1 11 Z" fill="#1557a6"/>
     </marker>
-    <marker id="arrowPurple" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+    <marker id="arrowPurple" viewBox="0 0 12 12" refX="10.5" refY="6" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
       <path d="M1 1 L11 6 L1 11 Z" fill="#7047ad"/>
     </marker>
-    <marker id="arrowTeal" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+    <marker id="arrowTeal" viewBox="0 0 12 12" refX="10.5" refY="6" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
       <path d="M1 1 L11 6 L1 11 Z" fill="#158496"/>
     </marker>
-    <marker id="arrowGold" viewBox="0 0 12 12" refX="10.5" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+    <marker id="arrowGold" viewBox="0 0 12 12" refX="10.5" refY="6" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
       <path d="M1 1 L11 6 L1 11 Z" fill="#b67a12"/>
     </marker>
     <style>
@@ -54,18 +54,18 @@
       .fold { fill: #ffffff; fill-opacity: 0.58; stroke: #17365d; stroke-width: 2; stroke-linejoin: round; }
       .icon { fill: none; stroke: #17365d; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
       .icon-fill { fill: #1557a6; stroke: #17365d; stroke-width: 2; stroke-linejoin: round; }
-      .control { fill: none; stroke: #1557a6; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowBlue); }
-      .exchange { fill: none; stroke: #1557a6; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-start: url(#arrowBlue); marker-end: url(#arrowBlue); }
-      .plot-flow { fill: none; stroke: #7047ad; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowPurple); }
-      .plot-exchange { fill: none; stroke: #7047ad; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-start: url(#arrowPurple); marker-end: url(#arrowPurple); }
-      .instrument-flow { fill: none; stroke: #158496; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowTeal); }
-      .support-flow { fill: none; stroke: #b67a12; stroke-width: 4; stroke-dasharray: 4 11; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowGold); }
-      .log-flow { fill: none; stroke: #647485; stroke-width: 3.5; stroke-dasharray: 10 9; stroke-linecap: round; stroke-linejoin: round; }
+      .control { fill: none; stroke: #1557a6; stroke-width: 3.25; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowBlue); }
+      .exchange { fill: none; stroke: #1557a6; stroke-width: 3.25; stroke-linecap: round; stroke-linejoin: round; marker-start: url(#arrowBlue); marker-end: url(#arrowBlue); }
+      .plot-flow { fill: none; stroke: #7047ad; stroke-width: 3.25; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowPurple); }
+      .plot-exchange { fill: none; stroke: #7047ad; stroke-width: 3.25; stroke-linecap: round; stroke-linejoin: round; marker-start: url(#arrowPurple); marker-end: url(#arrowPurple); }
+      .instrument-flow { fill: none; stroke: #158496; stroke-width: 3.25; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowTeal); }
+      .support-flow { fill: none; stroke: #b67a12; stroke-width: 2.5; stroke-dasharray: 4 12; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowGold); }
+      .log-flow { fill: none; stroke: #647485; stroke-width: 2.25; stroke-dasharray: 8 10; stroke-linecap: round; stroke-linejoin: round; }
     </style>
   </defs>
 
   <rect width="1800" height="1120" fill="url(#bg)"/>
-  <ellipse cx="885" cy="600" rx="720" ry="470" fill="#dcecff" opacity="0.28" filter="url(#soft)"/>
+  <ellipse cx="885" cy="600" rx="720" ry="470" fill="#dcecff" opacity="0.15" filter="url(#soft)"/>
 
   <rect x="55" y="45" width="450" height="1030" rx="52" fill="#eaf3ff" opacity="0.68" stroke="#c5dbf6" stroke-width="2"/>
   <rect x="535" y="45" width="650" height="1030" rx="52" fill="#fffaf0" opacity="0.72" stroke="#f3dfb3" stroke-width="2"/>
@@ -73,33 +73,33 @@
 
   <!-- Communication paths behind nodes -->
   <path class="control" d="M280 170 V227"/>
-  <path class="exchange" d="M470 282 C545 282 535 205 610 205"/>
-  <path class="exchange" d="M470 302 C535 302 540 545 610 545"/>
-  <path class="exchange" d="M470 322 C520 322 535 885 610 885"/>
+  <path class="exchange" d="M470 270 C545 270 535 205 610 205"/>
+  <path class="exchange" d="M470 300 C535 300 540 545 610 545"/>
+  <path class="exchange" d="M470 325 C520 325 535 885 610 885"/>
   <path class="exchange" d="M790 250 V332"/>
   <path class="exchange" d="M790 430 V500"/>
   <path class="exchange" d="M790 590 V680"/>
   <path class="exchange" d="M790 770 V840"/>
-  <path class="exchange" d="M610 385 C555 385 555 885 610 885"/>
+  <path class="exchange" d="M610 410 C590 410 590 910 610 910"/>
 
   <path class="plot-exchange" d="M970 385 H1265"/>
   <path class="plot-flow" d="M1450 340 V258"/>
-  <path class="plot-flow" d="M1265 205 C1100 205 1110 125 955 125 C790 125 735 85 585 85 C450 85 445 260 470 275"/>
+  <path class="plot-flow" d="M1265 205 C1100 205 1110 125 955 125 C790 125 735 85 585 85 C470 85 455 190 400 235"/>
 
   <path class="instrument-flow" d="M1450 690 C1450 820 1060 820 970 885"/>
 
   <path class="support-flow" d="M120 125 H70 V975 H90"/>
-  <path class="support-flow" d="M970 725 C1090 725 1110 1030 470 975"/>
-  <path class="support-flow" d="M610 385 C505 385 505 975 470 975"/>
+  <path class="support-flow" d="M970 725 C1090 725 1110 1015 470 960"/>
+  <path class="support-flow" d="M610 385 C505 385 505 995 470 995"/>
 
   <path class="log-flow" d="M280 530 V600"/>
   <path class="log-flow" d="M470 645 H525 V205 H610"/>
   <path class="log-flow" d="M525 390 H575 V885 H610"/>
   <path class="log-flow" d="M440 690 V930"/>
-  <circle cx="525" cy="390" r="7" fill="#647485"/>
-  <circle cx="575" cy="545" r="6" fill="#647485"/>
-  <circle cx="575" cy="725" r="6" fill="#647485"/>
-  <circle cx="575" cy="885" r="6" fill="#647485"/>
+  <circle cx="525" cy="390" r="4" fill="#647485"/>
+  <circle cx="575" cy="545" r="3.5" fill="#647485"/>
+  <circle cx="575" cy="725" r="3.5" fill="#647485"/>
+  <circle cx="575" cy="885" r="3.5" fill="#647485"/>
 
   <!-- main.py -->
   <g>
@@ -233,16 +233,4 @@
     <text class="filename-small" x="1498" y="699" text-anchor="middle">instrument_registry.py</text>
   </g>
 
-  <!-- Decorative thread lanes -->
-  <path d="M1040 160 V930" fill="none" stroke="#d9b85d" stroke-width="3" stroke-dasharray="2 13" opacity="0.7"/>
-  <circle cx="1040" cy="205" r="9" fill="#ffd77a" stroke="#7b5716" stroke-width="2"/>
-  <circle cx="1040" cy="545" r="9" fill="#ffd77a" stroke="#7b5716" stroke-width="2"/>
-  <circle cx="1040" cy="885" r="9" fill="#ffd77a" stroke="#7b5716" stroke-width="2"/>
-
-  <!-- Small pulse marks on asynchronous exchanges -->
-  <g fill="#ffffff" stroke="#1557a6" stroke-width="2.5">
-    <circle cx="535" cy="249" r="8"/>
-    <circle cx="535" cy="407" r="8"/>
-    <circle cx="535" cy="658" r="8"/>
-  </g>
 </svg>
